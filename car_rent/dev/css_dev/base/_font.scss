@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file     : fonts                                           */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* Plus Jakarta Sans =========================================== */
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/PlusJakartaSans-Bold.woff2') format('woff2'),
+  url('../fonts/PlusJakartaSans-Bold.woff') format('woff'),
+  url('../fonts/PlusJakartaSans-Bold.ttf') format('truetype'),
+  url('../fonts/PlusJakartaSans-Bold.otf') format('opentype');
+  font-weight: $b;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/PlusJakartaSans-SemiBold.woff2') format('woff2'),
+  url('../fonts/PlusJakartaSans-SemiBold.woff') format('woff'),
+  url('../fonts/PlusJakartaSans-SemiBold.ttf') format('truetype'),
+  url('../fonts/PlusJakartaSans-SemiBold.otf') format('opentype');
+  font-weight: $sb;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/PlusJakartaSans-Medium.woff2') format('woff2'),
+  url('../fonts/PlusJakartaSans-Medium.woff') format('woff'),
+  url('../fonts/PlusJakartaSans-Medium.ttf') format('truetype'),
+  url('../fonts/PlusJakartaSans-Medium.otf') format('opentype');
+  font-weight: $md;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
+  url('../fonts/PlusJakartaSans-Regular.woff') format('woff'),
+  url('../fonts/PlusJakartaSans-Regular.ttf') format('truetype'),
+  url('../fonts/PlusJakartaSans-Regular.otf') format('opentype');
+  font-weight: $r;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/PlusJakartaSans-Light.woff2') format('woff2'),
+  url('../fonts/PlusJakartaSans-Light.woff') format('woff'),
+  url('../fonts/PlusJakartaSans-Light.ttf') format('truetype'),
+  url('../fonts/PlusJakartaSans-Light.otf') format('opentype');
+  font-weight: $l;
+  font-style: normal;
+}
+/* font : Plus Jakarta Sans ==================================== */
+/* ---------------------------------------------------------- */

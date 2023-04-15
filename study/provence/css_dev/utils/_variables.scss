@@ -1,0 +1,85 @@
+@charset "utf-8";
+// ======================================================================== //
+// file		: variables
+// ======================================================================== //
+
+// font==================================================================== //
+//$default_font: 'Apple SD Gothic Neo';
+//$default_font: 'Noto Sans KR', sans-serif;
+//$default_font: 'Noto Serif KR', serif;
+//$default_font: 'Noto Serif', sans-serif;
+//$default_font: 'Nanum Gothic', sans-serif;
+//$default_font: 'Nanum Myeongjo', serif;
+//$default_font: 'Roboto', sans-serif;
+//$default_font: 'Apple SD Gothic Neo', sans-serif;
+//$default_font: 'Malgun Gothic', sans-serif;
+$default_font: 'Noto Sans KR', sans-serif;
+$second_font: 'Open Sans';
+$th: 100;
+$l: 300;
+$r: 400;
+$md: 500;
+$sb: 600;
+$b: 700;
+$eb: 800;
+$bk: 900;
+
+$font-6r:0.6rem;
+$font-7r:0.7rem;
+$font-8r:0.8rem;
+$font-9r:0.9rem;
+$font-1r:1rem;
+$font-11r:1.1rem;
+$font-12r:1.2rem;
+$font-13r:1.3rem;
+$font-14r:1.4rem;
+$font-15r:1.5rem;
+$font-16r:1.6rem;
+$font-17r:1.7rem;
+$font-18r:1.8rem;
+$font-19r:1.9rem;
+$font-20r:2rem;
+$font-22r:2.2rem;
+$font-24r:2.4rem;
+$font-26r:2.6rem;
+$font-28r:2.8rem;
+$font-30r:3rem;
+$font-32r:3.2rem;
+$font-34r:3.4rem;
+$font-36r:3.6rem;
+$font-40r:4rem;
+$font-46r:4.6rem;
+$font-48r:4.8rem;
+$font-50r:5rem;
+$font-52r:5.2rem;
+$font-60r:6rem;
+
+$title_fc:#333;
+$default_fc:#222;
+
+//color
+$point_clr:#e46764;
+$border_clr:#f1f1f1;
+$border_clr2:#ccc;
+
+//btn
+$df_h_s:35px;
+$df_h_m:40px;
+$df_h_l:50px;
+
+//layout
+$max_w: 1280px;
+$max_h: 1280px;
+$header_h:50px;
+$con_mg: 10px;
+$con_pd: 15px;
+$con_pd2: 20px;
+$con_pd3: 25px;
+
+//media queries
+$full: 1920px;
+$middle: 1600px;
+$narrow: 1280px;
+
+//url
+$img_url:'../../images/';

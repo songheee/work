@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file     : fonts                                           */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* Noto Sans KR s =========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../fonts/NotoSansCJKkr-Light.otf') format('otf'),
+  url('../fonts/NotoSansCJKkr-Light.woff') format('woff'),
+  url('../fonts/NotoSansCJKkr-Light.ttf') format('ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../fonts/NotoSansCJKkr-Medium.otf') format('otf'),
+  url('../fonts/NotoSansCJKkr-Medium.woff') format('woff'),
+  url('../fonts/NotoSansCJKkr-Medium.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../fonts/NotoSansCJKkr-Regular.otf') format('otf'),
+  url('../fonts/NotoSansCJKkr-Regular.woff') format('woff'),
+  url('../fonts/NotoSansCJKkr-Regular.ttf') format('ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../fonts/NotoSansCJKkr-Bold.otf') format('otf'),
+  url('../fonts/NotoSansCJKkr-Bold.woff') format('woff'),
+  url('../fonts/NotoSansCJKkr-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* font : Noto Sans KR e ===================================== */
+/* ---------------------------------------------------------- */

@@ -1,0 +1,70 @@
+<!-- @@master ../layout_template.html -->
+
+<!-- @@block root_content -->
+
+<!-- wrap -->
+<div id="app">
+  <header-component></header-component>
+
+  <div class="conponents" :class="{'car_list_on': cpToggleFltrNav, 'dash_main_on':cpToggleMenu}">
+    <router-view></router-view>
+  </div>
+
+  <footer-component></footer-component>
+</div>
+
+
+<script>
+var EventBus = new Vue();
+
+var vue = new Vue({
+  el:'#app',
+  router,
+  components: {
+    'header-component' : Header,
+    'footer-component' : Footer,
+  },
+  data() {
+      return {
+        isMobile : false,
+        cpToggleFltrNav: false,
+        cpToggleMenu:false,
+      }
+  },
+  created() {
+    EventBus.$on('chck-mo', () => {
+      EventBus.$emit('rechck-mo', this.isMobile);
+    });
+    EventBus.$on('filter', () => {
+        this.cpToggleFltrNav = !this.cpToggleFltrNav;
+    });
+    EventBus.$on('menu', () => {
+        this.cpToggleMenu = !this.cpToggleMenu;
+    });
+  },
+  methods: {
+    checkDevice() {
+      var UserAgent = navigator.userAgent;
+      if (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null)
+      {
+        this.isMobile = true;
+      }else{
+        this.isMobile = false;
+      }
+    },
+  },
+  mounted(){
+    this.$nextTick(function () {
+      this.checkDevice();
+    });
+  },
+})
+</script>
+
+
+
+
+
+<!-- //wrap -->
+
+<!-- @@close-->

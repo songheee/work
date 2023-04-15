@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang='ko'>
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/javascript" http-equiv="Content-Script-Type">
+    <meta content="text/css" http-equiv="Content-Style-Type">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" name="viewport">
+    <link href="../assets/plugin/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+    <link href="../assets/css/display.css" rel="stylesheet" type="text/css">
+    <script src="../assets/plugin/vue.js"></script>
+    <script src="../assets/plugin/axios/axios.min.js"></script>
+    <script src="../assets/plugin/httpVueLoder/httpVueLoader.js"></script>
+    <script src="../assets/plugin/router/vue-router.js"></script>
+    <script src="../assets/plugin/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="../assets/plugin/vuex/vuex.js"></script> -->
+    <script src="../components/router.js"></script>
+    <script src="../components/app.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <title>Car rent</title>
+
+</head>
+<body>
+
+<!-- wrap -->
+<div id="app">
+  <header-component></header-component>
+
+  <div class="conponents" :class="{'car_list_on': cpToggleFltrNav, 'dash_main_on':cpToggleMenu}">
+    <router-view></router-view>
+  </div>
+
+  <footer-component></footer-component>
+</div>
+
+
+<script>
+var EventBus = new Vue();
+
+var vue = new Vue({
+  el:'#app',
+  router,
+  components: {
+    'header-component' : Header,
+    'footer-component' : Footer,
+  },
+  data() {
+      return {
+        isMobile : false,
+        cpToggleFltrNav: false,
+        cpToggleMenu:false,
+      }
+  },
+  created() {
+    EventBus.$on('chck-mo', () => {
+      EventBus.$emit('rechck-mo', this.isMobile);
+    });
+    EventBus.$on('filter', () => {
+        this.cpToggleFltrNav = !this.cpToggleFltrNav;
+    });
+    EventBus.$on('menu', () => {
+        this.cpToggleMenu = !this.cpToggleMenu;
+    });
+  },
+  methods: {
+    checkDevice() {
+      var UserAgent = navigator.userAgent;
+      if (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null)
+      {
+        this.isMobile = true;
+      }else{
+        this.isMobile = false;
+      }
+    },
+  },
+  mounted(){
+    this.$nextTick(function () {
+      this.checkDevice();
+    });
+  },
+})
+</script>
+
+
+
+
+
+<!-- //wrap -->
+
+
+
+
+
+
+</body>
+</html>

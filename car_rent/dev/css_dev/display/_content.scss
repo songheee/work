@@ -1,0 +1,2160 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: content                                     	  */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* content s ================================================ */
+.con{
+  @include con_wrap(2rem);
+}
+/* payment */
+.payment_wrap{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .pay_info{
+    flex-basis: 63.5%;
+  }
+}
+.l_r_txt{
+  background-color: #fff;
+  padding: 2.4rem;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+  .info_list{
+    overflow: hidden;
+    &::after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    p{
+      @include sub_tit;
+    }
+    dl{
+      display: flex;
+      justify-content: space-between;
+      dt,
+      dd{
+        font-weight: $md;
+        color: $font-clr2;
+      }
+    }
+    .other_wrap{
+      overflow: hidden;
+      background-color: #F6F7F9;
+      padding: 2.4rem;
+      margin-top: 3rem;
+      border-radius: 10px;
+      .rental_select{
+        display: flex;
+        justify-content: space-between;
+        margin-top:0;
+        label{
+          flex: 1 1 0%;
+          &.credit_visa{
+            background: url(../../assets/images/contents/visa.png) no-repeat right center;
+          }
+          &.credit_paypal{
+            background: url(../../assets/images/contents/paypal.png) no-repeat right center;
+          }
+          &.credit_bitcoin{
+            background: url(../../assets/images/contents/bitcoin.png) no-repeat right center;
+          }
+        }
+      }
+      li{
+        input{
+          background-color: #fff;
+        }
+      }
+    }
+    .rentbtn{
+      @include btn_blue ($fw:$b, $br:1rem, $fs:$font-16r);
+      width: 14rem;
+      height: 5.6rem;
+      margin-top: 3rem;
+    }
+    .safe_mark{
+      margin-top: 3rem;
+      p{
+        width: 30px;
+        height: 32px;
+        font-size: 0;
+        background: url(../../assets/images/contents/vrstva_302.png) no-repeat;
+      }
+      dl{
+        display: block;
+        margin-top:1.6rem;
+        dt{
+          font-size: $font-16r;
+          font-weight: $sb;
+          color: #1A202C;
+        }
+      }
+    }
+  }
+}
+/* // payment */
+
+/* radio button */
+.rental_select{
+  position: relative;
+  margin-top: 2rem;
+  &>label{
+    font-size: $font-16r;
+    color: #666;
+    vertical-align: middle;
+    font-weight: $sb;
+  }
+  input[type="radio"] {
+  width: .1rem;
+  height: .1rem;
+  overflow: hidden;
+  }
+  input[type="radio"],
+  label {
+    position: relative;
+    padding-left: 2.5rem;
+    cursor: pointer;
+    &::before{
+      content: '';
+      position: absolute;
+      left: .4rem;
+      top: .4rem;
+      width: 1.4rem;
+      height: 1.4rem;
+      background:#8ea8f7;
+      border: 3px solid #d5e0ff;
+      border-radius: 100%;
+      box-sizing:border-box;
+    }
+  }
+  input[type="radio"]:checked+label {
+    &::before{
+      background: #8ea8f7;
+      border-color:#d5e0ff;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: .7rem;
+      left: .7rem;
+      width: .8rem;
+      height: .8rem;
+      background:#0040ff;
+      border-radius: 100%;
+    }
+  }
+  input{
+    @include radio_basic;
+  }
+}
+.comfirm_chk{
+  .other_wrap{
+    .rental_select{
+      input[type="checkbox"]{
+        width: 2rem;
+        height: 2rem;
+      }
+      input[type="checkbox"],
+      label{
+        padding-left: 1.5rem;
+        &::before{
+          display: none;
+        }
+      }
+    }
+  }
+}
+/* //radio button */
+
+/* select box */
+.form_wrap{
+  margin-top: 2.8rem;
+  li{
+    width: 50%;
+    float: left;
+    margin-bottom: 1rem;
+    &:nth-child(2),
+    &:nth-child(4){
+      padding-left: 2rem;
+      box-sizing: border-box;
+    }
+    label{
+      font-size: $font-16r;
+      line-height: 4rem;
+    }
+    input{
+      width: 100%;
+      font-size: $font-14r;
+      font-weight: $md;
+      padding: 1.6rem;
+      border:0;
+      border-radius: 1.0rem;
+      background-color: #F6F7F9;
+      &::placeholder{
+        color: $font-clr2;
+      }
+    }
+    .selectbox{
+      width: 100%;
+      font-size: $font-14r;
+      font-weight: $md;
+      padding: 1.5rem;
+      border:0;
+      border-radius: 1.0rem;
+      background: #F6F7F9 url(../../assets/images/contents/arrow_down_2.png) no-repeat right 2rem center;
+      color: $font-clr2;
+      -webkit-appearance:none;
+    }
+  }
+}
+
+.select_typ{
+  margin-top: 1rem;
+  li{
+    width: 33.33%;
+    padding-left: 2rem;
+    border-right:1px solid #C3D4E9;
+    &:first-child{
+      padding-left: 0;
+    }
+    &:last-child{
+      border-right: 0;
+    }
+    & > p{
+      font-weight: $b;
+    }
+    .selectbox{
+      background: #fff url(../../assets/images/contents/arrow_down.png) no-repeat right 2rem center;
+      padding: 0px 4rem 0 0;
+      text-overflow: ellipsis;
+    }
+  }
+}
+/* //select box */
+
+  /* payment */
+.side_item{
+  flex-basis: 35%;
+  align-self: flex-start;
+  @include inner_con;
+  .sub_tit{
+    @include sub_tit;
+    margin-bottom: 3rem;
+    p{
+      margin-bottom: 1rem;
+    }
+    .summmay{
+      @include sub_summay;
+    }
+  }
+  .preview{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.2rem;
+    .img_txt{
+      margin-left: 1.6rem;
+      .car_tit{
+        margin-bottom: .8rem;
+        font-size: $font-32r;
+        font-weight: $b;
+      }
+      .review{
+        margin-left: .5rem;
+        color: #596780;
+        vertical-align: top;
+      }
+    }
+  }
+} //side_item
+.price{
+  border-top: 1px solid #c3d4e966;
+  font-size: $font-16r;
+  padding-top: 3.2rem;
+  dl{
+    display:table;
+    width:100%;
+    padding: 1.2rem 0;
+  }
+  dt{
+    display:table-cell;
+    width:30%;
+    text-align:left;
+    vertical-align:middle;
+    color: $font-clr2;
+  }
+  dd{
+    display:table-cell;
+    width:70%;
+    font-weight: $sb;
+    text-align:right;
+    color: #1A202C;
+  }
+  .pay_wrap{
+    position: relative;
+    .paycode{
+      width: 100%;
+    }
+    .input_box{
+      font-size: $font-14r;
+      padding:1.6rem 3rem;
+      border: 0;
+      border-radius: 10px;
+      background-color: #F6F7F9;
+      &::placeholder{
+        color: $font-clr2;
+      }
+    }
+    span{
+      position: absolute;
+      right: 3rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: $sb;
+    }
+  }
+  .total{
+    display: flex;
+    justify-content: space-between;
+    margin-top:3.2rem;
+    .total_txt{
+      span{
+        display: block;
+        font-size: $font-14r;
+        color: $font-clr2;
+        &:first-child{
+          font-size: $font-20r;
+          font-weight: $b;
+          color: #1A202C;
+        }
+      }
+      .hide{
+        display: none;
+      }
+    }
+    .total_num{
+      font-size: $font-32r;
+      font-weight: $b;
+      color: #1A202C;
+    }
+  }
+}
+  /* //payment */
+
+/* 별점 */
+.star {
+  display: inline-block;
+  width: 100px;
+  height: 20px;
+  background-image: url(../../assets/images/contents/ic_star.png);
+  background-repeat: repeat;
+  &::after{
+    content: '';
+    display: block;
+    height: 20px;
+    background: url(../../assets/images/contents/ic_actions_star.png) repeat;
+  }
+  &.star_c1{
+    &::after{
+      width: 20px;
+    }
+  }
+  &.star_c2{
+    &::after{
+      width: 40px;
+    }
+  }
+  &.star_c3{
+    &::after{
+      width: 60px;
+    }
+  }
+  &.star_c4{
+    &::after{
+      width: 80px;
+    }
+  }
+  &.star_c5{
+    &::after{
+      width: 100px;
+    }
+  }
+}
+/* //별점 */
+
+.area_wrap{
+  display: flex;
+  position: relative;
+}
+
+/* home */
+.home_wrap{
+  padding: 0;
+}
+.ad_section{
+  padding: 2rem 4.5rem;
+  //@include con_wrap(2rem 4.5rem);
+}
+.pre_img_sec{
+  display: flex;
+  justify-content: space-between;
+  li{
+    width: 49%;
+    border-radius: 1rem;
+    padding: 1.4rem 0 12rem 2.4rem;
+    background-repeat: no-repeat;
+    background-color: #54A6FF;
+    background-position: bottom;
+    color: #fff;
+    &:first-child{
+      background-image: url(../../assets/images/contents/car_bg_1.png), url(../../assets/images/contents/car_1.png);
+    }
+    &:last-child{
+      background-color: $prime-clr;
+      background-image: url(../../assets/images/contents/car_2.png), url(../../assets/images/contents/car_bg_2.png);
+      button{
+        background-color: #54A6FF;
+      }
+    }
+    p{
+      margin-bottom: 2rem;
+      width: 56%;
+      &:first-child{
+        font-size: $font-32r;
+        font-weight: $sb;
+      }
+      &:nth-child(2){
+        font-size: $font-16r;
+        font-weight:$md;
+      }
+    }
+    button{
+      padding:1rem 2rem;
+      border-radius: .4rem;
+      font-size: $font-16r;
+      font-weight: $sb;
+      color: #fff;
+      background-color: $prime-clr;
+    }
+  }
+}
+/* //home */
+
+/* pick_drop 공통*/
+.pick_drop{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3.2rem;
+  & > div{
+    width: 45%;
+    padding: 2rem 3rem;
+    background-color: #fff;
+    border-radius: 1rem;
+  }
+  .rental_select{
+    margin-top: 0;
+    & > label{
+      color: #1A202C;
+    }
+  }
+  .swap{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 1rem;
+    font-size: 0;
+    background: $prime-clr url(../../assets/images/contents/swap.png) no-repeat center;
+  }
+}
+
+/* // pick_drop 공통*/
+
+/* car_list 공통*/
+
+/* filter클릭시 columns변경, chkArea show */
+.car_list_on{
+  .area_wrap{
+    .car_list_wrap{
+      .car_list{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0 4rem;
+      }
+    }
+    .chk_ty2{
+      display: block;
+    }
+  }
+  /* datail */
+  .dti_section{
+    .car_item_dti{
+      .img_txt{
+        .item_dti_info{
+          margin-top: 0rem;
+        }
+        .car_price{
+          padding-top: 6rem;
+        }
+      }
+    }
+    .preview_txt_wrap{
+      .show_all{
+        background-position: 54.5% center;
+      }
+    }
+  }
+}
+/* dash_menu show */
+.dash_main_on{
+  .area_wrap{
+    .dash_main{
+      display: block;
+    }
+  }
+}
+
+.car_list_wrap{
+  ul{
+    display: grid;
+    gap: 0 2rem;
+    &.car_list{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .car_item{
+      width: 32rem;
+      padding: 2.4rem;
+      margin-bottom: 3rem;
+      border-radius: 1rem;
+      background-color: #fff;
+      .car_sub_tit{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        .list_name{
+          display: inline-block;
+          font-size: $font-20r;
+          font-weight: $b;
+          color: #1A202C;
+        }
+        .list_type{
+          font-size: $font-14r;
+          font-weight: $b;
+          color: $font-clr2;
+        }
+      }
+      .car_detail{
+        margin-bottom: 2.4rem;
+        text-align: center;
+        position: relative;
+        &::after{
+          content : '';
+          position: absolute;
+          left: 0;
+          bottom: 8rem;
+          width: 27rem;
+          height: 6rem;
+          background: linear-gradient(180deg, #ffffff00 0%, #FFFFFF 100%);
+        }
+        .car_img{
+          margin: 6.5rem 0;
+        }
+        & > ul{
+          display: flex;
+          justify-content: space-between;
+          li{
+            color: $font-clr2;
+            padding: 0.4rem 0 0 3rem;
+            &.icon_oil{
+              background: url(../../assets/images/contents/gas_station.png) no-repeat;
+            }
+            &.icon_manual{
+              background: url(../../assets/images/contents/car.png) no-repeat;
+            }
+            &.icon_people{
+              background: url(../../assets/images/contents/profile_2user.png) no-repeat;
+            }
+            img{
+              padding: 0 .2rem .5rem 0;
+            }
+          }
+        }
+      }
+    }
+    .detail_show{
+      display: block;
+    }
+  }
+  .more_btn{
+    overflow: hidden;
+    text-align: center;
+    margin: 4rem 0 6.3rem 0;
+    & > button{
+      @include btn_blue($fw:$sb, $br:.4rem, $fs:$font-16r);
+      padding: 1rem 2rem;
+    }
+    & > span{
+      float: right;
+      margin-top: 1rem;
+      color:$font-clr2;
+    }
+  }
+}
+.car_main_wrap{
+  display: flex;
+  justify-content: space-between;
+  margin: 3.6rem 0 2rem;
+  .car_list_tit{
+    font-size: $font-16r;
+    font-weight: $sb;
+    color: $font-clr2;
+  }
+  .view_all{
+    font-size: $font-16r;
+    font-weight: $sb;
+    color: $prime-clr;
+  }
+}
+.car_price{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & > div{
+    font-size: $font-14r;
+    font-weight: $b;
+    color: $font-clr2;
+    & > span{
+      &:first-child{
+        font-size: $font-20r;
+        color: #1A202C;
+      }
+    }
+    & > p{
+      span{
+        text-decoration: line-through;
+      }
+    }
+  }
+  .rent_btn{
+    @include btn_blue($fw:$sb, $br:.4rem, $fs:$font-16r);
+    padding: 1rem 2rem;
+  }
+}
+/* 좋아요버튼 */
+button{
+  &.like_btn{
+    width: 24px;
+    height: 24px;
+    text-indent: -9999px;
+    background: url(../../assets/images/contents/empty_like.png) no-repeat;
+  }
+  &.like_btn_on{
+    background: url(../../assets/images/contents/Like.png) no-repeat;
+  }
+}
+/* //car_list 공통*/
+
+/* check_area 공통*/
+.dashboard_wrap{
+  .chk_ty2{
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    z-index:10;
+    height: 100%;
+  }
+}
+.side_wrap{
+  display: none;
+  width: auto;
+  padding-top: 0;
+  background-color: #fff;
+  .side_list{
+    height: 100%;
+    padding:3.2rem 2.5rem;
+  }
+  .catgy_cap{
+    margin-top:5rem;
+  }
+  .catgy_price{
+    margin-top:5rem;
+    .rental_select{
+      & > input{
+        width: 25rem;
+      }
+      input[type='range'] {
+        overflow: hidden;
+        width: 25rem;
+        height:1.5rem;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        -webkit-appearance: none;
+        background-color: #90A3BF;
+      }
+
+      input[type='range']::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+        color: #3563E9;
+        margin-top: -1px;
+      }
+
+      input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: 3px solid #fff;
+        height: 1.8rem;
+        width: 1.8rem;
+        border-radius: 2rem;
+        background: #3563E9;
+        box-shadow: -20rem 1rem 1rem 20rem #3563E9;
+      }
+      p{
+        font-size: $font-17r;
+        font-weight: $sb;
+        color: #596780;
+      }
+    }
+  }
+  .side_tit{
+    font-size: $font-12r;
+    font-weight: $sb;
+    color: $font-clr2;
+    letter-spacing: .2rem;
+  }
+  .rental_select{
+    margin-top: 3rem;
+    & > label{
+      font-size: $font-17r;
+      font-weight: $sb;
+      color: #596780;
+      & > span{
+      color: $font-clr2;
+      }
+    }
+  }
+}
+.side_list{
+  .other_wrap{
+    input{
+      width: 2rem;
+      height: 2rem;
+    }
+    .confirm_txt{
+      padding-left: 1.2rem;
+      &::before{
+        display: none;
+      }
+    }
+  }
+}
+/* check transition */
+/* .slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+} */
+
+/* //check transition */
+
+/* //check_area 공통*/
+
+/* catogory */
+.category_wrap{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0;
+  &::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.catgy_list{
+  padding: 2rem 4.5rem;
+  .pick_drop{
+    margin:0 0 3.6rem 0;
+    position: relative;
+    & > div{
+      width: 48%;
+      padding: 2rem 3rem;
+      background-color: #fff;
+      border-radius: 1rem;
+    }
+    .rental_select{
+      margin-top: 0;
+      & > label{
+        color: #1A202C;
+      }
+    }
+    .swap{
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      transform: translate(-50%);
+    }
+  }
+}
+
+#myinput {
+  background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%);
+  border: solid 1px #82CFD0;
+  border-radius: 8px;
+  height: 7px;
+  width: 356px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+/* //catogory */
+
+/* detail */
+.detail_wrap{
+  padding: 0;
+}
+.dti_section{
+  width: 100%;
+  padding: 2rem 4.5rem;
+  .pre_car_info{
+    display: flex;
+    justify-content: space-between;
+  }
+  .pre_img{
+    width: 49%;
+    .b_view{
+      height: 360px;
+      padding: 2.4rem 0 0 2.4rem;
+      margin-bottom: 2.4rem;
+      color: #fff;
+      border-radius: 1rem;
+      background-repeat: no-repeat;
+      background-color: #3563E9;
+      background-position: bottom;
+      background-image: url(../../assets/images/contents/car_2.png), url(../../assets/images/contents/car_bg_2.png);
+      & > p{
+        width: 76%;
+        &:first-child{
+          margin-bottom: 2rem;
+          font-size: $font-32r;
+          font-weight: $sb;
+        }
+        &:nth-child(2){
+          width: 56%;
+          font-size: $font-16r;
+          font-weight:$md;
+        }
+      }
+    }
+    .s_view{
+      & > ul{
+        display: flex;
+        justify-content: space-between;
+        li{
+          width: 30%;
+          height: 124px;
+          font-size: 0;
+          cursor: pointer;
+          border-radius: 10px;
+
+          &:nth-child(1){
+            background: url(../../assets/images/contents/view_1.png) no-repeat center;
+            background-size: 100%;
+          }
+          &:nth-child(2){
+            background: url(../../assets/images/contents/view_2.png) no-repeat center;
+            background-size: 100%;
+          }
+          &:nth-child(3){
+            background: url(../../assets/images/contents/view_3.png) no-repeat center;
+            background-size: 100%;
+          }
+          &.pre_on{
+            border:2px solid #3563E9;
+            background-size: 94% 92%;
+          }
+        }
+      }
+    }
+  }
+  .car_item_dti{
+    width: 49%;
+    .img_txt{
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 1.5rem 2.4rem;
+      position: relative;
+      margin-left: 1.6rem;
+      &::after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .car_tit{
+        margin-bottom: 1rem;
+        font-size: $font-32r;
+        font-weight: $b;
+      }
+      .dti_btn{
+        width: 24px;
+        height: 24px;
+        text-indent: -9999px;
+        position: absolute;
+        right: 20px;
+        top: 26px;
+
+      }
+      .review{
+        color: #596780;
+        vertical-align: top;
+      }
+      .car_exp{
+        padding-top: 4.2rem;
+        font-size: $font-20r;
+        font-weight: $r;
+        line-height: 4rem;
+      }
+      .item_dti_info{
+        margin-top: 3rem;
+        table{
+          tr{
+            margin-bottom: 1rem;
+            td{
+              padding-top: 2rem;
+              font-size: $font-20r;
+              font-weight: $r;
+              color: $font-clr2;
+              text-align: right;
+              &:nth-child(1){
+                text-align: left;
+              }
+              &:nth-child(2n){
+                font-weight:$sb;
+                color: #596780;
+              }
+            }
+          }
+        }
+      }
+      .car_price{
+        padding-top: 7rem;
+        & div{
+          font-size: $font-16r;
+          & >span{
+            &:first-child{
+              font-size: $font-28r;
+            }
+          }
+        }
+      }
+    } /* //img_txt */
+  }
+}
+
+.preview_txt_wrap{
+  position: relative;
+  overflow: hidden;
+  height: 420px;
+  background-color: #fff;
+  padding: 2.4rem;
+  border-radius: 10px;
+  margin-top: 3.2rem;
+  &::after{
+    content: '';
+    display: inline-block;
+    clear: both;
+  }
+  /* 클릭시 추가되는 클래스  */
+  &.h_on{
+    height: auto;
+  }
+  .pre_tit{
+    font-size: $font-20r;
+    font-weight: $sb;
+    color: #1A202C;
+    &::after{
+      content: '13';
+      background-color: $prime-clr;
+      display: inline-block;
+      padding: .4rem 1rem;
+      margin-left: 1.2rem;
+      color: #fff;
+      border-radius: 4px;
+      font-size: $font-14r;
+    }
+  }
+  .pre_list{
+    margin:3.2rem 0;
+    li{
+      margin-bottom: 1.5rem;
+      .self_wrp{
+        display: flex;
+        justify-content: space-between;
+        .youself{
+          display: flex;
+          & > img{
+            padding-right: 1.6rem;
+          }
+          .pre_name{
+            font-size: $font-20r;
+            font-weight: $b;
+            margin-top: 0.5rem;
+          }
+          .pre_self_tit{
+            font-size: $font-14r;
+            color: $font-clr2;
+          }
+        }
+        .pre_scope{
+          margin-top: 0.7rem;
+          text-align: right;
+          & > p{
+            &:first-child{
+              margin-bottom: .5rem;
+            }
+          }
+        }
+      }
+      .my_review{
+        padding: 1rem .5rem 1.2rem 7.5rem;
+        font-weight: $r;
+        line-height: 2.5rem;
+        color: #90A3BF;
+      }
+    }
+  }
+  .show_all{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    width: 100%;
+    font-size: $font-16r;
+    font-weight: $sb;
+    color: $font-clr2;
+    background: #fff url(../../assets/images/contents/arrow_down_2.png) no-repeat 53.5% center;
+    padding: 3rem;
+  }
+}
+/* // detail */
+
+/* dashboard */
+.dashboard_wrap{
+  padding:0;
+  .dash_list{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
+  }
+}
+.dash_datail{
+  width: 49%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2.4rem;
+  .img_txt {
+    margin-top: 3rem;
+    .dash_rent_bord{
+      padding: 0;
+      .rental_car{
+        & > img{
+          width: 132px;
+          height: 72px;
+        }
+      }
+    }
+  }
+  .pick_drop{
+    display: grid;
+    margin-top: 1.2rem;
+    & > div{
+      width: 100%;
+      padding: 1rem 0;
+    }
+    .swap{
+      display: none;
+    }
+  }
+  .price{
+    padding-top: 2rem;
+  }
+}
+.dash_rank{
+  width: 48%;
+  .pie_graph{
+    padding: 2.4rem;
+    border-radius: 10px;
+    background-color: #fff;
+    .dash_rental{
+      position: relative;
+      &::after{
+        content: '';
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        right: 0;
+        top: center;
+        vertical-align: bottom;
+        background: url(../../assets/images/dashbord/more.png) no-repeat;
+        cursor: pointer;
+      }
+    }
+    .chart_wrap{
+      display: flex;
+      justify-content: space-between;
+      .top_rank{
+        position: relative;
+          &::after{
+            content: '';
+            display: block;
+            clear: both;
+          }
+        & > div{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          p{
+            &:nth-child(1){
+              font-size: $font-24r;
+              font-weight: $b;
+            }
+            &:nth-child(2){
+              color: $font-clr2;
+            }
+          }
+        }
+      }
+      .chart_item{
+        dl{
+          display: table;
+          width: 100%;
+          padding: 1.2rem 0;
+          dt{
+            display: table-cell;
+            padding-right:9rem;
+            text-align: left;
+            vertical-align: middle;
+            color: $font-clr2;
+            &::before{
+              content: '';
+              display: inline-block;
+              width: 12px;
+              height: 12px;
+              border-radius: 12px;
+              margin-right: 1.2rem;
+            }
+          }
+          &:nth-child(1){
+            dt{
+              &::before{
+                background-color: #0D3559;
+              }
+            }
+          }
+          &:nth-child(2){
+            dt{
+              &::before{
+                background-color: #175D9C;
+              }
+            }
+          }
+          &:nth-child(3){
+            dt{
+              &::before{
+                background-color: #2185DE;
+              }
+            }
+          }
+          &:nth-child(4){
+            dt{
+              &::before{
+                background-color: #63A9E8;
+              }
+            }
+          }
+          &:nth-child(5){
+            dt{
+              &::before{
+                background-color: #A6CEF2;
+              }
+            }
+          }
+          dd{
+            display: table-cell;
+            font-weight: $sb;
+            text-align: right;
+            color: #1A202C;
+          }
+        }
+      }
+    }
+  }
+}
+.recent_list{
+  padding: 2.4rem 2.4rem 1rem 2.4rem;
+  margin-top: 3.2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  .car_main_wrap{
+    margin:0;
+  }
+  .img_txt{
+    margin-top: 0;
+    .dash_rent_bord{
+      .rental_car{
+        img{
+          width: 114px;
+          height: 36px;
+        }
+        .car_tit{
+          font-size: $font-16r;
+        }
+        .car_val{
+          font-size: $font-12r;
+          color: $font-clr2;
+        }
+      }
+      .license_plate{
+        font-size: $font-12r;
+        color: $font-clr2;
+      }
+      .recent_total{
+        font-size: $font-16r;
+        font-weight: $b;
+      }
+      & > div{
+        &:last-child{
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+/* recent car list 공통 */
+.img_txt{
+  //margin-top: 3.2rem;
+  .dash_rent_bord{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #c3d4e966;
+    padding: 3rem 0;
+    &:last-child{
+      border-bottom: 0;
+    }
+    .rental_car{
+      display: flex;
+      & > div{
+        margin-left: 2rem;
+      }
+      .car_tit{
+        font-size: $font-24r;
+        font-weight: $b;
+      }
+      .car_val{
+        color: #3D5278;
+      }
+    }
+  }
+  .license_plate{
+    color: #3D5278;
+  }
+}
+/* 공통 서브타이틀 */
+.dash_rental{
+  margin-bottom: 2.4rem;
+  font-size: $font-20r;
+  font-weight: $b;
+}
+
+/* main menu 공통 */
+.dashboard_wrap{
+  .dash_main{
+    display: block;
+  }
+}
+/* 다른페이지에서는 안보이게 */
+.dash_main{
+  display: none;
+}
+.dash_menu{
+  position: relative;
+  .side_tit{
+    margin:0 0 1rem 1rem;
+    color:hsla(219, 35%, 69%, 0.40);
+  }
+  li{
+    padding: 1rem 0;
+    a{
+      display: block;
+      padding: 1.5rem 8rem 1.5rem 4.6rem;
+      font-size: $font-16r;
+      font-weight: $md;
+      color: $font-clr2;
+      background-repeat: no-repeat;
+      background-position: 11px 13px;
+      &:hover{
+        border-radius: 10px;
+        background-color: #3563E9;
+        color: #fff;
+      }
+    }
+  }
+  .side_type{
+    li{
+      &:nth-of-type(1){
+        a{
+          background-image: url(../../assets/images/dashbord/home.png);
+        }
+      }
+      &:nth-of-type(2){
+        a{
+          background-image: url(../../assets/images/dashbord/dash_car.png);
+        }
+      }
+      &:nth-of-type(3){
+        a{
+          background-image: url(../../assets/images/dashbord/chart.png);
+        }
+      }
+      &:nth-of-type(4){
+        a{
+          background-image: url(../../assets/images/dashbord/empty_wallet_change.png);
+        }
+      }
+      &:nth-of-type(5){
+        a{
+          background-image: url(../../assets/images/dashbord/message.png);
+        }
+      }
+      &:nth-of-type(6){
+        a{
+          background-image: url(../../assets/images/dashbord/calendar.png);
+        }
+      }
+    }
+  }
+  .basic_set{
+    margin-top: 3rem;
+    li{
+      &:nth-of-type(1){
+        a{
+          background-image: url(../../assets/images/dashbord/setting.png);
+        }
+      }
+      &:nth-of-type(2){
+        a{
+          background-image: url(../../assets/images/dashbord/info_circle.png);
+        }
+      }
+      &:nth-of-type(3){
+        position: relative;
+        a{
+          background-image: url(../../assets/images/dashbord/briefcase.png);
+        }
+      }
+      &:nth-of-type(4){
+        a{
+          background-image: url(../../assets/images/dashbord/logout.png);
+        }
+      }
+    }
+  }
+  .logout{
+    position: absolute;
+    left: 0rem;
+    bottom: -7rem;
+    width: 100%;
+    padding-right: 11rem;
+  }
+  /* active배경 */
+  .set_on{
+    border-radius: 10px;
+    background-color: #3563E9;
+    color: #fff;
+  }
+}/* //dash_menu */
+
+/* pick-drop */
+.m_dashmemu{
+  display: none;
+}
+
+/* dark mode switch */
+.basic_set{
+  li{
+    &:last-child{
+      position: relative;
+    }
+  }
+}
+.button-cover,
+.sun,
+.moon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+}
+.turn {
+  position: relative;
+  top: 50%;
+  left: 14.5rem;
+  width: 7.4rem;
+  height: 3.6rem;
+  margin: -2rem auto 0 auto;
+  overflow: hidden;
+  border-radius: 100px;
+  .switch_chk {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .sun,
+  .moon{
+    transition: 0.3s ease all;
+  }
+  .sun {
+    width: 100%;
+    z-index: 2;
+    background: url(../../assets/images/dashbord/sun.png) no-repeat 22% center;
+    &::before {
+      content: "";
+      background: url(../../assets/images/dashbord/sun.png) no-repeat 50% center;
+      position: absolute;
+      top: .4rem;
+      left: .4rem;
+      width: 2rem;
+      height: 1rem;
+      padding: .9rem .4rem;
+      background-color: #3563E9;
+      border-radius: 50%;
+      transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+    }
+  }
+  .moon {
+    width: 100%;
+    background: #ebf7fc url(../../assets/images/dashbord/moon.png) no-repeat 80% center;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+  .switch_chk:checked + .sun:before {
+    content: "";
+    left: 4.2rem;
+    background: #3563E9 url(../../assets/images/dashbord/moon.png) no-repeat 60% center;
+  }
+}
+/* //dashboard */
+
+
+/*모바일 지정 */
+@media only screen and (max-width: 768px) {
+
+  .payment_wrap{
+    .pay_info{
+      flex-basis: 100%;
+      order:2;
+    }
+  }
+  .input_box{
+    padding:1.6rem 2rem;
+  }
+
+  .l_r_txt{
+    .info_list{
+      p{
+        font-size: $font-16r;
+      }
+      dl{
+        dt,
+        dd{
+          font-size: $font-12r;
+          font-weight: $md;
+          color: $font-clr2;
+        }
+        dt{
+          width: 70%;
+        }
+        dd{
+          margin-top: -2rem;
+        }
+      }
+      .other_wrap{
+        padding: 1.4rem;
+        .rental_select{
+          font-size: $font-14r;
+          label{
+            &.credit_visa,
+            &.credit_paypal,
+            &.credit_bitcoin{
+              background-size: 30%;
+            }
+          }
+        }
+        .confirm_txt{
+          & > span{
+            text-decoration: underline;
+          }
+        }
+      }
+      .rentbtn{
+        width: 10rem;
+        height: 3.6rem;
+        margin-top: 3.4rem;
+      }
+      .safe_mark{
+        margin-top: 3rem;
+        dl{
+          dt{
+            font-size: $font-16r;
+            font-weight: $sb;
+            color: #1A202C;
+          }
+          dd{
+            margin-top:0;
+          }
+        }
+      }
+    }
+    .side_list{
+      .other_wrap{
+        .rental_select{
+          input{
+            width: 1.6rem;
+            height: 1.6rem;
+            margin-top: 0.9rem;
+          }
+          label{
+            font-size: $font-12r;
+          }
+        }
+      }
+    }
+  }
+
+  /* radio button*/
+  .rental_select{
+    margin-bottom: 0rem;
+    input{
+      margin: -.3rem .3rem 0 0;
+      @include radio_basic;
+    }
+    label{
+      font-size: $font-16r;
+    }
+  }
+
+  .comfirm_chk{
+    .other_wrap{
+      .rental_select{
+        input[type="checkbox"]{
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-top: 0.5rem;
+        }
+        input[type="checkbox"],
+        label{
+          font-size: $font-12r;
+        }
+      }
+    }
+  }
+  /* //radio button*/
+
+  /* select box */
+  .form_wrap{
+    margin-top: 2.8rem;
+    li{
+      width: 100%;
+      float: none;
+      margin-bottom: 1rem;
+      &:nth-child(2),
+      &:nth-child(4){
+        padding-left: 0;
+      }
+      label{
+        font-size: $font-14r;
+        line-height: 4rem;
+      }
+      input{
+        width: 100%;
+        font-size: $font-12r;
+        font-weight: $md;
+        padding: 1.6rem;
+      }
+    }
+  }
+  .select_typ{
+    margin-top: 1rem;
+    li{
+      width: 33.33%;
+      float: left;
+      &:nth-child(2),
+      &:nth-child(3){
+        padding-left: 1rem;
+      }
+      .selectbox{
+        padding: 0 3rem 0 0;
+        background-position: right 1rem center;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  /* // select box */
+
+  /* payment */
+  .side_item{
+    flex-basis: 100%;
+    order:1;
+    margin-bottom: 3rem;
+    .sub_tit{
+      margin-bottom: 2rem;
+      .summmay{
+        font-size: $font-12r;
+      }
+    }
+    .preview{
+      margin-bottom: 2rem;
+      .img_txt{
+        .car_tit{
+          font-size: $font-20r;
+        }
+        .review{
+          display: block;
+        }
+      }
+    }
+  } //side_item
+  .price{
+    font-size: $font-12r;
+    padding-top: 1rem;
+    .pay_wrap{
+      font-size: $font-12r;
+      span{
+        right: 2rem;
+      }
+    }
+    .total{
+      margin-top:2.4rem;
+      .total_txt{
+        span{
+          font-size: $font-12r;
+          &:first-child{
+            font-size: $font-16r;
+          }
+          &:nth-child(2){
+            display: none;
+          }
+        }
+        .hide{
+          display: block;
+        }
+      }
+      .total_num{
+        font-size: $font-20r;
+      }
+    }
+  }
+  /* //payment */
+
+  /* 별점 */
+  .star {
+    background-size: 20%;
+    width: 80px;
+    background-repeat-y: no-repeat;
+    &::after{
+      background-repeat-y: no-repeat;
+    }
+    &.star_c1{
+      &::after{
+        width: 16px;
+        background-size: 100%;
+      }
+    }
+    &.star_c2{
+      &::after{
+        width: 33px;
+        background-size: 48.5%;
+      }
+    }
+    &.star_c3{
+      &::after{
+        width: 49px;
+        background-size: 33%;
+      }
+    }
+    &.star_c4{
+      &::after{
+        width: 63px;
+        background-size: 25.5%;
+      }
+    }
+    &.star_c5{
+      &::after{
+        width: 80px;
+        background-size: 20%;
+      }
+    }
+  }
+  /* //별점 */
+  /* home */
+  .ad_section{
+    padding:2rem;
+    //@include con_wrap(2rem);
+  }
+  .pre_img_sec{
+    display: block;
+    li{
+      width: 100%;
+      padding: 2.4rem 0 7rem 2.4rem;
+      background-size: 100%, 55%;
+      background-position: -2rem, bottom;
+      &:last-child{
+        display: none;
+      }
+      p{
+        margin-bottom: 1rem;
+        width: 100%;
+        &:first-child{
+          font-size: $font-16r;
+        }
+        &:nth-child(2){
+          font-size: $font-12r;
+          line-height: 160%;
+        }
+      }
+      button{
+        padding:1.2rem 2rem;
+        font-size: $font-14r;
+      }
+    }
+  }
+   /* // home */
+
+  /* pick_drop 공통*/
+
+  .pick_drop{
+    position: relative;
+    display: block;
+    &::after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    & > div{
+      width: 100%;
+      padding: 2rem 1.5rem 8rem;
+    }
+    .pick_chk{
+      margin-bottom: 3.2rem;
+    }
+    .swap{
+      position: absolute;
+      left: 50%;
+      top: 41%;
+      transform: translate(-50%);
+    }
+  }
+   /* // pick_drop 공통*/
+
+   /* CarListSwipe,BasicList 공통 */
+  .car_list_wrap{
+    .car_main_wrap{
+      .car_list_tit{
+        font-size: $font-14r;
+      }
+    }
+    .car_list{
+      gap: 0;
+      .car_item{
+        .car_detail{
+          ul{
+            li{
+              font-size: $font-12r;
+            }
+          }
+        }
+      }
+    } /* //CarListSwipe,BasicList 공통 */
+
+    /* CarListSwipe */
+    .car_list_swipe{
+      position: relative;
+      &::after{
+        content : '';
+        position: absolute;
+        right: -18px;
+        top: 4rem;
+        width: 8rem;
+        height: 38rem;
+        background: linear-gradient(-270deg, #ffffff00 0%, #ffffff 100%);
+        z-index: 10;
+      }
+      .car_list{
+        .car_item{
+          width: 25rem;
+          .car_detail{
+            .car_img{
+              width: 90%;
+              margin: 5rem 0;
+            }
+            &::after{
+              bottom: 39%;
+              width: 100%;
+              height: 23%;
+            }
+            & > ul{
+              li{
+                padding: .5rem 0 0 2.5rem;
+              }
+            }
+          }
+        }
+      }
+    } /* // CarListSwipe */
+
+    /* BasicList_list */
+    .basicList_list{
+      .car_list{
+        display: block;
+        .car_item{
+          width: 100%;
+          margin-bottom: 2rem;
+          .car_sub_tit{
+            .list_name{
+              font-size: $font-16r;
+              font-weight: $sb;
+            }
+            .list_type{
+              font-size: $font-12r;
+              font-weight: $md;
+            }
+          }
+          .car_detail{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin: 1rem 0 0;
+            text-align: left;
+            &::after{
+              bottom: 0;
+              width: 55%;
+              height: 41%;
+            }
+            .car_img{
+              width: 55%;
+              margin: 0;
+            }
+            & > ul{
+              display: block;
+              li{
+                padding:0rem 0 0rem 3rem;
+                line-height: 3rem;
+              }
+            }
+          }
+          .car_price{
+            margin-top: 3.6rem;
+          }
+        }
+      }
+    } /* //BasicList_list */
+    .car_price{
+      & > div{
+        font-size: $font-12r;
+        font-weight: $md;
+        & > span{
+          &:first-child{
+            font-size: $font-16r;
+            font-weight: $b;
+          }
+        }
+      }
+      .rent_btn{
+        @include btn_blue($fw:$sb, $br:.4rem, $fs:$font-12r);
+      }
+    }
+    .more_btn{
+      margin: 4rem 0;
+      & > button{
+        @include btn_blue($fw:$sb, $br:.4rem, $fs:$font-12r);
+        margin-left: 5rem;
+      }
+      & > span{
+        font-weight: $b;
+        margin-top: .8rem;
+      }
+    }
+
+  } /* //car_list_wrap */
+
+
+/* check_area 공통*/
+  .side_wrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    .side_list{
+      padding: 3.2rem 3.5rem;
+    }
+  }
+  .catgy_list{
+    padding: 2rem;
+    .pick_drop{
+      position: relative;
+      display: block;
+      &::after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      & > div{
+        width: 100%;
+        padding: 2rem 1.5rem 8rem;
+      }
+      .pick_chk{
+        margin-bottom: 3.2rem;
+      }
+      .swap{
+        position: absolute;
+        left: 50%;
+        top: 41%;
+        transform: translate(-50%);
+      }
+    }
+  }
+  .area_wrap{
+    display: block;
+  }
+
+/* detail */
+.dti_section{
+  width: 100%;
+  padding: 2rem;
+  .pre_car_info{
+    display: block;
+  }
+  .pre_img{
+    width: 100%;
+    .b_view{
+      height: auto;
+      padding: 2.4rem 0 11rem 2.4rem;
+      background-size: 55%, 117%;
+      background-position: 8rem 16rem, 0rem;
+      & > p{
+        &:first-child{
+          margin-bottom: 1.2rem;
+          font-size: $font-16r;
+        }
+        &:nth-child(2){
+          width: 56%;
+          font-size: $font-12r;
+        }
+      }
+    }
+    .s_view{
+      & > ul{
+        li{
+          width: 100%;
+          height: 85px;
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3){
+            background-size: 90% 92%;
+          }
+        }
+      }
+    }
+  }
+  .car_item_dti{
+    width: 100%;
+    margin-top: 3.2rem;
+    .img_txt{
+      margin-left: 0;
+      .car_tit{
+        font-size: $font-20r;
+      }
+      .car_exp{
+        padding-top: 1.6rem;
+        font-size: $font-12r;
+        line-height: 2.4rem;
+      }
+      .item_dti_info{
+        margin-top: 0;
+        table{
+          tr{
+            td{
+              padding-top: 1.2rem;
+              font-size: $font-12r;
+            }
+          }
+        }
+      }
+      .car_price{
+        padding-top: 3.2rem;
+        & > div{
+          font-size: $font-12r;
+          & > span{
+            &:first-child{
+              font-size: $font-20r;
+            }
+          }
+        }
+      }
+    } /* //img_txt */
+  }
+}
+.my_review{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  height: 60px;
+}
+.preview_txt_wrap{
+  .show_all{
+    background-position: 63% center;
+  }
+}
+/* //detail */
+
+/* dashboard */
+.dashboard_wrap{
+  .dash_main{
+    display: none;
+  }
+  .dash_list{
+    display: block;
+    padding: 2rem;
+  }
+}
+.dash_datail{
+  width: 100%;
+  padding: 1.6rem;
+  & > img{
+    width: 100%;
+  }
+  .img_txt{
+    margin-top: 2rem;
+    .rental_car{
+      & > img{
+        width: 116px;
+        height: 64px;
+      }
+    }
+    .license_plate{
+      margin-top: 3rem;
+    }
+  }
+  .pick_drop{
+    display: none;
+  }
+  .price{
+    padding-top:0;
+  }
+}
+.dash_rank{
+  width: 100%;
+  margin-top: 3rem;
+  .pie_graph{
+    padding: 2.4rem;
+    .chart_wrap{
+      display: block;
+      .top_rank{
+        text-align: center;
+        & > div{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          p{
+            &:nth-child(1){
+              font-size: $font-24r;
+              font-weight: $b;
+            }
+            &:nth-child(2){
+              color: $font-clr2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.recent_list{
+  padding: 1.5rem;
+  .img_txt{
+    .dash_rent_bord{
+      .rental_car{
+        img{
+          width: 114px;
+          height: 36px;
+        }
+        .car_tit{
+          font-size: $font-14r;
+        }
+      }
+    }
+  }
+}
+/* recent car list 공통 */
+.img_txt{
+  margin-top: 3.2rem;
+  .dash_rent_bord{
+    padding: 3rem 0;
+    .rental_car{
+      display: flex;
+      .car_tit{
+        font-size: $font-20r;
+      }
+      .car_val{
+        font-size: $font-12r;
+      }
+    }
+  }
+  .license_plate{
+    font-size: $font-12r;
+  }
+}
+/* 공통 서브타이틀 */
+.dash_rental{
+  font-size: $font-16r;
+}
+/* pick-drop */
+.m_dashmemu{
+  display: block;
+  padding:0;
+}
+
+
+
+
+
+
+
+/* //dashboard */
+
+} /* //media */
+
+
+
+/* content e ================================================ */
+/* ---------------------------------------------------------- */

@@ -1,0 +1,33 @@
+{
+    "git.path": "C:\\프로그램\\g\\Git\\bin",
+    "git.autofetch": true,
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.includeItems": [],
+    "liveSassCompile.settings.formats": [
+
+
+        {
+            "format": "compact",
+            "extensionName": ".css",
+            "savePath": "~/../css/"
+        }
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    //크로스브라우징
+    "liveSassCompile.settings.autoprefix": null,
+
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.editorAssociations": {
+        "*.db": "default"
+    },
+    "workbench.preferredDarkColorTheme": "Default Light+",
+    "workbench.preferredHighContrastColorTheme": "Default Light+",
+
+    //esLint작동오류일때
+    "eslint.workingDirectories": [
+      {"mode": "auto"}
+  ]
+}

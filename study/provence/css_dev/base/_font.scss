@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file     : fonts                                           */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* Noto Sans KR s =========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  src: url('../../fonts/NotoSansKr/NotoSansKR-Regular.woff2') format('woff2'),
+  url('../../fonts/NotoSansKr/NotoSansKR-Regular.woff') format('woff'),
+  url('../../fonts/NotoSansKr/NotoSansKR-Regular.otf') format('opentype');
+  font-weight: $r;
+  font-style: normal;
+}
+/* font : Noto Sans KR e ==================================== */
+/* ---------------------------------------------------------- */
+///* -------------------------------------------------------- */
+/* NanumSquare s ======================================= */
+@font-face {
+  font-family: "NanumSquare";
+  font-style: normal;
+  font-weight: normal;
+  src: local("../../fonts/NanumSquare/NanumSquare"); /* computer */
+  src: url("../../fonts/NanumSquare/NanumSquare.eot"); /* IE9 Compat Modes */
+}
+/* NanumSquare e ======================================= */
+/* ---------------------------------------------------------- */
+/* Lato s ======================================= */
+@font-face {
+  font-family: 'Lato';
+  font-weight: normal;
+  font-style: normal;
+  src: local("../../fonts/Lato/Lato-Regular");
+  src:url("../../fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+/* Lato e ======================================= */
+/* ---------------------------------------------------------- */

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('../../page_dev/head.html')
+    <title>프로방스</title>
+</head>
+<body>
+    @@include('../../page_dev/header_gnb.html')
+    <div id="container" class="sub_wrap sub_tower">
+        <div id="here" class="sub_gnb subBg">
+            <h2 class="page_tit">주차타워</h2>
+            @@include('../../page_dev/sub_inner_gnb.html')
+        </div>
+        <div class="sub_content">
+            <div class="small-tit">
+                <p class="tit_txt">주차타워</p>
+                <p class="sub_txt">마을 옆에 있는 주차빌딩에 주차하시고 아래로 내려오시면 또 다른 즐거움들이 가득합니다.
+                    마을로 들어가시기 전과 마을을 떠나시기 전에 숨어 있는 특별한 매장들을 찾아보세요.</p>
+            </div>
+            <div class="content">
+                <div class="floors">
+                    <ul>
+                        <li>B1</li>
+                        <li class="active">1F</li>
+                        <li>2F</li>
+                        <li>3F-7F</li>
+                    </ul>
+                </div>
+                <p class="tower_txt">1F 안내</p>
+                <ul class="tower_tab">
+                    <li><a href="#tab1">전체</a></li>
+                    <li><a href="#tab2" class="on">식당&카페</a></li>
+                    <li><a href="#tab3">패션</a></li>
+                    <li><a href="#tab4">홈리빙</a></li>
+                    <li><a href="#tab5">체험</a></li>
+                </ul>
+                <ul id="tab1" class="store_list tab_off">
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/icon-store.png" alt="logo">
+                            <span>백담원</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/adidas.png" alt="logo">
+                            <span>아디다스</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/amazon.png" alt="logo">
+                            <span>아마존</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/icon-store.png" alt="logo">
+                            <span>백담원</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/adidas.png" alt="logo">
+                            <span>아디다스</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/amazon.png" alt="logo">
+                            <span>아마존</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/icon-store.png" alt="logo">
+                            <span>백담원</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="tab2" class="store_list tab_off" style="display:flex;">
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/icon-store.png" alt="logo">
+                            <span>백담원</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/adidas.png" alt="logo">
+                            <span>아디다스</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="tab3" class="store_list tab_off">
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/icon-store.png" alt="logo">
+                            <span>백담원</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="tab4" class="store_list tab_off">
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/icon-store.png" alt="logo">
+                            <span>백담원</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/icon-store.png" alt="logo">
+                            <span>백담원</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="tab5" class="store_list tab_off">
+                    <li>
+                        <a href="#none">
+                            <img src="@@webRoot/../images/subPage/adidas.png" alt="logo">
+                            <span>아디다스</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    @@include('../../page_dev/footer.html')
+
+    <!-- subPage breadcrumb -->
+    <script type='text/javascript' src="@@webRoot/../js/lnb_data.js"></script>
+    <script>
+        WorksNav_v2.checkCurrentLnbNav("gnb3","gnb3_1"); //현재 페이지 체크
+    </script>
+
+</body>
+</html>

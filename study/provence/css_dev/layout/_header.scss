@@ -1,0 +1,350 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: header                                      	  */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* header s ================================================= */
+.wrap{
+    width: 100%;
+    font-size: $font-18r;
+    .header{
+        height: 89px;
+    }
+    .wrap-inner{
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        .lang{
+            float: left;
+            margin-top: 35px;
+            li{
+                display: inline-block;
+                margin-right: 12px;
+                a{
+                    display: block;
+                    padding-left: 23px;
+                    height: 10px;
+                    line-height: 10px;
+                    font-weight: $bk;
+                    font-size: $font-11r;
+                    color: #969496;
+                }
+                &.eng a{
+                    background:url("../images/vector-smart-object_6.png") no-repeat;
+                }
+                &.chn a{
+                    background:url("../images/vector-smart-object_5.png") no-repeat;
+                }
+            }
+        }
+        .logo{
+            position: absolute;
+            left: 50%;
+            top: 23px;
+            width: 166px;
+            margin-left: -83px;
+        }
+        .sns-list{
+            float: right;
+            margin-top:35px;
+            li{
+                float: left;
+                text-indent: -5000px;
+                font-size: 0;
+                width: 30px;
+                height:30px;
+                border:1px solid #969496;
+                border-radius: 5px;
+                margin-left: 3px;
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                &.face a{
+                    background: url("../images/vector-smart-object_8.png") no-repeat 50% 50%;
+                }
+                &.blog a{
+                    background: url("../images/vector-smart-object_7.png") no-repeat 50% 50%;
+                }
+                &.instar a{
+                    background: url("../images/vector-smart-object_4.png") no-repeat 50% 50%;
+                }
+                &.youtube a{
+                    background: url("../images/vector-smart-object_3.png") no-repeat 50% 50%;
+                }
+            }
+        }
+        .mo-menu-btn{
+            display: none;
+            float: right;
+            width: 55px;
+            margin: auto;
+            background: #718d5a;
+            .menu-wrap{
+                position: relative;
+                width: 30px;
+                height: 22px;
+                margin: 20px auto 20px;
+                .border{
+                    position: absolute;
+                    left: 0;
+                    display: inline-block;
+                    width: 100%;
+                    height: 2px;
+                    background: #fff;
+                }
+                .border_1{
+                    top: 0;
+                }
+                .border_2{
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+                .border_3{
+                    bottom: 0;
+                }
+            }
+        }
+    }
+    .nav{
+        margin-top: 5px;
+        border-top: 1px solid rgb(175, 175, 175);
+        height: 60px;
+        .nav-menu{
+            max-width: 1200px;
+            margin: 0 auto;
+            .menu{
+                float: left;
+                width: 16.666%;
+                text-align: center;
+                position: relative;
+                font-family: $default-font3;
+                &:hover {
+                    &>a{
+                        .en{
+                            display: none;
+                        }
+                        .ko {
+                            display: block;
+                        }
+                    }
+                }
+                &>a{
+                    display: block;
+                    width: 100%;
+                    height: 59px;
+                    line-height: 59px;
+
+                    .ko {
+                        display: none;
+                        margin-left: 60px;
+                        font-family: $default-font2;
+                        font-weight: 500;
+                    }
+                }
+                .on{
+                    border-top: 3px solid #81984e;
+                    border-bottom: 3px solid #81984e;
+                }
+                .ko{
+                    position: absolute;
+                    left: 0px;
+                    top:0;
+                    display: none;
+                }
+                .sub-menu{
+                    display: none;
+                    position:absolute;
+                    left:0px;
+                    top:59px;
+                    width:198px;
+                    background-color:#0b0306;
+                    z-index: 20;
+                    li{
+                        text-align: left;
+                        padding:10px 20px;
+                        > a{
+                            font-family: $default-font2;
+                            display: inline-block;
+                            width: 177px;
+                            color: #fff;
+                            font-size: $font-16r;
+                            padding:10px;
+                        }
+                        a:hover {
+                            color: #81984e;
+                            font-weight: 700;
+                            &::before {
+                                content: "-";
+                                font-size: $font-16r;
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                }
+                .active {
+                    display: block !important;
+                }
+            }
+        }
+    }
+}
+
+/* subPage Breadcrumb */
+.sub_gnb{
+    position: relative;
+    .secon_gnb{
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%);
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+        .list_1{
+            display: flex;
+            p{
+                width: 200px;
+                border-right: 1px solid #ddd;
+            }
+            .home_icon{
+                img{
+                    padding: 17px;
+                    background-color: #8dbb6a;
+                }
+                span{
+                    display: inline-block;
+                    vertical-align: middle;
+                    padding-left: 20px;
+                }
+            }
+            .home_gnb{
+                >a{
+                    display: inline-block;
+                    width: 200px;
+                    padding: 16px 0 16px 20px;
+                    background: url(../images/gnb_icon/s+pluse.png) no-repeat right 20px center;
+                }
+            }
+        }
+        .list_2{
+            > ul{
+                display: flex;
+                li{
+                    a{
+                        display: block;
+                        width: 58px;
+                        height: 55px;
+                        line-height: 55px;
+                        text-align: center;
+                        background-color: #c0dd58;
+                        border-right: 1px solid #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+/* //---------subPage gnb---------// */
+
+
+
+
+/*모바일 지정 */
+@media only screen and (max-width: 1060px) {
+    .wrap{
+        &::after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .header{
+            height: 62px;
+        }
+        .wrap-inner{
+            .lang{
+                display: none;
+            }
+            .logo{
+                top: 0;
+            }
+            .sns-list{
+                display: none;
+            }
+            .mo-menu-btn{
+                display: block;
+            }
+        }
+        .nav{
+            width: 100%;
+            position: absolute;
+            top: 91%;
+            right: 0;
+            z-index: 10;
+            .nav-menu{
+                .menu{
+                    width: 100%;
+                    background-color: #fff;
+                    &>a{
+                        .ko {
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                    }
+                    .sub-menu{
+                        width: 100%;
+                        max-height: 0;
+                        position: inherit;
+                        top:0;
+                        overflow: hidden;
+                        background-color: #f1f1f1;
+                        li{
+                            text-align: center;
+                            padding:10px 20px;
+                            > a{
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* subPage gnb */
+.sub_gnb{
+    .secon_gnb{
+        width: 100%;
+        display: block;
+        .list_1{
+            .home_gnb{
+                >a{
+                    width: 100%;
+                }
+            }
+        }
+        .list_2{
+            display: none;
+        }
+    }
+}
+/* //---------subPage gnb---------// */
+
+/*-----menu click ----- */
+    .menu-on{
+        display: none;
+
+    }
+
+}
+
+/* header e ================================================= */
+/* ---------------------------------------------------------- */

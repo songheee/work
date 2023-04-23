@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <title>blockpage</title>
+    
+    <style>
+        * { box-sizing:border-box;}
+        html, body, p{margin:0; padding:0; font-family: 'Noto Sans KR', sans-serif;}
+        
+        .wrap{display:flex; justify-content:center; align-items:center;padding:55px 15px 52px; width:100vw; height:100vh;}
+        
+        .wrap-page{/*width:755px;*/ /*padding:55px 15px 52px;*/}
+        .logo{text-align: right; border-bottom: 1px solid #a91313; padding-bottom: 2px; }
+        .logo::after {content:""; display:block; width:100%; height:2px; background:#a91313;}
+        .logo img{display: inline-block; margin-bottom: 10px;}
+        
+        .con{margin-top:50px;}
+        .con::after{content:""; display:block; clear:both;}
+        .con-1{float:left; width: 16%;}
+        .con-1 img {width:100%;}
+        .con-2{float:left; margin-left: 20px; width: calc(84% - 20px);}
+        
+        .con-2 .txt-1{font-size: 42px; color: #d41b1b; line-height: 53px;}
+        span{font-weight: bold;}
+        
+        .con-2-1 .txt-2{font-size: 19px; color: #000; margin-top:13px;}
+        .con-2-1 button{font-size: 16px; border: 0; color: #fff; background-color: #452e28; width: 190px; height: 65px; padding: 8px; margin-top: 23px; cursor: pointer;}
+        
+        .con-2-1 {padding-left:calc(16% + 20px);}
+        
+        .con-3{ background: url(images/tel.png) no-repeat 9% 50%  #f2f2f2; padding:20px 20px 20px 123px; border-radius: 4px; margin-top:112px;}
+        .con-3 .tel{margin-left: 24px;}
+        .con-3 .tel p{font-size: 18px; line-height: 28px;}
+        .con-3 .tel p.tel-num{font-size: 16px; color: #555;}
+        
+        .only-m {display:none;}
+        .only-pc{display: none;}
+        @media only screen and (max-width: 480px){
+            
+            .wrap-page{width:100%; height:100%; padding: 36px 20px 0;}
+            .content{flex-wrap: wrap;  flex-direction:row;}
+            .con-1 img{width: 86%; height: 86%; display: inline-block; vertical-align: bottom;}
+            
+            .con-2{margin-left: 0px;width:84%;}
+            .con-2 .txt-1{font-size: 19px; letter-spacing:-0.01em; line-height: 24px;}
+            
+            .con-2-1 {padding-left:0;text-align:center;}
+            .con-2-1 .txt-2{font-size: 15px;}
+            .con-2-1 button{width: 200px; height: 50px; padding: 5px; margin-top:23px; margin-left: 15px; font-size: 15px;}
+            
+            .con-3{ background: url(images/tel.png) no-repeat 97% 68%  #f2f2f2; padding:15px 0 15px 20px; border-radius: 4px; margin-top: 69px; background-size: 72px;}
+            .con-3 .tel{margin-left: 0px;}
+            .con-3 .tel p{font-size: 13px; line-height: 20px; width: 78%;}
+            .con-3 .tel p.tel-num{font-size: 12px; margin-top: 8px;}
+            
+           /* .only-m {display:none;}*/
+            
+            
+        }
+        
+        @media only screen and (max-width: 740px){
+         .only-m {display:block;}
+        }
+        @media only screen and (min-width: 741px){
+         .only-pc {display:block;}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+      <div class="wrap-page">
+           <div class="logo">
+               <img src="images/logo.png" alt="가치삽시다">
+           </div>
+           <div class="content">
+              <div class="con">
+                  <p class="con-1"><img src="images/mark.png" alt="경고"></p>
+                  <div class="con-2">
+                      <p class="txt-1">연속된 새로고침&#40;F5&#41; 클릭으로<br> <span>잠시 서비스가 중지</span> 되었습니다.</p>                      
+                  </div>
+              </div>
+              <div class="con-2-1">
+                  <p class="txt-2">잠시후에 다시 연결을 해주시기를 바랍니다.</p>
+                  <button type="button">가치삽시다로 이동</button>
+                </div>
+              <div class="con-3">
+                  <div class="tel">
+                      <p>정상 사용중 차단된 경우 아래 연락처로<br class="only-m"> 문의주시기를 바랍니다.</p>
+                      <p class="tel-num">가치삽시다 고객센터 <span>1899-4049</span></p>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

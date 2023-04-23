@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>captcha page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html,
+        body,
+        p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .content {
+            display:flex;
+            justify-content:center;
+            max-width: 993px;
+            width:100%;
+            background:url(images/captcha_bg_pc.png) no-repeat 50% 32px;
+            background-size:contain;
+        }
+        .con-box {
+            margin-top:46%;
+            padding:36px 15px 28px;
+            max-width:660px;
+            width:100%;
+            text-align:center;
+            background:#fff;
+            border:2px solid #00349a;
+            border-radius:20px;
+            box-shadow:3px 2.7px 0 rgba(0,140,214,0.43);
+        }
+        .main-txt {
+            font-weight:500;
+            font-size:36px;
+            line-height:44px;
+            color:#1d2088;
+        }
+        .main-txt span {
+            text-decoration:underline;
+        }
+        .sub-txt {
+            padding-top:25px;
+            font-weight:500;
+            font-size:24px;
+            line-height:32px;
+            color:#000;
+        }
+        .captcha-box {
+            margin-top:20px;
+            display:inline-block;
+            max-width:300px;
+            width:100%;
+            height:76px;
+            background:#eee;
+        }
+        @media only screen and (max-width: 640px) {
+            .wrap {
+                align-items:flex-start;
+            }
+            .content {
+                background:url(images/captcha_bg_m.png) no-repeat 50% 0;
+                background-size:cover;
+            }
+            .con-box {
+                margin-top:40vh;
+                margin-right:25px;
+                margin-left:25px;
+                padding-top:32px;
+                padding-bottom:37px;
+            }
+            .main-txt {
+                font-size:21px;
+                line-height:25px;
+            }
+            .sub-txt {
+                font-size:17px;
+                line-height:22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="content">
+            <div class="con-box">
+                <p class="main-txt">연속된 새로고침(F5) 클릭으로<br><span>잠시 서비스가 중지</span>되었습니다.</p>
+                <p class="sub-txt">가치삽시다로 접근하시려면,<br>아래 내용을 확인해주시기 바랍니다.</p>
+                <div class="captcha-box"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

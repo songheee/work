@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: footer                                      	  */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* footer s ================================================= */
+.footer{
+  @include wrap_p($pd:8rem 3.5rem 4rem);
+  font-size: $font-16r;
+  color: $font-clr;
+  .first_line{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+    .foot_logo{
+      flex-basis: 30rem;
+      p{
+        margin-top: 1.6rem;
+        color:$font-clr2;
+      }
+    }
+    & > ul{
+      display: flex;
+      flex-basis: 60rem;
+      justify-content: space-between;
+      .f_tit{
+        span{
+          font-size: $font-20r;
+          font-weight: $sb;
+          color: #1A202C;
+        }
+        & > ul{
+          margin-top: 1.6rem;
+          li{
+            a{
+              display: inline-block;
+              line-height: 5rem;
+              color:#131313;
+            }
+          }
+        }
+      }
+    }
+  }
+  .secon_line{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #13131329;
+    padding: 3rem 0;
+    color:#1A202C;
+    font-weight: $sb;
+    &>div{
+      display: flex;
+      flex-basis: 32rem;
+      justify-content: space-between;
+    }
+  }
+
+
+
+}
+
+
+
+
+/*모바일 지정 */
+@media only screen and (max-width: 768px) {
+    .footer{
+      padding: 1rem 2.4rem 0;
+      background-color: #F6F7F9;
+      .first_line{
+        flex-wrap: wrap;
+        padding-bottom: 0;
+        .foot_logo{
+          img{
+            width: 11rem;
+          }
+          p{
+            width: 75%;
+            font-size: $font-12r;
+            line-height: 2.7rem;
+          }
+        }
+        & > ul{
+          flex-wrap: wrap;
+          margin-top: 4rem;
+          .f_tit{
+            margin-bottom: 4rem;
+            padding-right: 2rem;
+            &:nth-child(2){
+              order:3;
+            }
+            &>ul{
+              &>li{
+                &>a{
+                  line-height: 4rem;
+                  color:$font-clr2;
+                }
+              }
+            }
+          }
+        }
+      }
+      .secon_line{
+        flex-wrap: wrap-reverse;
+        font-size: $font-12r;
+        border-top:none;
+        padding-top: 0;
+        &>div{
+          margin-bottom: 3rem;
+        }
+      }
+
+    }
+
+
+
+
+}
+/* footer e ================================================= */
+/* ---------------------------------------------------------- */

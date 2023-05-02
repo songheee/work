@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file     : fonts                                           */
+// writer	: 김송희
+// date		: 20221123
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* NaverNanumSquareNeo s =========================================== */
+
+@font-face {
+  font-family: 'NaverNanumSquareNeo';
+  src: url('../fonts/NanumSquareNeoTTF-aLt.woff2') format('woff2'),
+  url('../fonts/NanumSquareNeoTTF-aLt.woff') format('woff'),
+  url('../fonts/NanumSquareNeoTTF-aLt.eot') format('eot'),
+  url('../fonts/NanumSquareNeoOTF-aLt.otf') format('opentype'),
+  url('../fonts/NanumSquareNeo-aLt.ttf') format('truetype');
+  font-weight: $l;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NaverNanumSquareNeo';
+  src: url('../fonts/NanumSquareNeoTTF-bRg.woff2') format('woff2'),
+  url('../fonts/NanumSquareNeoTTF-bRg.woff') format('woff'),
+  url('../fonts/NanumSquareNeoTTF-bRg.eot') format('eot'),
+  url('../fonts/NanumSquareNeoOTF-bRg.otf') format('opentype'),
+  url('../fonts/NanumSquareNeo-bRg.ttf') format('truetype');
+  font-weight: $r;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NaverNanumSquareNeo';
+  src: url('../fonts/NanumSquareNeoTTF-cBd.woff2') format('woff2'),
+  url('../fonts/NanumSquareNeoTTF-cBd.woff') format('woff'),
+  url('../fonts/NanumSquareNeoTTF-cBd.eot') format('eot'),
+  url('../fonts/NanumSquareNeoOTF-cBd.otf') format('opentype'),
+  url('../fonts/NanumSquareNeo-cBd.ttf') format('truetype');
+  font-weight: $b;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NaverNanumSquareNeo';
+  src: url('../fonts/NanumSquareNeoTTF-dEb.woff2') format('woff2'),
+  url('../fonts/NanumSquareNeoTTF-dEb.woff') format('woff'),
+  url('../fonts/NanumSquareNeoTTF-dEb.eot') format('eot'),
+  url('../fonts/NanumSquareNeoOTF-dEb.otf') format('opentype'),
+  url('../fonts/NanumSquareNeo-dEb.ttf') format('truetype');
+  font-weight: $eb;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NaverNanumSquareNeo';
+  src: url('../fonts/NanumSquareNeoTTF-eHv.woff2') format('woff2'),
+  url('../fonts/NanumSquareNeoTTF-eHv.woff') format('woff'),
+  url('../fonts/NanumSquareNeoTTF-eHv.eot') format('eot'),
+  url('../fonts/NanumSquareNeoOTF-eHv.otf') format('opentype'),
+  url('../fonts/NanumSquareNeo-eHv.ttf') format('truetype');
+  font-weight: $hv;
+  font-style: normal;
+}
+
+/* font : NaverNanumSquareNeo e ==================================== */
+

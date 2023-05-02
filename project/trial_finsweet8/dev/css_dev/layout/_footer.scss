@@ -1,0 +1,231 @@
+@charset "utf-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: footer                                      	  */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* footer s ================================================= */
+
+// footer_sponsors
+.footer_top{
+  position: relative;
+  z-index: 1;
+}
+.footer_sponsors {
+  color: #fff;
+  padding: 72px 0;
+  background-color: $prime_color;
+  text-align: center;
+  transform: translateY(30%);
+  .logoipsum {
+    margin-top: 64px;
+    font-size: 0;
+    overflow: hidden;
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      li {
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+//footer_con
+.footer_con {
+    color: #fff;
+    width: 100%;
+    background-color: $black;
+    padding: 195px 80px 96px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    &::after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .pages,
+    .reach_us,
+    .subscribe {
+        h4 {
+            font-weight: $b;
+            margin-bottom: 32px;
+            font-size: 20px;
+        }
+        li {
+            margin-bottom: 16px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.footer_con {
+    .subscribe {
+        ul {
+            li {
+                margin-bottom: 32px;
+            }
+        }
+    }
+}
+
+//copyright
+.copyright {
+    height: 64px;
+    line-height: 64px;
+    color: #fff;
+    background-color: $prime_color;
+    text-align: center;
+    font-weight: $b;
+}
+
+//dark_mode
+.button-cover,
+.sun,
+.moon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+}
+.turn {
+  position: relative;
+  top: 52%;
+  left: 82px;
+  width: 5rem;
+  height: 2.6rem;
+  margin: -2rem auto 0 auto;
+  overflow: hidden;
+  border-radius: 100px;
+  .switch_chk {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .sun,
+  .moon{
+    transition: 0.3s ease all;
+  }
+  .sun {
+    width: 100%;
+    z-index: 2;
+    &::before {
+      content: "";
+      background: url(../../assets/images/ico/sun.png) no-repeat 50% center;
+      position: absolute;
+      top: .4rem;
+      left: .4rem;
+      width: 1rem;
+      height: 0rem;
+      padding: .9rem .4rem;
+      background-color: $prime_color;
+      border-radius: 50%;
+      transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+    }
+  }
+  .moon {
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+  }
+  .switch_chk:checked + .sun:before {
+    content: "";
+    left: 2.9rem;
+    background: $prime_color url(../../assets/images/ico/moon.png) no-repeat 60% center;
+  }
+}
+
+/* ---------------------------------------------------------- */
+
+//mdq pc
+@media only screen and (max-width: 768px) {
+
+  .footer_top {
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .footer_sponsors,
+  .inbox_wrap {
+    padding: 42px 42px !important;
+    transform: inherit;
+    .logoipsum {
+      margin-top: 34px;
+      ul {
+        flex-wrap: wrap;
+        li {
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .footer_con {
+      padding: 60px 20px;
+      flex-direction: column;
+      transform: inherit;
+    .logo_wrap {
+        margin-bottom: 40px;
+    }
+    .pages,
+    .reach_us {
+        margin-bottom: 60px;
+    }
+    .subscribe {
+        margin-bottom: 0;
+    }
+  }
+  //dark_mode
+  .turn {
+    top: 11%;
+    left: 238px;
+  }
+
+}
+
+
+//mdq tab
+@media only screen and (max-width: 425px) {
+
+  .footer_sponsors {
+    transform: inherit;
+    .logoipsum {
+      img {
+          width: 45%;
+      }
+    }
+  }
+
+  .footer_con {
+    .logo_wrap {
+      margin-bottom: 50px;
+    }
+    .pages,
+    .reach_us {
+      margin-bottom: 50px;
+    }
+    .subscribe {
+      margin-bottom: 0px;
+    }
+  }
+
+}
+
+/* footer e ================================================= */
+/* ---------------------------------------------------------- */

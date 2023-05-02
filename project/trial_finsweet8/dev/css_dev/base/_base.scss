@@ -1,0 +1,436 @@
+@charset "utf-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: base                                            */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* base s =================================================== */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: var(--background);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: $r;
+  color: #000;
+}
+
+:root[color-theme='light'] {
+  --background: #fff;
+  --fontColor: #000;
+}
+
+:root[color-theme='dark'] {
+  --background: #222;
+  --fontColor: #fff;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+// content padding
+.con_pd {
+  padding: 0 80px;
+}
+// margin
+.con-m{
+  margin-top: $margin-t;
+}
+
+/* text_heading List */
+.heading_1 {
+  font-size: 48px;
+  font-weight: $b;
+}
+.heading_2 {
+  font-size: 32px;
+  font-weight: $b;
+}
+.heading_3 {
+  font-size: 24px;
+  font-weight: $sb;
+}
+.heading_4 {
+  font-size: 20px;
+  font-weight: $sb;
+}
+.heading_5 {
+  font-size: 16px;
+  font-weight: $r;
+}
+.heading_6 {
+  font-size: 12px;
+  font-weight: $r;
+  margin-bottom: 0;
+}
+
+/* color_palette */
+.prime_color {
+  background-color: $prime_color;
+}
+.sub_color {
+  background-color: $sub_color;
+}
+.color_1 {
+  background-color: $color_1
+}
+.color_2 {
+  background-color: $color_2;
+}
+.color_3 {
+  background-color: black;
+  color: #fff;
+}
+.color_4 {
+  background-color: $color_4;
+}
+.color_5 {
+  background-color: $color_5;
+}
+
+
+/* btn List */
+//btn_type _ 공통
+.btn_typ_01{
+  display: inline-block;
+  padding: 12px 32px;
+  cursor: pointer;
+  &:hover {
+    transition: .5s;
+  }
+}
+.btn_typ_02{
+  display: inline-block;
+  font-weight: $sb;
+  color: $prime_color;
+}
+
+.btn_1 {
+  background-color: $prime_color;
+  color: #fff;
+  &:hover {
+    background-color: #3E2DB2;
+  }
+}
+
+.btn_2 {
+  border: 2px solid #14142B;
+  &:hover {
+    border: 2px solid $sub_color;
+    color: $sub_color;
+  }
+}
+/* btn_bg_del은 빼고 btn_3만 사용 (보여주기위한 배경색넣음) */
+.btn_bg_del{
+  display: inline-block;
+  margin-right: 48px;
+  padding: 10px;
+  background-color: #3E2DB2;
+}
+.btn_3{
+  border:2px solid #fff;
+  color: #fff;
+  &:hover {
+    border: 2px solid $color_4;
+    color: $color_4;
+  }
+}
+
+.btn_listen,
+.btn_read {
+  &:hover {
+    color: #3E2DB2;
+    transition: .5s;
+      .play {
+        background-color: #3E2DB2;
+        transition: .5s;
+      }
+  }
+  i.play {
+    background: url(../../assets/images/ico/ico_play.png) no-repeat center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $prime_color;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+}
+
+
+// category podcasts - podcasts list
+.cate_pod {
+  display: inline-block;
+  padding: 12px 32px;
+  border: 1px solid $color_4;
+  border-radius: 28.5px;
+  font-weight: $b;
+  color: $color_4;
+  &.on{
+    border: 1px solid $prime_color;
+    background-color: $prime_color;
+    color: #fff;
+  }
+}
+
+/* sns List */
+.facebook_b {
+  background: url(../../assets/images/ico/ico_facebook.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.linkedIn_b {
+  background: url(../../assets/images/ico/ico_linkedIn.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+.instagram_b {
+  background: url(../../assets/images/ico/ico_instagram.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+.sns{
+  & > li{
+    &:nth-child(1){
+      & > a{
+        &.chg_img{
+          background: url(../../assets/images/ico/ico_facebook_p.png) no-repeat center;
+        }
+      }
+    }
+    &:nth-child(2){
+      & > a{
+        &.chg_img{
+          background: url(../../assets/images/ico/ico_linkedIn_p.png) no-repeat center;
+        }
+      }
+    }
+    &:nth-child(3){
+      & > a{
+        &.chg_img{
+          background: url(../../assets/images/ico/ico_twitter_p.png) no-repeat center;
+        }
+      }
+    }
+  }
+}
+
+.facebook_s {
+  background: url(../../assets/images/ico/ico_facebook.svg) no-repeat center / 100%;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+.linkedIn_s {
+  background: url(../../assets/images/ico/ico_linkedIn.svg) no-repeat center / 100%;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+.instagram_s {
+  background: url(../../assets/images/ico/ico_instagram.svg) no-repeat center / 100%;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+// /* sns List */
+ul.socials_list {
+  margin-top: 32px;
+  overflow: hidden;
+  li {
+    float: left;
+    margin-right: 24px;
+    .ico_facebook_p {
+      background: url(../../assets/images/ico/ico_facebook_p.png) no-repeat center;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+    }
+    .ico_twitter_p {
+      background: url(../../assets/images/ico/ico_twitter_p.png) no-repeat center;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+    }
+    .ico_linkedIn_p {
+      background: url(../../assets/images/ico/ico_linkedIn_p.png) no-repeat center;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 0;
+    }
+  }
+}
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  margin: -1px;
+}
+
+.db {
+  display: block;
+}
+
+.dn {
+  display: none;
+}
+
+/* layout_your_inbox */
+.inbox_wrap{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0;
+  text-align: center;
+  color: #fff;
+  background-color: $prime_color;
+  z-index: 1;
+  transform: translateY(30%);
+  &::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../../assets/images/temp/bg_vector.png) no-repeat bottom;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.1;
+    z-index: -1;
+  }
+  .email_send{
+    margin: 32px auto 0 auto;
+    input[type=submit]{
+      background-color: $sub_color;
+    }
+    &::before,
+    &::after{
+      content: '';
+      display: block;
+      width: 114px;
+      height: 120px;
+      position: absolute;
+      z-index: -1;
+    }
+    &::before{
+      background: url(../../assets/images/ico/mic_2.png) no-repeat;
+      left: 10%;
+      top: 19%;
+    }
+    &::after{
+      background: url(../../assets/images/ico/mic_1.png) no-repeat;
+      right: 10%;
+      top: 50%;
+    }
+  }
+}
+
+
+/* tablet 지정 */
+@media only screen and (max-width: 768px) {
+  .heading_1 {
+    font-size: 28px;
+  }
+  .heading_2 {
+    font-size: 24px;
+  }
+  .heading_3 {
+    font-size: 18px;
+  }
+  .heading_4 {
+    font-size: 16px;
+  }
+  .heading_5 {
+    font-size: 14px;
+  }
+  .heading_6 {
+    font-size: 12px;
+  }
+
+  // margin
+  .con-m{
+    margin-top: $margin-t-m;
+  }
+  // content padding
+  .con_pd {
+    padding: 0 20px;
+  }
+
+  /* your_inbox */
+  .inbox_wrap{
+    margin: 80px 0 0 0;
+    .email_send{
+      margin: 32px auto 0 auto;
+      &::before{
+        left: 0;
+      }
+    }
+  }
+
+}/* //tablet 지정 */
+
+/* mobile 지정 */
+@media only screen and (max-width: 425px) {
+  .heading_1 {
+    font-size: 20px;
+  }
+  .heading_2 {
+    font-size: 18px;
+  }
+  .heading_3 {
+    font-size: 16px;
+  }
+  .heading_4 {
+    font-size: 14px;
+  }
+  .heading_5 {
+    font-size: 12px;
+  }
+  .heading_6 {
+    font-size: 10px;
+  }
+
+  // margin
+  .con-m{
+    margin-top: $margin-t-s;
+  }
+
+  /* your_inbox */
+  .inbox_wrap{
+    background-image: none;
+    padding: 40px 0;
+    .heading_2{
+      font-size: $font-16r;
+    }
+    .email_send{
+      margin: 16px auto 0 auto;
+      &::before,
+      &::after{
+        display: none;
+      }
+    }
+  }
+
+}/* //mobile 지정 */
+
+
+/* base e =================================================== */
+/* ---------------------------------------------------------- */

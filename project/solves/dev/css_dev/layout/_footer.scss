@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: footer                                	          */
+// writer	: 김송희
+// date		: 20221123
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* footer s ================================================= */
+footer{
+  height: 0;
+  position: relative;
+  transform: translateY(-100%);
+}
+
+.footer{
+  padding: 2.9rem 1rem;
+  text-align: center;
+  line-height: 2rem;
+  color: #e4e4e4;
+  background-color: #474747;
+  .tit_fb{
+    font-weight: $b;
+  }
+  span{
+    & > a{
+      color: #e4e4e4;
+    }
+  }
+  .copyright{
+    padding-top: 1.4rem;
+    font-size: $font-12r;
+    color: $sub_gray;
+  }
+}
+
+
+/* tablet */
+@media only screen and (max-width: 768px) {
+  .footer{
+    font-size: $font-12r;
+    .copyright{
+      padding-top: .5rem;
+      font-size: $font-10r;
+    }
+  }
+
+}/* tablet */
+
+/* footer e ================================================= */
+/* ---------------------------------------------------------- */

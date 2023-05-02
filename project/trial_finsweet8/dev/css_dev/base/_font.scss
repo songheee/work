@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* ========================================================== */
+/*                                                            */
+/* file     : fonts                                           */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* Inter s =========================================== */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+    url('../fonts/Inter-Regular.woff') format('woff'),
+    url('../fonts/Inter-Regular.eot') format('eot'),
+    url('../fonts/Inter-Regular.otf') format('otf'),
+    url('../fonts/Inter-Regular.ttf') format('truetype');
+    font-weight: $r;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-SemiBold.woff2') format('woff2'),
+    url('../fonts/Inter-SemiBold.woff') format('woff'),
+    url('../fonts/Inter-SemiBold.eot') format('eot'),
+    url('../fonts/Inter-SemiBold.otf') format('otf'),
+    url('../fonts/Inter-SemiBold.ttf') format('truetype');
+    font-weight: $sb;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Bold.woff2') format('woff2'),
+    url('../fonts/Inter-Bold.woff') format('woff'),
+    url('../fonts/Inter-Bold.eot') format('eot'),
+    url('../fonts/Inter-Bold.otf') format('otf'),
+    url('../fonts/Inter-Bold.ttf') format('truetype');
+    font-weight: $b;
+    font-style: normal;
+  }
+/* Inter e ======================================= */
+/* ---------------------------------------------------------- */

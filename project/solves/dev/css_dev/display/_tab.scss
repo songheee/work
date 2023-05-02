@@ -1,0 +1,786 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: contents                                   	      */
+// writer	: 김송희
+// date		: 20221123
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* tab s ==================================================== */
+
+.tab_menu{
+  position:relative;
+  .tab_list{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #c3c3c3;
+    padding: 0 20rem;
+    li{
+      padding: 4rem 5rem;
+      margin-top: 3rem;
+      margin-bottom: -1px;
+      .tab_btn{
+        padding: 4rem 5rem;
+        font-size: $font-16r;
+        color: $title_fc;
+        background-position: top center;
+        background-repeat: no-repeat;
+      }
+      &:nth-child(1){
+        .tab_btn{
+          background-image: url(../../assets/images/icon-off-01.png);
+        }
+      }
+      &:nth-child(2){
+        .tab_btn{
+          background-image: url(../../assets/images/icon-off-02.png);
+        }
+      }
+      &:nth-child(3){
+        .tab_btn{
+          background-image: url(../../assets/images/icon-off-03.png);
+        }
+      }
+      &.is_on{
+        border-bottom: 2px solid #0443a1;
+        .tab_btn{
+          font-weight: $b;
+          color:#0443a1;
+        }
+        &:nth-child(1){
+          .tab_btn{
+            background-image: url(../../assets/images/icon-on-01.png);
+          }
+        }
+        &:nth-child(2){
+          .tab_btn{
+            background-image: url(../../assets/images/icon-on-02.png);
+          }
+        }
+        &:nth-child(3){
+          .tab_btn{
+            background-image: url(../../assets/images/icon-on-03.png);
+          }
+        }
+      }
+    }
+  }
+  .tab_cont{
+    display: none;
+    &.is_on{
+      display: block;
+    }
+    .tab_tit_wrap{
+      .tab_tit{
+        margin-top: 5rem;
+        text-align: center;
+      }
+      .marker{
+        width: 12.4rem;
+        height: 2.8rem;
+        padding: .5rem 0;
+        margin: 0 auto;
+        border-radius: 1.4rem;
+        color: $white;
+        background-color: #256bf1;
+      }
+      .tab_main_tit{
+        margin-top: 1.5rem;
+        p{
+          &:nth-child(1){
+            font-size: $font-40r;
+            font-weight: $hv;
+            color: #333;
+            span{
+              font-weight: $b;
+            }
+          }
+          &:nth-child(2){
+            margin-top: 1.5rem;
+            font-size: $font-20r;
+            color: #0443a1;
+          }
+        }
+      }
+      .tab_sub_info{
+        margin-top: 4.9rem;
+        margin-bottom: 13rem;
+        &::before{
+          content: '';
+          display: block;
+          min-height: 40rem;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+        p{
+          margin-top: 3.7rem;
+          padding:0 8rem;
+          &:last-child{
+            margin-top: 3.7rem;
+            font-size: $font-20r;
+            color: #555;
+          }
+        }
+      }
+      .icon_wrap{
+        padding: 0 6rem;
+        margin-bottom: 13rem;
+        .icon_list{
+          border:1px solid #d7d7d7;
+          color: #333;
+        }
+      }
+      &.tab_con_01{
+        .tab_sub_info{
+          &::before{
+            background-image: url(../../assets/images/b-sub-img-03.png);
+          }
+          p{
+            &:nth-child(2){
+              margin-bottom: 7rem;
+              font-size: $font-20r;
+            }
+            &.m_chg{
+              width: 100%;
+              text-align: center;
+              img{
+                width: 100%;
+              }
+              .mo_only{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      &.tab_con_02{
+        .tab_sub_info{
+          &::before{
+            background-image: url(../../assets/images/b-sub-img-02.png);
+          }
+          p{
+            &.txt_30{
+              & > span{
+                font-weight: $eb;
+                color: #385fa9;
+              }
+            }
+            &:last-child{
+              margin-bottom: 3.7rem;
+            }
+          }
+        }
+        .icon_list{
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-wrap: wrap;
+          padding: 4rem 0;
+          .list_item{
+            font-size: $font-18r;
+            &::before{
+              content: '';
+              display: inline-block;
+              width: 3.2rem;
+              height: 3.2rem;
+              vertical-align: middle;
+              padding-right: 1.3rem;
+            }
+            &::after{
+              content: '';
+              display: inline-block;
+              width: .1rem;
+              height: 4rem;
+              vertical-align: middle;
+              margin-left: 8rem;
+              background-color:#d7d7d7;
+            }
+            &:nth-child(1){
+              &::before{
+                background: url(../../assets/images/b-s-icon-01.png) no-repeat center;
+              }
+            }
+            &:nth-child(2){
+              &::before{
+                background: url(../../assets/images/b-s-icon-02.png) no-repeat center;
+              }
+            }
+            &:nth-child(3){
+              &::before{
+                background: url(../../assets/images/b-s-icon-03.png) no-repeat center;
+              }
+            }
+            &:nth-child(4){
+              &::before{
+                background: url(../../assets/images/b-s-icon-04.png) no-repeat center;
+              }
+              &::after{
+                display: none;
+              }
+            }
+          }
+        }
+        .monitoring_wrap{
+          margin-bottom: 7rem;
+        }
+        .service_wrap{
+          .ser_tit{
+            padding: 2.2rem 0;
+            text-align: center;
+            font-size: $font-22r;
+            font-weight: $b;
+            color: #333;
+          }
+          .main_tit{
+            border: 1px solid #393939;
+            border-radius: 4rem 4rem 0 0;
+            margin-bottom: 1.5rem;
+          }
+          .ser_icon{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .ser_wrap{
+              .ser_tit{
+                color: $white;
+              }
+              .ser_list{
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                padding: 6rem 0;
+                height: 80%;
+                .ser_item{
+                  line-height: 1.44;
+                  text-align: center;
+                  font-size: $font-18r;
+                  color: #333;
+                  &::before{
+                    content: '';
+                    display: block;
+                    width: 11rem;
+                    height: 9rem;
+                    margin-bottom: 3.2rem;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                  }
+                }
+              }
+            }
+            .ser_wrap_01{
+              width: 56%;
+              .ser_tit{
+                background-color: #385fa9;
+              }
+              .ser_list_01{
+                background-color: #f1f6ff;
+                .ser_item{
+                  &:nth-child(1){
+                    &::before{
+                      background-image: url(../../assets/images/b-icon-02.png);
+                    }
+                  }
+                  &:nth-child(2){
+                    &::before{
+                      background-image: url(../../assets/images/b-icon-03.png);
+                    }
+                  }
+                  &:nth-child(3){
+                    &::before{
+                      background-image: url(../../assets/images/b-icon-01.png);
+                    }
+                  }
+                  &:nth-child(4){
+                    &::before{
+                      background-image: url(../../assets/images/b-icon-05.png);
+                    }
+                  }
+                }
+              }
+            }
+            .ser_wrap_02{
+              width: 42%;
+              .ser_tit{
+                background-color: #3e96af;
+              }
+              .ser_list_02{
+                background-color: #f1feff;
+                .ser_item{
+                  &:nth-child(1){
+                    &::before{
+                      background-image: url(../../assets/images/b-icon-04.png);
+                    }
+                  }
+                  &:nth-child(2){
+                    &::before{
+                      background-image: url(../../assets/images/b-icon-06.png);
+                    }
+                  }
+                  &:nth-child(3){
+                    &::before{
+                      background-image: url(../../assets/images/b-icon-07.png);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &.tab_con_03{
+        .tab_sub_info{
+          &::before{
+            background-image: url(../../assets/images/b-sub-img-01.png);
+          }
+          p{
+            &:last-child{
+              margin-bottom: 6rem;
+            }
+          }
+        }
+        .app_manage_wrap{
+          display: flex;
+          padding: 4rem;
+          margin-bottom: 5rem;
+          &:nth-child(1){
+            align-items: center;
+            .sub_mini_tit{
+              margin-top: 0;
+            }
+          }
+          .sub_mini_tit{
+            width: 30%;
+            margin-top: 2rem;
+            font-size: $font-26r;
+            font-weight: $eb;
+            color: #1a3970;
+            & > span{
+              display: block;
+              margin-top: 1rem;
+              font-size: $font-18r;
+              font-weight: $r;
+            }
+          }
+          p{
+            &.m_chg{
+              width: 100%;
+              text-align: center;
+              img{
+                width: 80%;
+              }
+              .mo_only{
+                display: none;
+              }
+            }
+          }
+          .app_m_list_01{
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+            .list_item{
+              width: 25%;
+              position: relative;
+              padding: 1rem 2rem;
+              font-size: $font-18r;
+              background-color: #f1f8fb;
+              border:1px solid #cde3ec;
+              border-radius: 6rem;
+              &::before{
+                content: '';
+                display: inline-block;
+                width: 8rem;
+                height: 8rem;
+                vertical-align: middle;
+                margin-right: 1.5rem;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: $white;
+                border-radius: 50%;
+              }
+              &::after{
+                content: '';
+                display: block;
+                position: absolute;
+                left: -22%;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 3.1rem;
+                height: 2.7rem;
+                background-image: url(../../assets/images/arrow-p.png);
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+              &:nth-child(1){
+                &::before{
+                  background-image: url(../../assets/images/b-m-icon-01.png);
+                }
+                &::after{
+                  display: none;
+                }
+              }
+              &:nth-child(2){
+                &::before{
+                  background-image: url(../../assets/images/b-m-icon-02.png);
+                }
+              }
+              &:nth-child(3){
+                &::before{
+                  background-image: url(../../assets/images/b-m-icon-03.png);
+                }
+              }
+            }
+          }
+          .schematic{
+            width: 100%;
+          }
+          .app_m_list_02{
+            width: 70%;
+            .list_item{
+              margin-bottom: 2rem;
+              &:last-child{
+                margin-bottom: 0;
+              }
+              .tms_con{
+                display: flex;
+                align-items: center;
+                & > p{
+                  width: 25%;
+                  height: 6rem;
+                  padding:2rem 0;
+                  border:1px solid #2e63c2;
+                  border-radius: 3rem;
+                  text-align: center;
+                  font-size: $font-18r;
+                  font-weight: $b;
+                  color: #2e63c2;
+                }
+                .line{
+                  width: 2.3rem;
+                  height: .1rem;
+                  background-color: #d7d7d7;
+                }
+                & > ul{
+                  width: 75%;
+                  padding: 2.5rem 3.5rem;
+                  border-radius: .8rem;
+                  background-color: #f5f5f5;
+                  border:1px solid #d7d7d7;
+                  & > li{
+                    line-height: 1.78;
+                    font-size: $font-18r;
+                    color: #333;
+                  }
+                }
+              }
+            }
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1360px) {
+  .tab_menu{
+    .tab_list{
+      padding: 0;
+      li{
+        padding: 4rem 0;
+        margin-top: 3rem;
+        .tab_btn{
+          padding: 4rem 3rem;
+          font-size: $font-16r;
+        }
+      }
+    }
+    .tab_cont{
+      .tab_tit_wrap{
+        .tab_main_tit{
+          p{
+            &:nth-child(1){
+              font-size: $font-36r;
+            }
+            &:nth-child(2){
+              font-size: $font-16r;
+            }
+          }
+        }
+        .tab_sub_info{
+          p{
+            padding:0 1rem;
+            &:last-child{
+              margin-top: 2.3rem;
+              margin-bottom: 4rem;
+              font-size: $font-16r;
+            }
+          }
+        }
+        &.tab_con_02{
+          .icon_list{
+            .list_item{
+              &::after{
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+        &.tab_con_03{
+          .app_manage_wrap{
+            flex-wrap: wrap;
+            .sub_mini_tit{
+              width: 100%;
+              margin-bottom: 2rem;
+              font-size: $font-20r;
+              & > span{
+                font-size: $font-16r;
+              }
+            }
+            .app_m_list_01{
+              width: 100%;
+              .list_item{
+                width: 100%;
+                margin-right: 7rem;
+                font-size: $font-16r;
+              }
+            }
+            .app_m_list_02{
+              width: 100%;
+              .list_item{
+                .tms_con{
+                  & > p{
+                    margin-right: 3rem;
+                    font-size: $font-16r;
+                  }
+                  .line{
+                    display: none;
+                  }
+                  & > ul{
+                    width: 100%;
+                    & > li{
+                      font-size: $font-16r;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/* tablet */
+@media only screen and (max-width: 768px) {
+  .tab_menu{
+    .tab_cont{
+      .tab_tit_wrap{
+        .tab_sub_info{
+          p{
+            &:last-child{
+              margin-bottom: 0;
+            }
+          }
+        }
+        &.tab_con_01{
+          .tab_sub_info{
+            p{
+              &:nth-child(2){
+                margin-bottom: 4rem;
+                font-size: $font-16r;
+              }
+              &.m_chg{
+                width: 80%;
+                margin: 0 auto;
+                .pc_only{
+                  display: none;
+                }
+                .mo_only{
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+        &.tab_con_02{
+          .tab_sub_info{
+            p{
+              &:last-child{
+                margin-bottom: 3rem;
+              }
+            }
+          }
+          .icon_list{
+            padding: 2rem 0;
+            .list_item{
+              font-size: $font-16r;
+              &::after{
+                display: none;
+                margin-left: 0;
+              }
+            }
+          }
+          .monitoring_wrap{
+            margin-bottom: 4rem;
+          }
+          .service_wrap{
+            .ser_tit{
+              font-size: $font-16r;
+            }
+            .ser_icon{
+              .ser_wrap{
+                .ser_list{
+                  .ser_item{
+                    font-size: $font-16r;
+                  }
+                }
+              }
+              .ser_wrap_01{
+                width: 100%;
+                height: 100%;
+              }
+              .ser_wrap_02{
+                width: 100%;
+              }
+            }
+          }
+        }
+        &.tab_con_03{
+          .app_manage_wrap{
+            p{
+              &.m_chg{
+                width: 80%;
+                margin: 0 auto;
+                .pc_only{
+                  display: none;
+                }
+                .mo_only{
+                  display: block;
+                  width: 100%;
+                }
+              }
+            }
+            .app_m_list_01{
+              flex-wrap: wrap;
+              .list_item{
+                margin-right: 0;
+                margin-bottom: 6rem;
+                &::after{
+                  left: 50%;
+                  top: -60%;
+                  transform: translateX(-50%);
+                  width: 4.9rem;
+                  height: 5.7rem;
+                  background-image: url(../../assets/images/arrow-m.png);
+                  background-size: 50%;
+                }
+                &:last-child{
+                  margin-bottom: 0;
+                }
+              }
+            }
+            .app_m_list_02{
+              .list_item{
+                .tms_con{
+                  flex-wrap: wrap;
+                  & > p{
+                    margin-bottom: 2rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/* mobile */
+@media only screen and (max-width: 598px) {
+  .tab_menu{
+    .tab_list{
+      li{
+        .tab_btn{
+          padding: 4rem 0;
+          font-size: $font-12r;
+        }
+      }
+    }
+    .tab_cont{
+      .tab_tit_wrap{
+        .tab_sub_info{
+          margin-bottom: 6rem;
+          p{
+            line-height: 1.4;
+            margin-top: 2rem;
+          }
+        }
+        .icon_wrap{
+          padding: 0 1rem;
+          margin-bottom: 6rem;
+        }
+        &.tab_con_01{
+          .tab_sub_info{
+            &::after{
+              margin: 0 1rem;
+              background-image: url(../../assets/images/mo-business-01.png);
+            }
+            p{
+              &.m_chg{
+                width: 100%;
+              }
+            }
+          }
+        }
+        &.tab_con_02{
+          .icon_list{
+            justify-content: flex-start;
+            .list_item{
+              padding: .5rem 3rem .5rem 1rem;
+            }
+          }
+          .service_wrap{
+            .ser_icon{
+              .ser_wrap{
+                .ser_list{
+                  padding: 6rem 2rem;
+                }
+              }
+            }
+          }
+        }
+        &.tab_con_03{
+          .app_manage_wrap{
+            padding: 2rem;
+            .app_m_list_02{
+              .list_item{
+                .tms_con{
+                  & > p{
+                    width: 50%;
+                  }
+                  & > ul{
+                    & > li{
+                      font-size: $font-14r;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/* tab e ==================================================== */
+/* ---------------------------------------------------------- */

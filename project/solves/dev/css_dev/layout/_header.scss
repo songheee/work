@@ -1,0 +1,313 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: header                                	          */
+// writer	: 김송희
+// date		: 20221123
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* header s ================================================= */
+.container{
+  position: relative;
+  &::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+.header{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  padding: 3rem 0rem;
+  border-bottom: 1px solid #f0f6fa;
+  background-color: $white;
+  .inner_wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7rem;
+  }
+  .gnb{
+    height: 32px;
+    line-height: 32px;
+    .menu{
+      overflow: hidden;
+      &::after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      & > li{
+        float: left;
+        margin-left:12rem;
+        width: 120px;
+        text-align: center;
+        a{
+          display: inline-block;
+          font-size: $font-16r;
+          font-weight: $b;
+          color: $title_fc;
+          &::after{
+            display: block;
+            content: '';
+            border-bottom: 2px solid #222;
+            transform: scaleX(0);
+            transition: transform 250ms ease-in-out;
+          }
+          &.is_on,
+          &:hover{
+            font-weight: $eb;
+            &::after{
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+    }
+    .mo_hamburger{
+      display: none;
+    }
+  }
+  &.drop {
+    position: fixed;
+    animation: drop 0.3s;
+    top: 0;
+    width: 100%;
+    z-index: 33;
+    .gnb{
+      .menu{
+        & > li{
+          a{
+            &:hover{
+              transition: .3s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.page_main{
+  .header{
+    background-color: hsla(235, 100%, 10%, 0.39);
+    .gnb{
+      .menu{
+        & > li{
+          a{
+          color: $white;
+            &::after{
+              display: block;
+              content: '';
+              border-bottom: 2px solid #fff;
+              transform: scaleX(0);
+              transition: transform 250ms ease-in-out;
+            }
+            &:hover{
+              font-weight: $eb;
+              &::after{
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.drop {
+      background-color: $white;
+      .gnb{
+        .menu{
+          & > li{
+            a{
+              color: $title_fc;
+              &::after{
+                display: block;
+                content: '';
+                border-bottom: 2px solid #000;
+                transform: scaleX(0);
+                transition: transform 250ms ease-in-out;
+              }
+              &:hover{
+                font-weight: $eb;
+                &::after{
+                  transform: scaleX(1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes drop {
+  0% {
+    top: -5rem;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 1360px) {
+  .header{
+    padding: 3rem 2rem;
+    .inner_wrap{
+      padding: 0rem;
+      .gnb{
+        .sub_menu {
+          ul.menu {
+            li {
+              margin-left: 2rem;
+            }
+          }
+          &.mo_menu_on{
+            ul.menu {
+              li {
+                margin-left: 0;
+                a{
+                  &::after{
+                    border-bottom: 2px solid #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* tablet */
+@media only screen and (max-width: 768px) {
+
+}/* tablet */
+
+/* mobile */
+@media only screen and (max-width: 598px) {
+  .header{
+    justify-content: flex-start;
+    padding: 3rem 0 3rem 2rem;
+    overflow-x: clip;
+    .gnb{
+      .sub_menu {
+        position: absolute;
+        right: -100%;
+        top:0;
+        background-color: $bg_clr;
+        height: 100vh;
+        width: 100%;
+        text-align: right;
+        padding: 7rem 5rem;
+        transition: .5s;
+        ul.menu {
+          float: none;
+          li {
+            float: none;
+            margin: 4rem 0 3rem 0;
+            padding-left: 0;
+            width: 100%;
+            text-align: right;
+            &:last-child {
+              padding-right: 0;
+            }
+            a{
+              color: $white;
+              font-size: $font-24r;
+            }
+          }
+        }
+      }
+      .mo_menu_on {
+        right: 0;
+      }
+      .mo_hamburger {
+        display: block;
+        width: 5rem;
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%);
+        z-index: 100;
+        div {
+          background-color: $point_clr;
+          width: 3.5rem;
+          height: .4rem;
+          margin: .7rem;
+          border-radius: 3rem;
+          transition: all .5s;
+        }
+        &.toggle {
+          div{
+            background-color: $white;
+          }
+        }
+      }
+    }
+    &.drop{
+      .mo_hamburger {
+        div {
+          background-color: $point_clr;
+        }
+      }
+    }
+  }
+  .page_main{
+    .header{
+      .gnb{
+        .sub_menu {
+          background-color: $bg_clr;
+          ul.menu {
+            li {
+              a{
+                color: $white;
+              }
+            }
+          }
+        }
+        .mo_hamburger {
+          &.toggle {
+            div{
+              background-color: $white;
+            }
+          }
+          div{
+            background-color: $white;
+          }
+        }
+      }
+      &.drop{
+        .mo_hamburger {
+          div {
+            background-color: $bg_clr;
+          }
+        }
+      }
+    }
+  }
+  // mo_hamburger line
+  .toggle {
+    .line1 {
+      transform: rotate(-45deg) translate(-8px, 7px);
+    }
+    .line2 {
+      opacity: 0;
+    }
+    .line3 {
+      transform: rotate(45deg) translate(-8px, -7px);
+    }
+  }
+
+
+}/* mobile */
+
+/* header e ================================================= */
+/* ---------------------------------------------------------- */

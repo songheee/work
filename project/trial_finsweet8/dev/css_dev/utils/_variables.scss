@@ -1,0 +1,94 @@
+@charset "utf-8";
+// ======================================================================== //
+// file		: variables
+// writer	: Ryu
+// date		: 20180525
+// ======================================================================== //
+
+// font==================================================================== //
+
+$th: 100;
+$l: 300;
+$r: 400;
+$md: 500;
+$sb: 600;
+$b: 700;
+$eb: 800;
+$bk: 900;
+$title_fc:#333;
+$default_fc:#222;
+
+//color
+$white: #fff;
+$black: #222;
+$light_gray: #999;
+$light_black: #999;
+$white_gray: #f1f1f1;
+$camel: #c69c6d;
+$border_clr:#f1f1f1;
+$border_clr2:#ccc;
+
+//finswee8 color2
+$prime_color: #503AE7;
+$sub_color: #1AD993;
+$color_1: #ABFFE0;
+$color_2: #832BC1;
+$color_4: #AFB0B9;
+$color_5: #F4F2FF;
+
+//btn
+$df_h_s:35px;
+$df_h_m:40px;
+$df_h_l:50px;
+
+//layout
+$max_w: 1280px;
+$max_h: 1280px;
+$header_h:50px;
+$con_mg: 10px;
+$con_pd: 15px;
+$con_pd2: 20px;
+$con_pd3: 25px;
+
+//media queries
+$full: 1920px;
+$middle: 1600px;
+$narrow: 1280px;
+
+//url
+$img_url:'../../images/';
+
+//motion
+$slide_time:300;
+
+$font-10r:10px;
+$font-11r:11px;
+$font-12r:12px;
+$font-12r:12px;
+$font-13r:13px;
+$font-14r:14px;
+$font-15r:15px;
+$font-16r:16px;
+$font-17r:17px;
+$font-18r:18px;
+$font-19r:19px;
+$font-20r:20px;
+$font-22r:22px;
+$font-24r:24px;
+$font-26r:26px;
+$font-28r:28px;
+$font-30r:30px;
+$font-32r:32px;
+$font-34r:34px;
+$font-36r:36px;
+$font-40r:40px;
+$font-46r:46px;
+$font-48r:48px;
+$font-50r:50px;
+$font-52r:52px;
+$font-60r:60px;
+
+//margin
+$margin-t:128px;
+$margin-t-m:80px;
+$margin-t-s:30px;

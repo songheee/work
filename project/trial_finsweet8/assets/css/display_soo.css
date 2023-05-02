@@ -1,0 +1,54 @@
+/* ========================================================== */
+/*                                                            */
+/* file		: soo                                      	  */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* soo s =================================================== */
+/* ========================================================== */
+/* contact s                                                  */
+/* ========================================================== */
+.contact_us { color: var(--fontColor); margin-top: 64px; height: calc( 100vh - 136px); background: url(../../assets/images/temp/bg_contact.png) no-repeat right bottom; }
+
+.contact_us .contact_us_wrap { display: flex; }
+
+.contact_us .contact_us_wrap .contact_input_wrap { width: 50%; }
+
+.contact_us .contact_us_wrap .contact_input_wrap .contact_input_txt p { color: #503AE7; font-size: 20px; font-weight: 600; margin-top: 16px; line-height: 28px; }
+
+.contact_us .contact_us_wrap .contact_input_wrap .contact_input { margin-top: 48px; }
+
+.contact_us .contact_us_wrap .contact_input_wrap .contact_input input, .contact_us .contact_us_wrap .contact_input_wrap .contact_input textarea { padding-left: 15px; background-color: #F4F2FF; color: #333; display: inline; border: none; outline: none; box-sizing: border-box; height: 48px; width: 100%; margin-bottom: 16px; }
+
+.contact_us .contact_us_wrap .contact_input_wrap .contact_input input:nth-child(4), .contact_us .contact_us_wrap .contact_input_wrap .contact_input textarea:nth-child(4) { height: 128px; }
+
+.contact_us .contact_us_wrap .contact_input_wrap .contact_input input:last-child, .contact_us .contact_us_wrap .contact_input_wrap .contact_input textarea:last-child { margin-bottom: 0; }
+
+.contact_us .contact_us_wrap .contact_input_wrap .contact_input input[type=submit] { background-color: #503AE7; color: #F4F2FF; font-size: 18px; vertical-align: bottom; width: 162px; }
+
+.contact_us .contact_us_wrap .contact_input_wrap .contact_input textarea { padding-top: 20px; resize: none; }
+
+.contact_us .contact_us_wrap .contact_sub { margin-left: 64px; }
+
+.contact_us .contact_us_wrap .contact_sub h3 { color: #808080; color: var(--fontColor); font-size: 20px; font-weight: 700; }
+
+.contact_us .contact_us_wrap .contact_sub .subscribe .podcasts_list { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px 100px; }
+
+.contact_us .contact_us_wrap .contact_sub .socials { margin-top: 64px; }
+
+@media only screen and (max-width: 768px) { .contact_us { padding: 0 20px; margin-top: 64px; }
+  .contact_us .contact_us_wrap { flex-wrap: wrap; }
+  .contact_us .contact_us_wrap .contact_input_wrap { width: 100%; }
+  .contact_us .contact_us_wrap .contact_input_wrap .contact_input input:nth-child(4) { height: 128px; }
+  .contact_us .contact_us_wrap .contact_sub { margin: 70px 0 0 0; } }
+
+@media only screen and (max-width: 425px) { .contact_us { background-image: none; }
+  .contact_us .subscribe .podcasts_list { display: inherit !important; }
+  .contact_us .subscribe .podcasts_list li { margin-bottom: 30px; }
+  .contact_us .subscribe .podcasts_list li:last-child { margin-bottom: 0; } }
+
+/* contact e ================================================ */
+/* soo e =================================================== */
+/* ---------------------------------------------------------- */
+
+/*# sourceMappingURL=../css/display_soo.css.map */

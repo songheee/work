@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: main                                      	  */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* main s =================================================== */
+.home_wrap .main_top { padding: 0 125px; background: url(../../assets/images/temp/bg_audio_track.png) no-repeat center right 20%; }
+
+.home_wrap .main_top .main_tit { width: 480px; margin-top: 92px; }
+
+.home_wrap .main_top .main_tit p { margin-top: 32px; color: var(--fontColor); }
+
+.home_wrap .main_top .main_tit p:first-child { margin-top: 0; }
+
+.home_wrap .main_top .main_tit p:nth-child(2) { line-height: 28px; }
+
+/* //home_wrap */
+/* email_input */
+.email_send { width: 486px; height: 48px; }
+
+.email_send input { display: inline; border: none; outline: none; box-sizing: border-box; height: 100%; }
+
+.email_send input[type="email"] { width: 70%; padding-left: 5px; background-color: #F4F2FF; color: #333; }
+
+.email_send input[type="email"]::placeholder { color: #AFB0B9; }
+
+.email_send input[type=submit] { width: 30%; background-color: #503AE7; margin-left: -10px; color: #F4F2FF; font-size: 18px; font-weight: 700; vertical-align: bottom; }
+
+/* banner */
+.notify-wrap { position: relative; margin: 192px auto 0 auto; }
+
+.notify-wrap .ellipsis { overflow: hidden; white-space: nowrap; }
+
+.notify-wrap .notify-wrap-inner { padding: 0 20px; margin: 0 30px; }
+
+.notify-wrap .notify-wrap-inner .notify-scroll { display: inline-block; animation: text-scroll 20s linear infinite; }
+
+.notify-wrap .notify-wrap-inner .notify-scroll ul li { display: inline-block; padding-right: 350px; vertical-align: text-bottom; }
+
+.notify-wrap .notify-wrap-inner .notify-scroll ul li a { display: block; }
+
+@keyframes text-scroll { from { transform: translateX(20%);
+    -moz-transform: translateX(20%);
+    -webkit-transform: translateX(20%);
+    -o-transform: translateX(20%);
+    -ms-transform: translateX(20%); }
+  to { transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    -ms-transform: translateX(-100%); } }
+
+.page_home .swiper { height: 100%; margin: 128px 80px 0; color: var(--fontColor); }
+
+.page_home .swiper-sec { position: relative; margin-bottom: 64px; }
+
+.page_home .swiper-sec .swiper-button-next, .page_home .swiper-sec .swiper-button-prev { width: 48px; height: 48px; border-radius: 50%; margin-top: 0; display: block; opacity: 1; cursor: pointer; pointer-events: auto; }
+
+.page_home .swiper-sec .swiper-button-next::after, .page_home .swiper-sec .swiper-button-prev::after { content: ''; }
+
+.page_home .swiper-sec .swiper-button-prev { left: 88%; background: #503AE7 url(../../assets/images/temp/ico_prev.png) no-repeat center; }
+
+.page_home .swiper-sec .swiper-button-next { right: 0%; background: #503AE7 url(../../assets/images/temp/ico_next_01.png) no-repeat center; }
+
+.page_home .custom_swiper .custom_wrap { overflow: visible; }
+
+.page_home .custom_swiper .custom_wrap .item::after { content: ''; display: block; width: 100%; height: 12px; margin-top: 12px; background: #503AE7; }
+
+.page_home .custom_swiper .custom_wrap .my_review { display: flex; align-items: center; margin-bottom: 16px; }
+
+.page_home .custom_swiper .custom_wrap .my_review > img { width: 80px; height: 80px; border-radius: 50%; }
+
+.page_home .custom_swiper .custom_wrap .my_review > p { width: 116px; height: 44px; margin-left: 15px; text-indent: 3px; font-weight: 500; background: url(../../assets/images/ico/stars.png) no-repeat center bottom; }
+
+.page_home .custom_swiper .custom_wrap .review_con { height: auto; min-height: 192px; line-height: 24px; }
+
+/* tablet 지정 */
+@media only screen and (max-width: 768px) { .home_wrap .main_top { padding: 0 20px; background-size: 37%; background-position: 85% center; }
+  .home_wrap .main_top .main_tit { width: 314px; margin-top: 92px; }
+  .home_wrap .main_top .main_tit p { margin-top: 20px; }
+  .home_wrap .main_top .main_tit p:first-child { font-size: 28px; line-height: 35px; }
+  .home_wrap .main_top .main_tit p:nth-child(2) { font-size: 16px; line-height: 22px; }
+  /* // home_wrap*/
+  /* email_input */
+  .email_send { width: 340px; }
+  .email_send input[type="email"] { width: 65%; }
+  .email_send input[type="email"]::placeholder { color: #AFB0B9; font-size: 14px; }
+  .email_send input[type=submit] { width: 25%; font-size: 14px; }
+  /* banner */
+  .notify-wrap { margin: 80px auto 0 auto; }
+  .custom_swiper .custom_wrap { display: flex; }
+  .page_home .custom_swiper { margin: 30px 0px 0; padding: 0 16px; }
+  .page_home .swiper-sec { margin-bottom: 64px; }
+  .page_home .swiper-sec .swiper_btn_wrap { position: absolute; position: absolute; right: 66px; bottom: -10px; }
+  .page_home .swiper-sec .swiper-button-next, .page_home .swiper-sec .swiper-button-prev { width: 32px; height: 32px; background-size: 50%; } }
+
+/* // tablet 지정 */
+/* mobile 지정 */
+@media only screen and (max-width: 425px) { .home_wrap .main_top { background: none; }
+  .home_wrap .main_top .main_tit { width: 100%; }
+  /* email_input */
+  .email_send { width: 100%; }
+  .email_send input[type="email"] { width: 70%; }
+  .email_send input[type=submit] { width: 30%; }
+  /* banner */
+  .notify-wrap { margin: 40px auto 0 auto; } }
+
+/* // mobile 지정 */
+/* main e =================================================== */
+/* ---------------------------------------------------------- */
+/* ========================================================== */
+/*                                                            */
+/* file		: kim                                      	  */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* kim s =================================================== */
+/* kim e =================================================== */
+/* ---------------------------------------------------------- */
+
+/*# sourceMappingURL=../css/display_kim.css.map */

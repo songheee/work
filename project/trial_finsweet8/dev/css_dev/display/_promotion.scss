@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: _promotion                                      	  */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* _promotion s ============================================== */
+// promotion
+.promotion {
+  color: var(--fontColor);
+    .promo_tit {
+        overflow: hidden;
+        height: 117px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(0,0,0,.2);
+        h1 {
+            float: left;
+            font-weight: $b;
+        }
+    }
+    .promo_con {
+        h3 {
+            margin-top: 96px;
+            font-size: 24px;
+            font-weight: $sb;
+        }
+        .typo_box {
+            overflow: hidden;
+            width: 100%;
+            background-color: #F4F2FF;
+            margin-top: 48px;
+            text-align: center;
+            padding: 80px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            .download {
+                font-size: 32px;
+                font-weight: $b;
+                a {
+                    span.ico {
+                        background: url(../../assets/images/ico/ico_down.png) no-repeat center;
+                        width: 51px;
+                        height: 51px;
+                        border-radius: 50%;
+                        display: inline-block;
+                        background-color: #503AE7;
+                        vertical-align: bottom;
+                    }
+                    p {
+                        display: inline-block;
+                        margin-left: 24px;
+                        line-height: 51px;
+                    }
+                }
+            }
+            .font {
+                font-weight: $sb;
+                font-size: 24px;
+                .ico {
+                    display: inline-block;
+                    background: url(../../assets/images/ico/ico_folder.png) no-repeat center / 100%;
+                    width: 68px;
+                    height: 54px;
+                }
+                p {
+                    display: inline-block;
+                    vertical-align: bottom;
+                    line-height: 58px;
+                    margin-left: 22px;
+                }
+            }
+        }
+    }
+  }
+
+  //text_heading
+  .text_heading {
+    margin-top: 96px;
+    .tehead_wrap {
+        overflow: hidden;
+        .heading {
+            float: left;
+            width: 30%;
+            p {
+              margin-bottom: 38px;
+            }
+        }
+        .body_text {
+          width: 70%;
+          line-height: 150%;
+        }
+    }
+  }
+
+  // color_palette
+  .color_palette {
+    h3 {
+        font-size: 30px;
+        font-weight: $sb;
+    }
+    ul {
+        overflow: hidden;
+        text-align: center;
+        margin-top: 48px;
+        li {
+            float: left;
+            width: 128px;
+            height: 96px;
+            line-height: 96px;
+        }
+    }
+  }
+
+  // components
+  .components {
+    .btn_com_list,
+    .btn_hover_list,
+    .category_podcasts {
+      margin-top: 48px;
+      a {
+        display: inline-block;
+        margin-right: 48px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .components {
+    .btn_hover_list {
+      .btn_1 {
+        background-color: #3E2DB2;
+        transition: .5s;
+      }
+      .btn_2 {
+        border: 2px solid $sub_color;
+        color: $sub_color;
+      }
+      .btn_listen {
+        color: $prime_color;
+        i {
+          background-color: $prime_color;
+        }
+      }
+      .btn_read {
+        color: $prime_color;
+      }
+    }
+  }
+
+  //podcasts
+  .podcasts {
+    overflow: hidden;
+    margin-top: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    .podcasts_list {
+      width: 50%;
+      li {
+        float: left;
+        margin-right: 60px;
+      }
+    }
+    .sns_list {
+      border: 1px dashed $prime_color;
+      padding: 20px 20px;
+      li {
+        float: left;
+        margin-right: 24px;
+      }
+      .ico_small {
+      }
+    }
+  }
+  .promo_only{
+    color: #fff;
+    margin: 30px 0;
+    padding: 20px;
+    & > p{
+      margin-top: 20px;
+    }
+  }
+
+  .page_promotion {
+    .socials {
+      margin-top: 0 !important;
+    }
+  }
+
+// mdq_tab
+@media only screen and (max-width: 768px) {
+  .promo_tit {
+    padding: 0 30px;
+  }
+  .promo_con {
+    padding: 0 20px;
+    .typo_box {
+      padding: 30px;
+    }
+    .text_heading {
+      .heading {
+        width: inherit;
+      }
+      .body_text {
+        width: inherit;
+      }
+    }
+    .podcasts {
+      flex-direction: column;
+      .podcasts_list {
+        li {
+          margin-bottom: 30px;
+        }
+      }
+      .sns_list {
+        margin-top: 20px;
+        width: inherit;
+        height: 100%;
+      }
+    }
+  }
+}
+// mdq_mo
+@media only screen and (max-width: 425px) {
+  .promo_con {
+    .text_heading {
+      .heading {
+        width: 100%;
+      }
+    }
+    .components {
+      .btn_com_list,
+      .btn_hover_list,
+      .category_podcasts {
+        float: inherit;
+        a {
+          float: none;
+        }
+      }
+    }
+  }
+}
+
+/* _promotion e ============================================== */
+/* ---------------------------------------------------------- */

@@ -1,0 +1,44 @@
+<%- include('../../common/layout-header')-%>
+<body>
+<div class="ui-wrap my-info-wrap">
+    <!-- header -->
+    <header class="ui-header">
+        <%- include('../../common/header/header-ver1')-%>
+        <h1 class="title">내 정보 수정</h1>
+    </header>
+    <!-- // header -->
+    <div class="ui-container">
+        <div class="my-profile-content">
+            <p class="tit-01">기본정보</p>
+        </div>
+        <div class="profile-box">
+            <div class="input-wrap">
+                <form  method="post">
+                    <div class="i-wrap">
+                        <p class="my-title">이름</p>
+                        <input id="name" type="text" class="my-in" value="김안전" placeholder="김안전">
+                    </div>
+                    <div class="i-wrap">
+                        <p class="my-title">휴대폰</p>
+                        <input type="id" class="my-in i-id" value="010-2073-6234" placeholder="010-2073-6234">
+                    </div>
+                    <div class="i-wrap">
+                        <p class="my-title">이메일</p>
+                        <div class="certifi-num">
+                            <input type="number"  class="send-input pro-pw" placeholder="anjeon@safe.co.kr" readonly>
+                            <div class="btn-box send-btn">
+                                <button type="button" class="btn white-btn">변경</button>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="btn-box m-top-56">
+                            <button type="button" class="btn navy-btn">저장하기</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

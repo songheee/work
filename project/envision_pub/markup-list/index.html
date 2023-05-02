@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="p:domain_verify">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>CHECKIE</title>
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../static/css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/frontend.css">
+    <script type="text/javascript" src="../static/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../static/js/common.js"></script>
+</head>
+    <body>
+        <div class="ui-wrap dash-wrap">
+            <!-- header -->
+            <header class="ui-header">
+                <h1 class="main-logo">
+                    <a href="#none"><span class="blind">CHEKIE</span></a>
+                </h1>
+
+                <a href="javascript:void(0);" id="aside-nav" class="aside-nav">
+                    <span class="icon"><span class="blind">확장 영역</span></span>
+                </a>
+            </header>
+            <!-- // header -->
+            <!-- aside-menu-wrap -->
+            <div id="aside-menu-wrap" class="aside-menu-wrap">
+                <header class="menu-header">
+                    <button type="button" class="house">메인화면</button>
+                    <div class="nav__links">
+                        <button type="button" class="arim">알림</button>
+                        <button type="button" class="setting">설정</button>
+                        <button type="button" id="close" class="close">닫기</button>
+                    </div>
+                </header>
+                <div class="menu-container">
+                    <div class="menu-content">
+                        <div class="section-info">
+                            <p class="info-txt01"> 현장작업자</p>
+                            <p class="info-txt02">안전 1팀 <span>김안전</span>님</p>
+                            <div class="my-info-btn">
+                                <a href="#none" alt="내정보">내정보</a>
+                            </div>
+                        </div>
+                        <div class="list-box accordion">
+                            <ul class="section">
+                                <!-- to dev : 2depth오픈시 li태그에 .on클래스로 변경 -->
+                                <!-- to Dev [toggle Class] : on -->
+                                <li class="depth panel">
+                                    <a href="#none" class="dep-inner" data-container="toggle-menu-1">금일 점검 항목</a>
+                                    <ul id="toggle-menu-1" class="dep-content">
+                                        <li>
+                                            <a href="#none">일 점검 항목</a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">주 점검 항목</a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">월 점검 항목</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="depth panel">
+                                    <a href="#none" class="dep-inner" data-container="toggle-menu-2">점검 항목 모아보기</a>
+                                    <ul id="toggle-menu-2" class="dep-content">
+                                        <li>
+                                            <a href="#none">전체 점검 항목</a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">점검미완료 항목</a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">불량 항목</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none">점검 리포트</a>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none">자료실</a>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none">공지사항</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // aside-menu-wrap -->
+            <div class="date-section">
+                <div class="day">
+                    <span>2021</span>년
+                    <span>07</span>월
+                    <span>29</span>일
+                </div>
+                <div class="time">
+                    <span>14</span>
+                    <span>56</span>
+                    <span>31</span>
+                </div>
+            </div>
+            <div class="ui-container">
+                <a href="#none" class="profile-section">
+                    <div class="photo">
+                        <!-- to dev : 상황에 따른 작업자 프로필 사진 변경 -->
+                        <img src="../static/images/dashboard/profile.jpg" alt="작업자 프로필 사진">
+                    </div>
+                    <ul class="info-box">
+                        <li>현장작업자</li>
+                        <li>안전 1팀 <span class="name">김안전</span>님 <span class="arrow"> > </span></li>
+                    </ul>
+                </a>
+                <div class="main-content">
+                    <div class="tab-section">
+                        <!-- to dev : 활성화 되는 a 태그에 .active 클래스 추가 -->
+                        <!-- to Dev [toggle Class] : active -->
+                        <ul class="tab-menu">
+                            <li>
+                                <a href="#tabs-1" class="active">금일<span>10</span></a>
+                            </li>
+                            <li>
+                                <a href="#tabs-2">금주<span>40</span></a>
+                            </li>
+                            <li>
+                                <a href="#tabs-3">금월<span>6</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <!-- view-section 금일 -->
+                        <div  id="tabs-1" class="view-section">
+                            <a href="#none" class="today">
+                                <ul>
+                                    <li>금일 전체 점검 항목</li>
+                                    <li><span>10</span>건</li>
+                                    <li>자세히 보기</li>
+                                </ul>
+                            </a>
+                            <div class="bottom-box">
+                                <a href="#none" class="n-check">
+                                    <ul>
+                                        <li class="icon">아이콘</li>
+                                        <li>점검 미완료</li>
+                                        <li><span>8</span>건</li>
+                                    </ul>
+                                </a>
+                                <a href="#none" class="faulty">
+                                    <ul>
+                                        <li class="icon">아이콘</li>
+                                        <li>불량</li>
+                                        <li><span>1</span>건</li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                        <!--// view-section 금일 -->
+                        <!-- view-section 금주 -->
+                        <div id="tabs-2" class="view-section">
+                            <a href="#none" class="today">
+                                <ul>
+                                    <li>금주 전체 점검 항목</li>
+                                    <li><span>13</span>건</li>
+                                    <li>자세히 보기</li>
+                                </ul>
+                            </a>
+                            <div class="bottom-box">
+                                <a href="#none" class="n-check">
+                                    <ul>
+                                        <li class="icon">아이콘</li>
+                                        <li>점검 미완료</li>
+                                        <li><span>10</span>건</li>
+                                    </ul>
+                                </a>
+                                <a href="#none" class="faulty">
+                                    <ul>
+                                        <li class="icon">아이콘</li>
+                                        <li>불량</li>
+                                        <li><span>3</span>건</li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                        <!--// view-section 금주 -->
+                        <!-- view-section 금월 -->
+                        <div id="tabs-3" class="view-section">
+                            <a href="#none" class="today">
+                                <ul>
+                                    <li>금월 전체 점검 항목</li>
+                                    <li><span>30</span>건</li>
+                                    <li>자세히 보기</li>
+                                </ul>
+                            </a>
+                            <div class="bottom-box">
+                                <a href="#none" class="n-check">
+                                    <ul>
+                                        <li class="icon">아이콘</li>
+                                        <li>점검 미완료</li>
+                                        <li><span>12</span>건</li>
+                                    </ul>
+                                </a>
+                                <a href="#none" class="faulty">
+                                    <ul>
+                                        <li class="icon">아이콘</li>
+                                        <li>불량</li>
+                                        <li><span>5</span>건</li>
+                                    </ul>
+                                </a>
+                            </div>
+                        </div>
+                        <!--// view-section 금월 -->
+                    </div>
+                </div>
+            </div>
+            <footer class="ui-footer main-footer">
+                <div class="ft-info">
+                    <ul class="ft-menu">
+                        <li>
+                            <a href="#">공지사항</a>
+                        </li>
+                        <li>
+                            <a href="#">췌키 이용약관</a>
+                        </li>
+                        <li>
+                            <a href="#">개인정보처리방침</a>
+                        </li>
+                    </ul>
+                    <p class="num">고객센터 <a href="tel:15880000">: 1500-0000</a></p>
+                </div>
+                <ul class="info-box">
+                    <li>(주) 아이디알 인비전 / 대표이사 : 홍길동</li>
+                    <li>개인정보보호책임자 : 홍길동 / 문의 : abc5269@checkie.com</li>
+                    <li>주소 : 07207 서울시 영등포구 양평로21길 26, 2608호</li>
+                    <li>COPYRIGHT ⓒ IDR ENVISION All right reserved.</li>
+                </ul>
+            </footer>
+        </div>
+    </body>
+</html>

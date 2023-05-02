@@ -1,0 +1,68 @@
+<%- include('../../common/layout-header')-%>
+<body>
+    <div class="ui-wrap check-list-wrap">
+        <!-- header -->
+        <header class="ui-header">
+            <%- include('../../common/header/header-ver1')-%>
+            <h1 class="title">점검 상세보기</h1>
+        </header>
+        <!-- // header -->
+        <div class="ui-container detail">
+            <!-- content-wrap -->
+            <div class="content-wrap">
+                <div class="main-content">
+                    <img class="preview-img" src="../../static/images/check/preview_img.png" alt="철근">
+                    <ul class="info-box">
+                        <li>철근 콘크리트 공사</li>
+                        <li class="point-c">A구역 철근</li>
+                        <li>- 점검주기<b>:</b><span>일일 점검</span></li>
+                        <li>- 점검자<b>:</b><span>김안전</span></li>
+                    </ul>
+                </div>
+                <div class="main-content v2">
+                    <ul class="info-box">
+                        <li>- 점검 완료 여부<b>:</b><span>점검 미완료</span></li>
+                        <li>- 점검 완료 시간<b>:</b><span class="num">2021-07-29 14:56:31</span></li>
+                    </ul>
+                    <img class="stamp-img" src="../../static/images/check/stamp_incomplete.png" alt="미완료">
+                </div>
+                <%- include('../../common/check-detail-list-section')-%>
+            </div>
+            <!--// content-wrap -->
+        </div>
+
+        <!-- btn-wrap -->
+        <div class="check-btn-wrap">
+            <div class="btn-box">
+                <button type="button" class="btn navy-btn">점검하기</button>
+            </div>
+
+            <div class="btn-list">
+                <!-- to dev : 비 활성화 되는 button, a태그에 클래스 .btn-off 추가 -->
+                <!-- to Dev [toggle Class] : btn-off -->
+                <button class="btn" type="button">
+                    <span class="icon real-time"></span>
+                    <span class="txt">실시간알림</span>
+                </button>
+
+                <button class="btn" type="button">
+                    <span class="icon sns-share"></span>
+                    <span class="txt">내용공유</span>
+                </button>
+
+                <a class="btn" href="tel:02-000-0000">
+                    <span class="icon connect"></span>
+                    <span class="txt">관리자 연결</span>
+                </a>
+
+                <button class="btn" type="button">
+                    <span class="icon check-checkie"></span>
+                    <span class="txt">췌키 확인</span>
+                </button>
+            </div>
+        </div>
+        <!--// btn-wrap -->
+    </div>
+</body>
+</html>
+

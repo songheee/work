@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@import
+'utils/variables',
+'utils/mixin_custom';
+
+@import
+'base/reset',
+'base/font',
+'base/footer',
+'base/layerpopup',
+'base/common';
+
+@import
+'pages/register',
+'pages/my_info',
+'pages/notice',
+'pages/dashboard',
+'pages/check',
+'pages/menu';

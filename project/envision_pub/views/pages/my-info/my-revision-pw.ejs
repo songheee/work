@@ -1,0 +1,40 @@
+<%- include('../../common/layout-header')-%>
+<body>
+<div class="ui-wrap my-info-wrap">
+    <!-- header -->
+    <header class="ui-header">
+        <%- include('../../common/header/header-ver1')-%>
+        <h1 class="title">비밀번호 변경</h1>
+    </header>
+    <!-- // header -->
+    <div class="ui-container">
+        <div class="my-profile-content">
+            <p class="tit-02">변경할 비밀번호를 입력해 주세요.</p>
+        </div>
+        <div class="profile-box">
+            <div class="input-wrap">
+                <form id="" method="post" class="form-login">
+                    <div class="i-wrap">
+                        <p class="my-title">비밀번호</p>
+                        <input type="password" type="text" class="my-in" placeholder="6~16자 영문+숫자+특수문자 조합">
+                    </div>
+                    <div class="i-wrap">
+                        <p class="my-title">비밀번호 확인</p>
+                        <input type="password" class="my-in" placeholder="6~16자 영문+숫자+특수문자 조합">
+                    </div>
+                </form>
+            </div>
+            <!-- to dev : 오류 메세지 활성화시 클래스 .my-warn에 태그 .active 추가 -->
+            <!-- to Dev [toggle tag] : active -->
+            <div class="my-warn">
+                <p>비밀번호 부적합, 다시 입력해주세요.</p>
+            </div>
+            <div class="btn-box m-top-56">
+                <button type="button" class="btn navy-btn">비밀번호 변경하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

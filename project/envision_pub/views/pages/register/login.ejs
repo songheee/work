@@ -1,0 +1,60 @@
+<%- include('../../common/layout-header')-%>
+
+<body>
+    <div class="ui-wrap login-wrap">
+        <div class="ui-container div-wrap">
+            <div class="intro">
+                <img src="../../static/images/register/logo.png" alt="췌키로고" class="checkie-logo">
+            </div>
+            <div class="txt-wrap">
+                <p class="txt-1">
+                    안녕하세요.<br>
+                    점검관리 앱, 췌키 입니다.
+                </p>
+                <p class="txt-3">서비스 이용을 위해 <strong>로그인</strong>해주세요.</p>
+            </div>
+            <div class="input-wrap">
+                    <div class="i-wrap">
+                        <p class="my-title"></p>
+                        <input id="id" type="text" class="my-in i-id" placeholder="아이디">
+                    </div>
+                    <div class="i-wrap">
+                        <p class="my-title"></p>
+                        <input type="password" class="my-in i-pw" placeholder="비밀번호">
+                    </div>
+            </div>
+            <div class="check-wrap">
+                <ul>
+                    <li>
+                        <input type="checkbox" name="checker" id="checker1" checked/>
+                        <label for="checker1">아이디 저장</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="checker" id="checker2">
+                        <label for="checker2">자동 로그인</label>
+                    </li>
+                </ul>
+            </div>
+            <!-- to dev : 오류 메세지 활성화시 클래스 .my-warn에 태그 .active 추가 -->
+            <!-- to Dev [toggle tag] : active -->
+            <div class="my-warn">
+                <p>가입하지 않은 아이디이거나, 잘못된 비밀번호입니다. </p>
+            </div>
+            <div class="btn-box">
+                <button type="button" class="btn navy-btn">로그인</button>
+                <button type="button" class="btn white-btn">회원가입</button>
+            </div>
+            <ul class="login-txt">
+                <li>
+                    <a href="#">아이디 찾기</a>
+                    <span class="bar"></span>
+                </li>
+                <li>
+                    <a href="#">비밀번호 재설정</a>
+                </li>
+            </ul>
+        </div>
+        <%- include('../../common/footer')-%>
+    </div>
+</body>
+</html>

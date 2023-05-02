@@ -1,0 +1,123 @@
+<%- include('../../common/layout-header')-%>
+
+<body>
+    <div class="ui-wrap member-wrap p-b-only two-wrap">
+        <!-- header -->
+        <header class="ui-header register-header">
+            <%- include('../../common/header/header-ver2')-%>
+            <h1 class="title">회원가입</h1>
+        </header>
+        <!-- // header -->
+        <div class="ui-container">
+            <!-- to dev : 현재페이지 활성화시 li태그에 step-active 클래스 추가 -->
+            <!-- to dev : 활성화완료 li태그에 step-on 클래스 추가  -->
+            <!-- to dev : 점선 활성화시 dot-img>span태그에 dot-on 클래스 추가 -->
+            <div class="member-step">
+                <ul class="step-wrap div-wrap">
+                    <li class="step step-on">
+                        <p>1</p>
+                        <p>약관 동의</p>
+                    </li>
+                    <li class="dot-img">
+                        <span class="dot-on"></span>
+                    </li>
+                    <li class="step step-active">
+                        <p>2</p>
+                        <p>정보 입력</p>
+                    </li>
+                    <li class="dot-img">
+                        <span></span>
+                    </li>
+                    <li class="step">
+                        <p>3</p>
+                        <p>가입 완료</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="member-input-wrap register">
+                <div class="input-wrap">
+                    <form id="" method="post" class="form-login">
+                        <div class="i-wrap">
+                            <p class="my-title">이름</p>
+                            <input id="name" type="text" class="my-in" placeholder="작업자 / 관리자 성명">
+                        </div>
+                        <div class="i-wrap">
+                            <p class="my-title">아이디</p>
+                            <input type="id" class="my-in i-id" placeholder="5~12자 영문 또는 영문+숫자 조합 – 영문 대문자 불가">
+                        </div>
+                        <!-- to dev : 오류 메세지 활성화시 클래스 .my-warn에 태그 .active 추가 -->
+                        <!-- to Dev [toggle tag] : active -->
+                        <div class="my-warn">
+                            <p>아이디 부적합, 다시 입력해주세요.</p>
+                        </div>
+                        <div class="i-wrap">
+                            <p class="my-title">비밀번호</p>
+                            <input type="password" class="my-in" placeholder="6~16자 영문+숫자+특수문자 조합">
+                        </div>
+                        <div class="i-wrap">
+                            <p class="my-title">비밀번호 확인</p>
+                            <input type="password" class="my-in" placeholder="6~16자 영문+숫자+특수문자 조합">
+                        </div>
+                        <div class="i-wrap">
+                            <p class="my-title">휴대폰번호</p>
+                            <input type="number" class="my-in" placeholder="- 없이 번호 입력">
+                        </div>
+                        <div class="i-wrap">
+                            <p class="my-title">이메일 주소</p>
+                            <input type="email" class="my-in" placeholder="(예) anjeon@safe.co.kr">
+                        </div>
+                    </form>
+                </div>
+                <div class="btn-box m-top-18">
+                    <button type="button" class="btn white-btn">인증번호 발송</button>
+                </div>
+                <div class="certifi-num">
+                    <input type="number"  class="send-input" placeholder="인증번호">
+                    <div class="btn-box send-btn">
+                        <!-- to dev : 인증번호 활성화시  .btn-off 제거 -->
+                        <button type="button" class="btn white-btn btn-off">인증</button>
+                    </div>
+                </div>
+                <div class="select-wrap">
+                    <div class="input-wrap m-top-3">
+                        <form id="" method="post" class="form-login">
+                            <div class="i-wrap">
+                                <p class="my-title">소속</p>
+                                <select class="my-in select-list">
+                                    <option>소속 선택</option>
+                                    <option>소속 선택-1</option>
+                                    <option>소속 선택-2</option>
+                                </select>
+                            </div>
+                            <div class="i-wrap">
+                                <p class="my-title">근무시간</p>
+                                <select class="my-in select-list">
+                                    <option>근무시간 선택</option>
+                                    <option>근무시간 선택-1</option>
+                                    <option>근무시간 선택-2</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="radio-wrap m-top-23">
+                    <ul>
+                        <li>
+                            <input type="radio" name="radio" id="radio-1" checked/>
+                            <label for="radio-1">현장 작업자</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radio" id="radio-2">
+                            <label for="radio-2">관리자</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="btn-box two-btn-wrap m-top-23">
+            <button type="button" class="btn gray-btn">취소</button>
+            <button type="button" class="btn navy-btn">다음 단계</button>
+        </div>
+    </div>
+</body>
+</html>

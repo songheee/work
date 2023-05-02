@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="p:domain_verify">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>CHECKIE</title>
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../static/css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/frontend.css">
+    <script type="text/javascript" src="../../static/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+</head>
+<body>
+<div class="ui-wrap my-info-wrap division">
+    <!-- header -->
+    <header class="ui-header">
+        <button type="button" class="btn-prev">
+            <span class="icon">이전</span>
+        </button>
+        <a href="#none" id="aside-nav" class="aside-nav">
+            <span class="icon"><span class="blind">확장 영역</span></span>
+        </a>
+        <!-- aside-menu-wrap -->
+        <div id="aside-menu-wrap" class="aside-menu-wrap">
+            <header class="menu-header">
+                <button type="button" class="house">메인화면</button>
+                <div class="nav__links">
+                    <button type="button" class="arim">알림</button>
+                    <button type="button" class="setting">설정</button>
+                    <button type="button" id="close" class="close">닫기</button>
+                </div>
+            </header>
+            <div class="menu-container">
+                <div class="menu-content">
+                    <div class="section-info">
+                        <p class="info-txt01"> 현장작업자</p>
+                        <p class="info-txt02">안전 1팀 <span>김안전</span>님</p>
+                        <div class="my-info-btn">
+                            <a href="#none" alt="내정보">내정보</a>
+                        </div>
+                    </div>
+                    <div class="list-box accordion">
+                        <ul class="section">
+                            <!-- to dev : 2depth오픈시 li태그에 .on클래스로 변경 -->
+                            <!-- to Dev [toggle Class] : on -->
+                            <li class="depth panel">
+                                <a href="#none" class="dep-inner" data-container="toggle-menu-1">금일 점검 항목</a>
+                                <ul id="toggle-menu-1" class="dep-content">
+                                    <li>
+                                        <a href="#none">일 점검 항목</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none">주 점검 항목</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none">월 점검 항목</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="depth panel">
+                                <a href="#none" class="dep-inner" data-container="toggle-menu-2">점검 항목 모아보기</a>
+                                <ul id="toggle-menu-2" class="dep-content">
+                                    <li>
+                                        <a href="#none">전체 점검 항목</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none">점검미완료 항목</a>
+                                    </li>
+                                    <li>
+                                        <a href="#none">불량 항목</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="depth">
+                                <a href="#none">점검 리포트</a>
+                            </li>
+                            <li class="depth">
+                                <a href="#none">자료실</a>
+                            </li>
+                            <li class="depth">
+                                <a href="#none">공지사항</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // aside-menu-wrap -->
+        <h1 class="title">내 정보 수정</h1>
+    </header>
+    <!-- // header -->
+    <div class="ui-container">
+        <div class="my-profile-content">
+            <p class="tit-01">소속정보</p>
+        </div>
+        <div class="select-wrap profile-box">
+            <div class="input-wrap">
+                <form id="" method="post" class="form-login">
+                    <div class="i-wrap">
+                        <p class="my-title">소속</p>
+                        <select class="my-in select-list">
+                            <option>안전 1팀</option>
+                            <option>안전 2팀</option>
+                            <option>안전 3팀</option>
+                        </select>
+                    </div>
+                    <div class="i-wrap">
+                        <p class="my-title">근무시간</p>
+                        <select class="my-in select-list">
+                            <option>08:00 ~17:00</option>
+                            <option>08:00 ~17:00</option>
+                            <option>08:00 ~17:00</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="btn-box m-top-56">
+                <button type="button" class="btn navy-btn">저장하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

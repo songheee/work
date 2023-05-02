@@ -1,0 +1,10 @@
+/node_modules
+/dist/
+.idea
+.git
+*.db
+.sass-cache
+package-lock.json
+package.json
+
+.vscode/settings.json

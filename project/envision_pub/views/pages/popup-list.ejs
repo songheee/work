@@ -1,0 +1,135 @@
+<%- include('../common/layout-header')-%>
+
+<body>
+<div class="ui-wrap popup-wrap">
+    <header class="ui-header register-header">
+        <%- include('../common/header/header-ver2')-%>
+        <h1 class="title">팝업리스트</h1>
+    </header>
+    <div class="ui-container">
+        <div class="body-blackout"></div>
+
+        <h3 class="lightbox-list-tit">회원가입 > 약관동의</h3>
+        <ul class="lightbox-list-wrap">
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-register-policy">
+                    <span>상세보기-췌키 이용약관(필수)</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-register-privacy">
+                    <span>상세보기-개인정보처리방침(필수)</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-register-privacy-agree">
+                    <span>상세보기-개인정보 수집 이용동의(필수)</span>
+                </button>
+            </li>
+        </ul>
+
+        <h3 class="lightbox-list-tit">점검항목 상세보기 > 현장 및 작업자 인증</h3>
+        <ul class="lightbox-list-wrap">
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-scan-place">
+                    <span>인증01- 스캔준비</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-scan-place-completed">
+                    <span>인증02- 스캔완료(현장 인증)</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-scan-worker">
+                    <span>인증03- FACE ID</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-scan-worker-completed">
+                    <span>인증04- 스캔완료(점검자 인증)</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-fail-scan">
+                    <span>안내창- 현장 인증실패</span>
+                </button>
+            </li>
+        </ul>
+
+        <h3 class="lightbox-list-tit">점검항목 상세보기 > 점검하기</h3>
+        <ul class="lightbox-list-wrap">
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-check-faulty">
+                    <span>불량 내용 등록</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-check-faulty-detail">
+                    <span>불량 내용 상세보기</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-real-time-inform">
+                    <span>실시간 알림</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-sns-share">
+                    <span>SNS 내용 공유</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-check-checkie">
+                    <span>췌키 확인</span>
+                </button>
+            </li>
+        </ul>
+
+        <h3 class="lightbox-list-tit">마이페이지</h3>
+        <ul class="lightbox-list-wrap">
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-revision-mail">
+                    <span>이메일 변경</span>
+                </button>
+            </li>
+        </ul>
+
+        <!-- popup-template -->
+        <%# 이용약관 %>
+        <%- include ("../popup/lp-register-policy.ejs") %>
+        <%# 개인정보처리방침 %>
+        <%- include ("../popup/lp-register-privacy.ejs") %>
+        <%# 개인정보수집이용동의 %>
+        <%- include ("../popup/lp-register-privacy-agree.ejs") %>
+
+        <%# 인증01 - 스캔준비(샘플) %>
+        <%- include ("../popup/lp-scan-place.ejs") %>
+        <%# 인증02 - 스캔완료(현장 인증) %>
+        <%- include ("../popup/lp-scan-place-completed.ejs") %>
+        <%# 인증03 - FACE ID %>
+        <%- include ("../popup/lp-scan-worker.ejs") %>
+        <%# 인증04 - 스캔완료(점검자 인증) %>
+        <%- include ("../popup/lp-scan-worker-completed.ejs") %>
+        <%# 안내창 - 인증실패 %>
+        <%- include ("../popup/lp-fail-scan.ejs") %>
+
+        <%# 불량내용 등록 %>
+        <%- include ("../popup/lp-check-faulty.ejs") %>
+        <%# 불량내용 상세보기 %>
+        <%- include ("../popup/lp-check-faulty-detail.ejs") %>
+
+        <%# 실시간 알람 %>
+        <%- include ("../popup/lp-real-time-inform.ejs") %>
+        <%# 내용 공유 %>
+        <%- include ("../popup/lp-sns-share.ejs") %>
+        <%# 췌키 확인 %>
+        <%- include ("../popup/lp-check-checkie.ejs") %>
+
+        <%# 이메일 변경 %>
+        <%- include ("../popup/lp-revision-mail.ejs") %>
+    </div>
+</div>
+
+</body>
+</html>

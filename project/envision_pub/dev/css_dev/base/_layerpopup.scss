@@ -1,0 +1,498 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: layerpopup                               	      */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* layer-popup s ============================================ */
+// popup
+.popup-wrap {
+  height: 100%;
+  position: relative;
+  .ui-header {
+    .title {
+      margin: 0;
+    }
+  }
+  .ui-container {
+    padding: 2rem;
+    .lightbox-list-tit {
+      font-size: 1.6rem;
+      padding: 2rem 0;
+    }
+    .lightbox-list-wrap {
+      @include mdq-min-middle {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      li {
+        @include mdq-min-middle {
+          width: 48%;
+        }
+        .a-button {
+          width: 100%;
+          padding: 1rem 0;
+          margin: 0.5rem 0;
+          border: 1px solid #1dcb5d;
+          font-size: 1.4rem;
+          font-weight: 400;
+          background-color: #fff;
+          color: #222;
+        }
+      }
+    }
+  }
+}
+
+// ## Base
+// -------------------
+
+// apply a natural box layout model to all elements, but
+// allowing components to change
+
+/* 공통 */
+@mixin sns-bt($bg){
+  content: '';
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  background: $bg;
+  margin: 0 auto 0.7rem;
+  background-size:cover;
+}
+
+// ## Page styles
+// -------------------
+.body-blackout {
+  position: fixed;
+  z-index: 1010;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .65);
+  display: none;
+
+  &.is-blacked-out {
+    display: block;
+  }
+}
+
+.popup-trigger {
+  display: inline-block;
+}
+
+.popup-modal {
+  position: fixed;
+  opacity: 0;
+  background-color: #fff;
+  left: 50%;
+  pointer-events: none;
+  transition:all 110ms ease;
+  z-index: 1011;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  transform: translate(-50%);
+  max-width: 1024px;
+  .title {
+    padding:2.1rem 0;
+    border-bottom: 1px solid #333;
+    font-size: 2rem;
+    &.border-n {
+      border-bottom: none;
+      padding: 3.6rem 0 1.1rem;
+    }
+  }
+  &.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &-close {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    cursor: pointer;
+    &:before {
+      content: " ";
+      display: block;
+      width: 1.75rem;
+      height: 1.75rem;
+      background-image: url(../../static/images/icons/pop_close.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  // full-sty 팝업
+  &.wide {
+    bottom: 0;
+    .content{
+      padding: 2rem 2rem 0;
+    }
+  }
+  // w:full, h:50% sty 팝업
+  &.wide-bt {
+    height: 50%;
+    bottom: 0;
+    max-height: 0%;
+    &.is-visible{
+      height: 53%;
+      max-height: 53%;
+      transition-property: all;
+      transition-duration: 0.5s;
+    }
+    .popup-modal-close {
+      right: 2rem;
+      top: -2.8rem;
+      &:before {
+        background-image: url(../../static/images/icons/pop_close_wt.png);
+      }
+    }
+    .title{
+      border-bottom: none;
+      padding: 3.5rem 0 0;
+      font-weight: 500;
+      background-color: #fff;
+    }
+    .scan-txt01{
+      padding-top: 1.2rem;
+      padding-bottom: 1.5rem;
+      font-size: 1.4rem;
+    }
+    span{
+      color: #10ba48;
+      font-weight: 500;
+    }
+    .check-img{
+      width: 16.5rem;
+      height: 16.5rem;
+    }
+    .sns-box{
+      ul{
+        overflow: hidden;
+        padding: 0 2.5rem;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        li{
+          a{
+            display: block;
+            color: #333333;
+            font-size: 1.3rem;
+            line-height: 1.7rem;
+          }
+          .sns-icon01{
+            &::before{
+              @include sns-bt(url(../../static/images/check/share_message.png) no-repeat);
+            }
+          }
+
+          .sns-icon02{
+            &::before{
+              @include sns-bt(url(../../static/images/check/share_mail.png) no-repeat);
+            }
+          }
+
+          .sns-icon03{
+            &::before{
+              @include sns-bt(url(../../static/images/check/share_kwork.png) no-repeat);
+            }
+          }
+
+          .sns-icon04{
+            &::before{
+              @include sns-bt(url(../../static/images/check/share_ktalk.png) no-repeat);
+            }
+          }
+
+          .sns-icon05{
+            &::before{
+              @include sns-bt(url(../../static/images/check/share_line.png) no-repeat);
+            }
+          }
+        }
+      }
+    }
+    &.v2{
+      max-height: 0rem;
+      .title{
+        padding: 1.8rem 0 2.1rem;
+      }
+      &.is-visible{
+        max-height: 17rem;
+      }
+    }
+  }
+  .content{
+    .arim-box {
+      padding: 0 1.5rem 1.5rem;
+      textarea{
+        width: 100%;
+        height: 10rem;
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+        border: 1px solid #a7a7a7;
+        background-color: #fff;
+        font-size: 1.3rem;
+        font-weight: 300;
+        color: #222;
+        resize: none;
+        outline: none;
+      }
+      button{
+        margin-top: 1.3rem;
+      }
+    }
+  }
+  // center 팝업
+  &.center {
+    width: 90%;
+    height: auto;
+    max-width: 45rem;
+    min-height: 23rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    &.alert{
+      width: 85%;
+      max-width: 35rem;
+      min-height: 18rem;
+      border-radius: 1.5rem;
+    }
+    .popup-modal-close{
+      top: 1.8rem;
+    }
+    .border-n{
+      padding: 1.75rem 1.9rem;
+      color: #333;
+    }
+    &.alert {
+      overflow: hidden;
+      .border-n{
+        padding: 3.6rem 0 1.1rem;
+      }
+      .popup-modal-close{
+        &::before{
+          content: none;
+        }
+      }
+      .content{
+      .alert-txt{
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #333333;
+      }
+      .alert-btn{
+        width: 100%;
+        height: 5rem;
+        margin-top: 2.8rem;
+        border-top: 1px solid #bcbcbc;
+        line-height: 5rem;
+          .pop-btn{
+            width: 50%;
+            height: 5rem;
+            position: inherit;
+            float: left;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #999999;
+            background-color: #fff;
+          &.close{
+            border-right: 1px solid #bcbcbc;
+            }
+          &.confirm{
+            color: #0cb744;
+            }
+          }
+        }
+      }
+    }
+    .mail-box{
+      padding: 0 1.5rem 2rem;
+      .modify{
+        .txt{
+          font-size: 1.4rem;
+          color: #333;
+          padding-bottom: 1.7rem;
+        }
+        .certifi-num{
+          margin-top: 0;
+        }
+        .m-top-15{
+          margin-top: 1.5rem;
+        }
+        .send-input{
+          width: 68%;
+          margin-right: 0.8rem;
+        }
+        .send-btn{
+          width: calc(31% - 0.8rem);
+          margin-left: 0;
+          .white-btn{
+            font-size: 1.2rem;
+            font-weight: 400;
+            padding: 0rem;
+          }
+        }
+        .navy-btn{
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+  &.normall{
+    bottom: 0;
+  }
+  &.chekie{
+    .popup-modal-close{
+      top: 2.1rem;
+    }
+    .content{
+        font-weight: 500;
+        line-height: 2.7rem;
+        font-size: 1.2rem;
+        padding: 2.2rem 1.5rem 5rem;
+        ul{
+          li{
+            color: #888888;
+            text-align: left;
+          }
+        }
+          span{
+              color: #333333;
+          }
+          .chekie-check-img{
+            padding-top: 2.2rem;
+              img{
+                  width: 100%;
+            }
+          }
+    }
+  }
+}
+
+//불량내용 상세보기
+.faulty-list{
+  padding-top: 1rem;
+  li{
+    margin-bottom: 1.2rem;
+    img{
+      width: 100%;
+    }
+  }
+}
+.ex-txt{
+  text-align: left;
+  font-size: 1.4rem;
+  color: #222;
+}
+
+// 불량내용 등록
+.popup-modal {
+  &.wide {
+    .content{
+      &.fullpag{
+        padding: 0;
+      }
+    }
+  }
+}
+.filebox {
+  display:flex;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: #f5f5f5;
+  .file-wrap{
+    width: 50%;
+    padding: 1.25rem 0;
+    &:first-child{
+      margin-right: 2rem;
+    }
+    .input-file-button{
+      width: 100%;
+      display: inline-block;
+      padding: 1.1rem 0;
+      border:1px solid #1c284a;
+      border-radius: .25rem;
+      background-color: #fff;
+      vertical-align: middle;
+      @include font-sty(400, 1.2rem, #1c284a);
+      cursor: pointer;
+    }
+    input[type="file"]{ /* 파일 필드 숨기기 */
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip:rect(0,0,0,0);
+      border: 0;
+    }
+  }
+}
+#image_container{
+  padding: 2.35rem 2rem 0;
+  text-align: left;
+  #img-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+      width: 100%;
+      margin-right: .9rem;
+      padding-top: 19.4%;
+      background: #efefef url(../../static/images/check/noimg.png) no-repeat center;
+      background-size: 50%;
+      &:last-child{
+        margin-right: 0;
+      }
+      img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-top: -60%;
+      }
+    }
+  }
+}
+.txt-area{
+  textarea{
+    width: 100%;
+    height: 10rem;
+    margin-top: 1.9rem;
+    padding: .85rem;
+    border: solid 1px #a7a7a7;
+    resize: none;
+  }
+  textarea::-webkit-input-placeholder{
+    font-size: 1.2rem;
+    color: #b7b7b7;
+  }
+}
+
+/* 팝업-버튼이 하단에 붙어있는 디자인 */
+.reset{
+  position: static;
+}
+.popup-btnwrap{
+  .two-btn-wrap{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    padding: 2rem 2rem;
+    margin-top: 8rem;
+    .gray-btn{
+      margin-right: 2rem;
+    }
+  }
+}
+
+/* layer-popup e ============================================ */
+/* ---------------------------------------------------------- */

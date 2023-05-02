@@ -1,0 +1,631 @@
+@charset "UTF-8";
+
+/* ========================================================== */
+/*                                                            */
+/* file		: check CHECKIE                        	          */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* check CHECKIE s ==================================-======= */
+.check-list-wrap {
+  .ui-header {
+    .aside-nav {
+      .icon {
+        background-image: url(../../static/images/icons/aside_menu_gr.png);
+      }
+    }
+  }
+  .ui-container {
+    margin-top: 4rem;
+    .content-wrap {
+      height: 100%;
+      .tab-section {
+        height: 5.2rem;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        font-size: 1.4rem;
+        ul {
+          display: flex;
+          justify-content: space-evenly;
+          margin: 0 auto;
+          width: 100%;
+          height: 100%;
+          max-width: 70rem;
+          li {
+            height: 100%;
+            max-width: 10.5rem;
+            text-align: center;
+            a {
+              display: flex;
+              align-items: center;
+              height: 100%;
+              .txt {
+                color: #ababab;
+              }
+              .num {
+                width: 2.3rem;
+                height: 2.3rem;
+                line-height: 2.4rem;
+                margin-left: 0.75rem;
+                font-size: 1.1rem;
+                color: #fefffe;
+                border-radius: 50%;
+                background-color: #ababab;
+                @include set-fntf-type2;
+              }
+              &.is-visible {
+                position: relative;
+                font-weight: 500;
+                color: #222;
+                .txt {
+                  position: relative;
+                  color: #222;
+                  &:after {
+                    content: " ";
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    top: 1.75rem;
+                    left: 0rem;
+                    background-color: #222;
+                  }
+                }
+                .num {
+                  background-color: #222;
+                  line-height: 2.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      .list-section {
+        padding: 1.3rem 1.5rem;
+        .lst-item {
+          margin-bottom: 1.7rem;
+          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+          border-radius: .8rem;
+          padding: .6rem 0;
+          background-color: #fff;
+          & > a {
+            width: 100%;
+            background-color: #fff;
+          }
+          /* 점검항목 리스트 > 불량 항목 */
+          .content-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 3.5rem;
+            padding-left: 1.25rem;
+            padding-right: 1.5rem;
+            border-top: 0.5px solid #cecece;
+            @include font-sty(500, 1.4rem, #444);
+            &:after {
+              content: "";
+              width: 1.3rem;
+              height: 0.9rem;
+              background-image: url(../../static/images/icons/arrow_open.png);
+              background-size: 100%;
+              background-repeat: no-repeat;
+            }
+            &.active {
+              &:after {
+                background-image: url(../../static/images/icons/arrow_close.png);
+              }
+            }
+          }
+          .sub-content {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            border-top: 0.5px solid #cecece;
+            ul {
+              padding-top: .8rem;
+              li {
+                @include flex-sty(space-between, center);
+                padding-bottom: 0.8rem;
+                .title {
+                  line-height: 1.55rem;
+                  @include font-sty(300, 1.2rem, #444);
+                }
+                .condition-box {
+                  display: flex;
+                  &:first-child {
+                    margin-left: 0.3rem;
+                  }
+                  .condition {
+                    width: 6.5rem;
+                    height: 2.5rem;
+                    margin-left: 0.6rem;
+                    border: 0.5px solid #aeaeae;
+                    border-radius: 12.5rem;
+                    @include font-sty(300, 1.1rem, #aeaeae);
+                    @include flex-center;
+                    &.on {
+                      color: #10ba48;
+                      border-color: #10ba48;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .main-content {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0 1.35rem 1.35rem 0.7rem;
+        .preview-img {
+          width: 5rem;
+          height: 5rem;
+          border-radius: .5rem;
+        }
+        .info-box {
+          flex: 1;
+          margin-left: 1.2rem;
+          padding-top: .7rem;
+          li {
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            &:first-child {
+              margin-bottom: .9rem;
+              line-height: 1rem;
+              font-size: 1.5rem;
+              font-weight: 500;
+            }
+            &.point-c{
+              margin-bottom: 1rem;
+              color: #10ba48;
+            }
+            &:nth-child(3){
+              margin-bottom: .7rem;
+              color: #888;
+            }
+            &:nth-child(4){
+              color: #888;
+            }
+            b{
+              font-weight: 400;
+              padding: 0 0.4rem;
+            }
+            span{
+              font-weight: 300;
+            }
+          }
+        }
+        .stamp-img {
+          display: block;
+          width: 5.5rem;
+          height: 5.5rem;
+          margin: auto;
+          margin: auto;
+        }
+        &.v2 {
+          border-top: 1px solid #cecece;
+          padding-top: 0.55rem;
+          padding-right: 2rem;
+          padding-bottom: 1.2rem;
+          .info-box {
+            margin-left: 0;
+            padding-top: 1rem;
+            li {
+              color: #888;
+              font-size: 1.2rem;
+              span {
+                color: #333;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+    /* 점검 항목 > 상세페이지 */
+    &.detail {
+      margin-top:1.2rem;
+      .content-wrap {
+        .main-content{
+          padding-left: 2rem;
+          .preview-img {
+            & + .info-box {
+              li {
+                &:nth-child(3),
+                &:last-child {
+                    display: inline-block;
+                }
+                &:last-child {
+                  padding-left: 2rem;
+                }
+              }
+            }
+          }
+          .num {
+            @include set-fntf-type2;
+          }
+        }
+        .list-section {
+          height: calc(100% - 1.5rem);
+          padding: 0;
+          overflow: scroll;
+          .list-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 3.25rem 1rem 2.25rem;
+            border-top: 1px solid #979797;
+            border-bottom: 1px solid #cecece;
+            @include font-sty(500, 1.4rem, #444);
+            .txt {
+              width: 100%;
+              max-width: 18.1rem;
+              text-align: center;
+              @include mdq-min-narrow {
+                max-width: 25rem;
+              }
+            }
+            .check-title {
+              display: flex;
+              text-align: right;
+              text-align: center;
+                p {
+                  min-width: 2.8rem;
+                  &:first-child {
+                    margin-right: 3.2rem;
+                  }
+              }
+            }
+          }
+          .list-item {
+            @include flex-sty(space-between);
+            flex-wrap: wrap;
+            @include font-sty(300, 1.4rem, #444);
+            padding: 1.3rem 2.5rem;
+            background-color: #fff;
+            &:nth-of-type(even) {
+              background-color: #f5f5f5;
+            }
+            .txt {
+              width: 61%;
+              margin-left: -0.25rem;
+              line-height: 1.5rem;
+              @include mdq-min-narrow {
+                max-width: 45rem;
+              }
+            }
+            .reject-cont {
+              width: 100%;
+              .btn-box{
+                display:flex;
+                align-items: center;
+                width: 100%;
+                padding-top: 2rem;
+                .btn {
+                  width: 50%;
+                  display: inline-block;
+                  padding: 1.1rem 0;
+                  border:1px solid #1c284a;
+                  border-radius: .25rem;
+                  background-color: #fff;
+                  vertical-align: middle;
+                  @include font-sty(400, 1.3rem, #1c284a);
+                  cursor: pointer;
+                  .txt-1 {
+                    display: inline-block;
+                  }
+                  .txt-2 {
+                    display: none;
+                  }
+                  &:first-child{
+                    margin-right: 1rem;
+                  }
+                  &.on {
+                    color: #10ba48;
+                    border-color: #10ba48;
+                    .txt-1 {
+                      display: none;
+                    }
+                    .txt-2 {
+                      display: inline-block;
+                    }
+                  }
+                  &:disabled {
+                    cursor: auto;
+                    border-color: #ccc;
+                    color: #ccc;
+                  }
+                }
+              }
+              .img-box {
+                display:flex;
+                width: 100%;
+                margin-top: 0.6rem;
+                .item {
+                  position: relative;
+                  flex: 1;
+                  border : 1px solid #c8c8c8;
+                  border-radius: 0.25rem;
+                  width: 50%;
+                  min-height: 11.5rem;
+                  padding: 0.8rem 0 1.65rem;
+                  overflow: hidden;
+                  background: #fff url(../../static/images/check/noimg.png) no-repeat;
+                  background-position-y: calc(50% - 1.3rem);
+                  background-position-x: center;
+                  background-size: 4.45rem 3.65rem;
+                  @include mdq-min-middle {
+                    background-size: 15%;
+                  }
+                  &:after {
+                    content: "미등록";
+                    @include font-sty(300, 1.2rem, #aaa);
+                    position: absolute;
+                    top: calc(50% + 1.5rem);
+                    left: calc(50% - 1.6rem);
+                    @include mdq-min-middle {
+                      top: 68%;
+                    }
+                  }
+                  &:first-child{
+                    margin-right: 1rem;
+                  }
+                  .txt {
+                    display: block;
+                    margin-left: 0;
+                    padding: 0.75rem 1.5rem 0;
+                    @include font-sty(300, 1.2rem, #555);
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    width: calc(100% - 0.5rem);
+                    line-height: 2rem;
+                  }
+                  &.mySwiper {
+                    &:after {
+                      content: none;
+                    }
+                    .swiper-slide  {
+                      background-color: #fff;
+                    }
+                  }
+                }
+                /* 이미지 슬라이드 */
+                .swiper {
+                  .swiper-wrapper {
+                    height: inherit;
+                    .swiper-slide {
+                      min-width: 12rem;
+                      min-height: 7.2rem;
+                      padding: 0 1.5rem;
+                    }
+                  }
+                  .swiper-pagination {
+                    bottom: 5rem;
+                    @include mdq-min-narrow2 {
+                      bottom: 5.5rem;
+                    }
+                    .swiper-pagination-bullet {
+                      width: 0.8rem;
+                      height: 0.8rem;
+                      border: 1px solid #a7a7a7;
+                      background: #fff;
+                      opacity: 1;
+                      &.swiper-pagination-bullet-active {
+                        background-color: #000;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &.faulty {
+          .list-section {
+            height: calc(100% - 8.5rem);
+          }
+        }
+      }
+    }
+    /* 라디오 버튼 */
+    .radio-button-list {
+      display: flex;
+      align-items: center;
+      width: auto;
+      padding-right: 0.95rem;
+      .m-radio-button {
+        &:first-child {
+          margin-right: 4.1rem;
+        }
+        .a-radio-button {
+          display: inline-block;
+          cursor: pointer;
+          width: 2.05rem;
+          height: 1.55rem;
+          margin: 0;
+          overflow: hidden;
+          background-image: url(../../static/images/icons/check_base.png);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          &:checked {
+              background-image: url(../../static/images/icons/check_good.png);
+              &.reject {
+                background-image: url(../../static/images/icons/check_reject.png);
+              }
+            }
+          &:disabled{
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+  /* 점검하기 버튼 영역 */
+  .check-btn-wrap {
+    position: fixed;
+    width: 100%;
+    max-width: 1024px;
+    bottom: 0;
+    padding: 0.95rem 2rem;
+    z-index: 2;
+    background-color: #fff;
+    box-shadow: -1.2px -3.8px 4px 0 rgba(0, 0, 0, 0.13);
+    .btn-list {
+      @include flex-sty(space-between, flex-end);
+      padding: 1.4rem 2rem 0.3rem;
+      .btn {
+          padding: 0;
+          text-align: center;
+          background-color: #fff;
+        .icon {
+          display: inline-block;
+          background-repeat: no-repeat;
+          background-position: center center;
+          width: 100%;
+          height: 2.7rem;
+          &.real-time {
+            margin-left: 0.3rem;
+            background-image: url(../../static/images/icons/inspect/real_time_on.png);
+            background-size: 2.2rem 2.7rem;
+          }
+          &.sns-share {
+            background-image: url(../../static/images/icons/inspect/sns_share_on.png);
+            background-size: 1.85rem 1.7rem;
+          }
+          &.connect {
+            background-image: url(../../static/images/icons/inspect/connect_on.png);
+            background-size:  1.85rem 2.7rem;
+          }
+          &.check-checkie {
+            background-image: url(../../static/images/icons/inspect/check_checkie_on.png);
+            background-size:  2.8rem 2.55rem;
+          }
+        }
+        .txt {
+          display: block;
+          margin-top: 0.7rem;
+          line-height: 1.2rem;
+          @include font-sty(300, 1.2rem, #222);
+        }
+        &.btn-off {
+          pointer-events: none;
+          .icon{
+            &.real-time {
+              background-image: url(../../static/images/icons/inspect/real_time_off.png);
+            }
+            &.sns-share {
+              background-image: url(../../static/images/icons/inspect/sns_share_off.png);
+            }
+            &.connect {
+              background-image: url(../../static/images/icons/inspect/connect_off.png);
+            }
+            &.check-checkie {
+              background-image: url(../../static/images/icons/inspect/check_checkie_off.png);
+            }
+          }
+          .txt {
+            color: #ccc;
+          }
+        }
+      }
+    }
+    .two-btn-wrap {
+      padding: 0;
+    }
+  }
+  /* 아코디언 동작 */
+  .lst-item {
+    .content-btn {
+      display: block;
+      &.active {
+        & + .sub-content {
+          display: block;
+          max-height: 50rem;
+        }
+      }
+    }
+    .sub-content {
+      display: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.4, 0, 1, 1);
+    }
+  }
+  /* swiper 동작 관련 */
+  &.swiper {
+    overflow: auto;
+    overflow-x:hidden;
+    padding-top: 6rem;
+    background-color: #f4f6fa;
+    .date-section {
+      position: fixed;
+      width: 100%;
+      max-width: 1024px;
+      height: 4rem;
+      z-index: 3;
+      background-color: #10ba48;
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.5);
+      .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: initial;
+        .swiper-pagination-bullet {
+          display: inline-block;
+          margin: 0 9.5%;
+          line-height: 4rem;
+          width: initial;
+          border-radius: inherit;
+          background: none;
+          opacity: 1;
+          outline: none;
+          -webkit-tap-highlight-color:  transparent;
+          &.swiper-pagination-bullet-active {
+            position: relative;
+            color: #fff;
+            &:before {
+              content: " ";
+              display: block;
+              position: absolute;
+              width: 3rem;
+              height: 0.45rem;
+              top: 3.6rem;
+              left: -0.65rem;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  a:link {
+    -webkit-tap-highlight-color:  transparent;
+  }
+
+  input[type="radio"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border: 0;
+    -moz-border: 0;
+    -webkit-border: 0;
+  }
+  .check-tab-content{
+    & > .list-section {
+      display: none;
+      &:first-child{
+        display:block;
+      }
+    }
+  }
+}
+/* check CHECKIE e ======================================= */

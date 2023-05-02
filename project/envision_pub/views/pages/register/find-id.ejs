@@ -1,0 +1,41 @@
+<%- include('../../common/layout-header')-%>
+    <body>
+        <div class="ui-wrap member-wrap">
+            <!-- header -->
+            <header class="ui-header">
+                <%- include('../../common/header/header-ver2')-%>
+                <h1 class="title">아이디 찾기</h1>
+            </header>
+            <!-- // header -->
+            <div class="ui-container">
+                <div class="top-block">
+                    가입 시 입력한 정보를 기입해주세요.
+                </div>
+                <div class="member-input-wrap">
+                    <div class="input-wrap">
+                        <form id="" method="post" class="form-login">
+                            <div class="i-wrap">
+                                <p class="my-title">이름</p>
+                                <input id="name" type="text" class="my-in" placeholder="작업자 / 관리자 성명">
+                            </div>
+                            <div class="i-wrap">
+                                <p class="my-title">이메일 주소</p>
+                                <input type="email" class="my-in" placeholder="(예) anjeon@safe.co.kr">
+                            </div>
+                        </form>
+                    </div>
+                    <!-- to dev : 오류 메세지 활성화시 클래스 .my-warn에 태그 .active 추가 -->
+                    <!-- to Dev [toggle tag] : active -->
+                    <div class="my-warn">
+                        <p>이메일 주소 부적합, 다시 입력해주세요.</p>
+                    </div>
+                    <div class="btn-box id-margin-t">
+                        <button type="button" class="btn navy-btn">아이디 찾기</button>
+                    </div>
+                </div>
+            </div>
+            <%- include('../../common/footer')-%>
+        </div>
+    </body>
+</html>
+

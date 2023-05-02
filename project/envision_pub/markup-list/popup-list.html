@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="p:domain_verify">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>CHECKIE</title>
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../static/css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/frontend.css">
+    <script type="text/javascript" src="../static/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../static/js/common.js"></script>
+</head>
+<body>
+<div class="ui-wrap popup-wrap">
+    <!-- header -->
+    <header class="ui-header register-header">
+        <button type="button" class="btn-prev">
+            <span class="icon">이전</span>
+        </button>
+        <h1 class="title">팝업 리스트</h1>
+    </header>
+    <!-- // header -->
+    <div class="ui-container">
+        <div class="body-blackout"></div>
+
+        <h3 class="lightbox-list-tit">회원가입 > 약관동의</h3>
+        <ul class="lightbox-list-wrap">
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-register-policy">
+                    <span>상세보기-췌키 이용약관(필수)</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-register-privacy">
+                    <span>상세보기-개인정보처리방침(필수)</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-register-privacy-agree">
+                    <span>상세보기-개인정보 수집 이용동의(필수)</span>
+                </button>
+            </li>
+        </ul>
+        <h3 class="lightbox-list-tit">점검항목 > 현장 및 작업자 인증</h3>
+        <ul class="lightbox-list-wrap">
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-scan-place">
+                    <span>인증01- 스캔준비</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-scan-place-completed">
+                    <span>인증02- 스캔완료(현장 인증)</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-scan-worker">
+                    <span>인증03- FACE ID</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-scan-worker-completed">
+                    <span>인증04- 스캔완료(점검자 인증)</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-fail-scan">
+                    <span>안내창- 현장 인증실패</span>
+                </button>
+            </li>
+        </ul>
+        <h3 class="lightbox-list-tit">점검 상세보기 > 점검하기</h3>
+        <ul class="lightbox-list-wrap">
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-check-faulty">
+                    <span>불량 내용 등록</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-check-faulty-detail">
+                    <span>불량 내용 상세보기</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-real-time-inform">
+                    <span>실시간 알림</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-sns-share">
+                    <span>SNS 내용 공유</span>
+                </button>
+            </li>
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-check-checkie">
+                    <span>췌키 확인</span>
+                </button>
+            </li>
+        </ul>
+        <h3 class="lightbox-list-tit">마이페이지</h3>
+        <ul class="lightbox-list-wrap">
+            <li>
+                <button class="a-button popup-trigger" data-popup-trigger="lp-revision-mail">
+                    <span>이메일 변경</span>
+                </button>
+            </li>
+        </ul>
+
+        <!-- popup-template -->
+        <!--  이용약관 -->
+        <div class="popup-modal wide" data-popup-modal="lp-register-policy">
+            <i class="popup-modal-close"></i>
+            <h1 class="title">이용약관</h1>
+            <div class="content"></div>
+        </div>
+        <!--//  이용약관 -->
+
+        <!-- 개인정보처리방침 -->
+        <div class="popup-modal wide" data-popup-modal="lp-register-privacy">
+            <i class="popup-modal-close"></i>
+            <h1 class="title">개인정보처리방침</h1>
+            <div class="content"></div>
+        </div>
+        <!--// 개인정보처리방침 -->
+
+        <!-- 개인정보 수집 이용동의 -->
+        <div class="popup-modal wide" data-popup-modal="lp-register-privacy-agree">
+            <i class="popup-modal-close"></i>
+            <h1 class="title">개인정보 수집 이용동의</h1>
+            <div class="content"></div>
+        </div>
+        <!--// 개인정보 수집 이용동의 -->
+
+        <!-- 스캔준비 -->
+        <div class="popup-modal wide-bt" data-popup-modal="lp-scan-place">
+            <i class="popup-modal-close"></i>
+            <h1 class="title">스캔준비</h1>
+            <div class="content">
+                <p class="scan-txt01">휴대폰 뒷면 상단에 췌키를 대주세요.</p>
+                <img class="check-img" src="../static/images/check/check_scan.png" alt="스캔준비">
+                <p class="scan-txt01">(NFC 위치 상단)</p>
+            </div>
+        </div>
+        <!--// 스캔준비 -->
+
+        <!-- 스캔 완료 -->
+        <div class="popup-modal wide-bt" data-popup-modal="lp-scan-place-completed">
+            <i class="popup-modal-close"></i>
+            <h1 class="title">스캔 완료</h1>
+            <div class="content">
+                <p class="scan-txt01"><span>현장 인증 완료</span>되었습니다.</p>
+                <img class="check-img" src="../static/images/check/check_scan_ok.png" alt="스캔완료">
+            </div>
+        </div>
+        <!--// 스캔 완료 -->
+
+        <!-- FACE ID -->
+        <div class="popup-modal wide-bt" data-popup-modal="lp-scan-worker">
+            <i class="popup-modal-close"></i>
+            <h1 class="title">FACE ID</h1>
+            <div class="content">
+                <p class="scan-txt01">얼굴을 카메라에 비춰주세요.</p>
+                <img class="check-img" src="../static/images/check/check_face_id.png" alt="face id">
+            </div>
+        </div>
+        <!--// FACE ID -->
+
+        <!-- 스캔 완료 -->
+        <div class="popup-modal wide-bt" data-popup-modal="lp-scan-worker-completed">
+            <i class="popup-modal-close"></i>
+            <h1 class="title">스캔 완료</h1>
+            <div class="content">
+                <p class="scan-txt01"><span>점검자 인증 완료</span>되었습니다.</p>
+                <img class="check-img" src="../static/images/check/check_scan_ok.png" alt="점검자스캔완료">
+            </div>
+        </div>
+        <!--// 스캔 완료 -->
+
+        <!-- 안내창(인증 실패) -->
+        <div class="popup-modal center alert" data-popup-modal="lp-fail-scan">
+            <h1 class="title border-n">안내</h1>
+            <div class="content">
+                <p class="alert-txt">현장 인증 실패하였습니다.<br>확인 후 다시 시도해주시기 바랍니다.</p>
+                <div class="alert-btn">
+                    <button class="popup-modal-cancel pop-btn close">취소</button>
+                    <button class="pop-btn confirm">다시시도</button>
+                </div>
+            </div>
+        </div>
+        <!--// 안내창(인증 실패) -->
+
+        <!-- 불량내용 등록 -->
+        <div class="popup-modal wide bottom-fix popup-btnwrap" data-popup-modal="lp-check-faulty">
+            <i class="popup-modal-close"></i>
+            <h1 class="title">불량내용 등록</h1>
+            <div class="content fullpag">
+                <div class="filebox">
+                    <div class="file-wrap">
+                        <label for="ex_file" class="input-file-button">사진첨부 (최대3장)</label>
+                        <input type="file" id="ex_file" multiple/>
+                    </div>
+                    <div class="file-wrap">
+                        <label for="video" class="input-file-button">영상첨부 (최대1개)</label>
+                        <input type="file" id="video" multiple/>
+                    </div>
+                </div>
+                <div id="image_container" class="register reset">
+                    <div id="img-list">
+                        <p>
+                            <img src="../static/images/check/sample_img.png" alt="불량내용1">
+                        </p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="txt-area">
+                        <textarea placeholder="내용을 입력해 주세요."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box two-btn-wrap p-side-20">
+                <button type="button" class="btn gray-btn popup-modal-cancel">취소</button>
+                <button type="button" class="btn navy-btn">등록</button>
+            </div>
+        </div>
+        <!--// 불량내용 등록 -->
+
+        <!-- 불량내용 상세보기 -->
+        <div class="popup-modal wide member-wrap" data-popup-modal="lp-check-faulty-detail">
+            <i class="popup-modal-close"></i>
+            <h1 class="title">불량내용 상세보기</h1>
+            <div class="content member-input-wrap">
+                <ul class="faulty-list">
+                    <li>
+                        <img src="../static/images/check/sample_img.png" alt="불량내용1">
+                    </li>
+                    <li>
+                        <img src="../static/images/check/sample_img02.png" alt="불량내용2">
+                    </li>
+                </ul>
+                <p class="ex-txt">육안점검시 과적방지 지침 불량, 벽돌 무너짐</p>
+            </div>
+        </div>
+        <!--// 불량내용 상세보기 -->
+
+        <!-- 실시간 알림 -->
+        <div class="popup-modal center" data-popup-modal="lp-real-time-inform">
+            <i class="popup-modal-close"></i>
+            <h1 class="title border-n">실시간 알림</h1>
+            <div class="content">
+                <div class="arim-box">
+                    <form method="post">
+                        <textarea placeholder="췌키에 전달할 실시간 알림 내용을 10자 이내로 입력하세요."></textarea>
+                    </form>
+                    <div class="btn-box">
+                        <button type="button" class="btn navy-btn">발송하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--// 실시간 알림 -->
+
+        <!-- sns 내용 공유 -->
+        <div class="popup-modal wide-bt v2" data-popup-modal="lp-sns-share">
+            <i class="popup-modal-close"></i>
+            <h1 class="title">내용 공유</h1>
+            <div class="content">
+                <div class="sns-box">
+                    <ul>
+                        <li>
+                            <a class="sns-icon01" href="#none">메시지</a>
+                        </li>
+                        <li>
+                            <a class="sns-icon02" href="#none">메일</a>
+                        </li>
+                        <li>
+                            <a class="sns-icon03" href="#none">카카오<br>워크</a>
+                        </li>
+                        <li>
+                            <a class="sns-icon04" href="#none">카카오톡</a>
+                        </li>
+                        <li>
+                            <a class="sns-icon05" href="#none">라인</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--// sns 내용 공유 -->
+
+        <!-- 췌키 확인 -->
+        <div class="popup-modal center chekie" data-popup-modal="lp-check-checkie">
+            <i class="popup-modal-close"></i>
+            <h1 class="title">췌키 확인</h1>
+            <div class="content">
+                <ul>
+                    <li>- 코드번호 : <span>019EE4CB27D</span></li>
+                    <li>- 최근 업데이트 시간 : <span>2021-06-17 15:30</span></li>
+                    <li>- 상태 : <span>SUCCESS</span></li>
+                    <li>- 신호 세기 : <span>GOOD</span></li>
+                    <li>- 배터리 상태 : <span>GOOD</span></li>
+                </ul>
+                <div class="chekie-check-img">
+                    <img src="../static/images/check/spimg.png" alt="체크이미지">
+                </div>
+            </div>
+        </div>
+        <!--// 췌키 확인 -->
+
+        <!-- 이메일 변경 -->
+        <div class="popup-modal center" data-popup-modal="lp-revision-mail">
+            <i class="popup-modal-close"></i>
+            <h1 class="title border-n">이메일 변경</h1>
+            <div class="ui-content mail-box">
+                <div class="mail-info modify">
+                    <p class="txt">이메일로 인증번호를 받은 후 완료해 주세요.</p>
+                    <div class="certifi-num">
+                        <input type="number"  class="send-input" placeholder="(예) anjeon@safe.co.kr">
+                        <div class="btn-box send-btn">
+                            <button type="button" class="btn white-btn">인증번호 발송</button>
+                        </div>
+                    </div>
+                    <div class="certifi-num m-top-15">
+                        <input type="number"  class="send-input" placeholder="인증번호 입력">
+                        <div class="btn-box send-btn">
+                            <!-- to dev : 인증번호 활성화시  .btn-off 제거 -->
+                            <button type="button" class="btn white-btn btn-off">인증하기</button>
+                        </div>
+                    </div>
+                    <div class="btn-box">
+                        <button type="button" class="btn navy-btn">변경 저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--// 이메일 변경 -->
+    </div>
+    <!--// popup-template -->
+</div>
+</body>
+</html>

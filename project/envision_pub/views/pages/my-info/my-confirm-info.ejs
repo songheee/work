@@ -1,0 +1,43 @@
+<%- include('../../common/layout-header')-%>
+<body>
+    <div class="ui-wrap my-info-wrap">
+        <!-- header -->
+        <header class="ui-header">
+            <%- include('../../common/header/header-ver2')-%>
+            <h1 class="title">내 정보 수정</h1>
+        </header>
+        <!-- // header -->
+        <div class="ui-container">
+            <div class="content">
+                <p class="title">내 정보 확인</p>
+                <p class="txt">
+                    정보를 안전하게 보호하기 위해<br>
+                    <span>비밀번호</span>를 다시 한 번 <span>입력</span>해주세요.
+                </p>
+            </div>
+            <div class="profile-box">
+                <div class="input-wrap">
+                    <form method="post">
+                        <div class="i-wrap">
+                            <p class="my-title">아이디</p>
+                            <input type="text" class="my-in pro-pw" placeholder="anjeon12" readonly>
+                        </div>
+                        <div class="i-wrap profile-pw">
+                            <p class="my-title">비밀번호</p>
+                            <input type="password" class="my-in" placeholder="6~16자 영문+숫자+특수문자 조합">
+                        </div>
+                    </form>
+                    <!-- to dev : 오류 메세지 활성화시 클래스 .my-warn에 태그 .active 추가 -->
+                    <!-- to Dev [toggle tag] : active -->
+                    <div class="my-warn">
+                        <p>잘못된 비밀번호 입니다. 다시 입력해주세요.</p>
+                    </div>
+                </div>
+                <div class="btn-box pw-margin-t">
+                    <button type="button" class="btn navy-btn">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: notice CHECKIE                        	      */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* notice CHECKIE s ========================================= */
+
+
+.notice-wrap{
+    padding: 2rem 1.5rem 2rem;
+    ul{
+        .tab-list-content{
+            margin-bottom: 1.4rem;
+            border-radius: .8rem;
+            box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+            .dep-inner{
+                display: block;
+                position: relative;
+                padding: 2.25rem 0 2.2rem 1.7rem;
+                background: #fff url(../../static/images/icons/arrow_open.png) no-repeat right 1.5rem center;
+                background-size: 13px;
+                border-radius: .8rem;
+                .txt-1{
+                    margin-bottom: .75rem;
+                    padding-right: 7rem;
+                    font-size: 1.7rem;
+                    font-weight: 500;
+                }
+                .txt-2{
+                    font-size: 1.3rem;
+                    color: #888;
+                    span{
+                        padding-right: 1.2rem;
+                    }
+                }
+                &::after{
+                    display: inline-block;
+                    content: "";
+                    width: 1px;
+                    height: 5.2rem;
+                    border-right: 1px solid #d5d5d5;
+                    position: absolute;
+                    right: 4.65rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+            }
+            .dep-content{
+                height: 0;
+                opacity: 0;
+                overflow: hidden;
+                visibility: hidden;
+                -webkit-transition: height .2s ease-out, opacity .2s ease-out;
+                -o-transition: height .2s ease-out, opacity .2s ease-out;
+                transition: height .2s ease-out, opacity .2s ease-out;
+                border-radius: 0 0 .8rem .8rem;
+                background-color: #fff;
+                line-height: 1.18;
+                font-size: 1.4rem;
+                color: #222;
+            }
+            &.on{
+                .dep-inner{
+                    border-radius: .8rem .8rem 0 0;
+                    background: #fff url(../../static/images/icons/arrow_close.png) no-repeat right 1.5rem center;
+                    background-size: 13px;
+                }
+                .dep-content{
+                    opacity: 1;
+                    height: auto;
+                    visibility: visible;
+                    padding: 2rem 1.5rem 2rem;
+                    box-sizing: content-box;
+                    border-top: 1px solid #d5d5d5;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* notice CHECKIE e ========================================= */

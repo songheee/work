@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CHECKIE_Markup_list</title>
+</head>
+<body>
+
+
+<style>
+    /*html {scroll-behavior: smooth;}*/
+    * {box-sizing:border-box;}
+    a, button {-webkit-tap-highlight-color:  transparent;}
+    p.gnbcheck{position: fixed; top: 0; left: 0; width: 100%; margin-top: 0; padding: 10px 25px 10px 10%; font-weight:600; font-size:29px; background-color: #33b964; color: #fff; }
+    .markup-list-menu-wrap {position:fixed;top:0;left:0;margin:0;padding:20px;max-height:40vh;overflow:auto;list-style:none;background:#fff;}
+    .markup-list-menu-wrap::after {content:'';display:inline-block;width:100%;height:1px;background:#000;}
+    .markup-list-menu-wrap > li {display:inline-block;margin-right:10px;margin-bottom:10px;}
+    .markup-list-menu-wrap > li > a {display:inline-block;padding:2px 5px;width:100%;color:#000;border:1px solid #000;text-decoration:none;}
+    .markup-list-menu-wrap > li.point-li > a {color:#fff;background:#666;}
+    .markup-list-menu-wrap > li > a:hover {color:#fff;background:#000;}
+    .markup-list-wrap {display:flex; margin-top: 60px;}
+    .markup-list-wrap ul {margin-top:0;list-style-type:square;}
+    .markup-list-wrap ul li {margin-bottom:5px;}
+    .markup-list-wrap h4 {margin-top:40px;margin-bottom:5px;text-transform:capitalize;}
+    .markup-list-r,
+    .markup-list-l {padding:0 0 50px 10%}
+    .s-ko,
+    .s-en {display:inline-block;padding:2px 10px;}
+    .s-ko {color:#fff;background:#333;font-size:12px;}
+    .s-en {color:#000;}
+    .work {color: indianred;}
+    .work:after {content: "> 작업 중"; padding-left: 5px; font-weight: 500;}
+</style>
+<p class='gnbcheck'>CHECKIE Markup List</p>
+
+<div class="markup-list-wrap">
+
+    <div class='markup-list-l'>
+        <h2>Local</h2>
+
+        <h4 id='idx-1'>main</h4>
+        <ul id='main'>
+            <li>
+                <a href='./index.html' target="_blank"><span class="s-ko">메인 (사이드 메뉴 포함)</span><span class="s-en">Dashboard</span></a>
+            </li>
+        </ul>
+
+        <h4 id='idx-1'>Registration</h4>
+        <ul id='main'>
+            <li>
+                <a href='./register/login.html' target="_blank"><span class="s-ko">로그인</span><span class="s-en">SignIn</span></a>
+            </li>
+            <li>
+                <a href='./register/find-id.html' target="_blank"><span class="s-ko">아이디 찾기</span><span class="s-en">find-id</span></a>
+            </li>
+            <li>
+                <a href='./register/find-id-result.html' target="_blank"><span class="s-ko">아이디 찾기 결과</span><span class="s-en">find-id-result</span></a>
+            </li>
+            <li>
+                <a href='./register/find-pw.html' target="_blank"><span class="s-ko">비밀번호 찾기</span><span class="s-en">find-pw</span></a>
+            </li>
+            <li>
+                <a href='./register/find-pw-reset.html' target="_blank"><span class="s-ko">비밀번호 재설정</span><span class="s-en">find-pw-reset</span></a>
+            </li>
+
+            <li>
+                <a href='./register/register.html' target="_blank"><span class="s-ko">회원가입 > 약관동의</span><span class="s-en">register</span></a>
+            </li>
+            <li>
+                <a href='./register/register-info.html' target="_blank"><span class="s-ko">회원가입 > 정보입력</span><span class="s-en">register-info</span></a>
+            </li>
+            <li>
+                <a href='./register/register-complete.html' target="_blank"><span class="s-ko">회원가입 > 완료</span><span class="s-en">register-complet</span></a>
+            </li>
+        </ul>
+
+
+        <h4 id='idx-1'>Check-list</h4>
+        <ul id='main'>
+            <li>
+                <a href='./check/check-list.html' target="_blank"><span class="s-ko">점검항목 리스트</span><span class="s-en">Check-list</span></a>
+            </li>
+        </ul>
+
+        <h4 id='idx-1'>Check-Detail</h4>
+        <ul id='main'>
+            <li>
+                <a href='./check/check-detail.html' target="_blank"><span class="s-ko">점검항목 상세</span><span class="s-en">Check-detail</span></a>
+            </li>
+            <li>
+                <a href='./check/check-detail-faulty.html' target="_blank"><span class="s-ko">점검항목 상세 > 불량체크</span><span class="s-en">Check-detail-faulty</span></a>
+            </li>
+        </ul>
+
+        <h4 id='idx-1'>Notice</h4>
+        <ul id='main'>
+            <li>
+                <a href='./notice.html' target="_blank"><span class="s-ko">공지사항</span><span class="s-en">notice</span></a>
+            </li>
+        </ul>
+
+        <h4 id='idx-1'>My page</h4>
+        <ul id='main'>
+            <li>
+                <a href='./my-info/my-page.html' target="_blank"><span class="s-ko">마이페이지 > 내정보</span><span class="s-en">my-page</span></a>
+            </li>
+            <li>
+                <a href='./my-confirm-info.html' target="_blank"><span class="s-ko">마이페이지 > 내정보 확인</span><span class="s-en">my-confirm-info</span></a>
+            </li>
+            <li>
+                <a href='./my-info/my-revision-basic.html' target="_blank"><span class="s-ko">마이페이지 > 기본정보 수정</span><span class="s-en">my-revision-basic</span></a>
+            </li>
+            <li>
+                <a href='./my-info/my-revision-belong.html' target="_blank"><span class="s-ko">마이페이지 > 소속정보 수정</span><span class="s-en">my-revision-belong</span></a>
+            </li>
+            <li>
+                <a href='./my-info/my-revision-pw.html' target="_blank"><span class="s-ko">마이페이지 > 비밀번호 변경</span><span class="s-en">my-revision-pw</span></a>
+            </li>
+        </ul>
+
+        <h4 id='idx-1'>Pop up</h4>
+        <ul id='main'>
+            <li>
+                <a href='./popup-list.html' target="_blank"><span class="s-ko">팝업</span><span class="s-en">popup-list</span></a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+</body>
+</html>

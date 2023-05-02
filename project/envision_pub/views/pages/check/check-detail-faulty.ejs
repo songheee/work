@@ -1,0 +1,55 @@
+<%- include('../../common/layout-header')-%>
+<body>
+<div class="ui-wrap check-list-wrap">
+    <!-- header -->
+    <header class="ui-header">
+        <%- include('../../common/header/header-ver1')-%>
+        <h1 class="title">점검 상세보기</h1>
+    </header>
+    <!-- // header -->
+    <div class="ui-container detail">
+        <!-- content-wrap -->
+        <div class="content-wrap faulty">
+            <div class="main-content">
+                <img class="preview-img" src="../../static/images/check/preview_img.png" alt="철근">
+                <ul class="info-box">
+                    <li>철근 콘크리트 공사</li>
+                    <li class="point-c">A구역 철근</li>
+                    <li>- 점검주기<b>:</b><span>일일 점검</span></li>
+                    <li>- 점검자<b>:</b><span>김안전</span></li>
+                </ul>
+            </div>
+            <div class="main-content v2">
+                <ul class="info-box">
+                    <li>- 점검 완료 여부<b>:</b><span>점검 미완료</span></li>
+                    <li>- 점검 완료 시간<b>:</b><span class="num">2021-07-29 14:56:31</span></li>
+                </ul>
+                <img class="stamp-img" src="../../static/images/check/stamp_incomplete.png" alt="미완료">
+            </div>
+            <%- include('../../common/check-detail-list-section-faulty')-%>
+        </div>
+        <!--// content-wrap -->
+    </div>
+
+    <!-- btn-wrap -->
+    <div class="check-btn-wrap">
+        <div class="btn-box two-btn-wrap">
+            <button type="button" class="btn gray-btn">취소</button>
+            <button type="button" class="btn navy-btn">등록</button>
+        </div>
+    </div>
+    <!--// btn-wrap -->
+</div>
+
+<script>
+    /* 점검 항목 상세 - Swiper s */
+    const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+    /* 점검 항목 상세 - Swiper e */
+</script>
+</body>
+

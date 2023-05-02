@@ -1,0 +1,76 @@
+<%- include('../../common/layout-header')-%>
+<body>
+    <div class="ui-wrap check-list-wrap swiper mySwiper">
+        <!-- header -->
+        <header class="ui-header">
+            <%- include('../../common/header/header-ver1')-%>
+            <h1 class="title">점검항목</h1>
+        </header>
+        <!-- // header -->
+        <%- include('../../common/check-swiper-pagination')-%>
+        <div class="ui-container swiper-wrapper">
+            <!--  day content -->
+            <div class="content-wrap swiper-slide">
+                <div class="tab-wrapper">
+                    <%- include('../../common/check-list/day-tab-section')-%>
+
+                    <div class="check-tab-content">
+                        <%- include('../../common/check-list/day-list-section-base')-%>
+                        <%- include('../../common/check-list/day-list-section-all')-%>
+                        <%- include('../../common/check-list/day-list-section-faulty')-%>
+                    </div>
+                </div>
+
+            </div>
+            <!-- // day content -->
+
+            <!--  week content -->
+            <div class="content-wrap swiper-slide">
+                <div class="tab-wrapper">
+                    <%- include('../../common/check-list/week-tab-section')-%>
+
+                    <div class="check-tab-content">
+                        <%- include('../../common/check-list/week-list-section-base')-%>
+                        <%- include('../../common/check-list/week-list-section-all')-%>
+                        <%- include('../../common/check-list/week-list-section-faulty')-%>
+                    </div>
+                </div>
+            </div>
+            <!-- // week content -->
+
+            <!--  month content -->
+            <div class="content-wrap swiper-slide">
+                <div class="tab-wrapper">
+                    <%- include('../../common/check-list/month-tab-section')-%>
+
+                    <div class="check-tab-content">
+                        <%- include('../../common/check-list/month-list-section-base')-%>
+                        <%- include('../../common/check-list/month-list-section-all')-%>
+                        <%- include('../../common/check-list/month-list-section-faulty')-%>
+                    </div>
+                </div>
+            </div>
+            <!-- // month content -->
+        </div>
+    </div>
+
+    <script>
+        /* 점검 항목 리스트 - Swiper s */
+        const bullet = ['일', '주', '월'];
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            // loop: true,(점검 미완료 tab click이벤트와 충돌로 인하여 주석 처리)
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<li class="' + className + '">' + (bullet[index]) + '</li>';
+                }
+            },
+        });
+        /* 점검 항목 리스트 - Swiper e */
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="p:domain_verify">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>CHECKIE</title>
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../static/css/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/frontend.css">
+    <script type="text/javascript" src="../../static/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../static/js/common.js"></script>
+</head>
+
+<body>
+    <div class="ui-wrap check-list-wrap">
+        <!-- header -->
+        <header class="ui-header">
+            <button type="button" class="btn-prev">
+                <span class="icon">이전</span>
+            </button>
+            <a href="#none" id="aside-nav" class="aside-nav">
+                <span class="icon"><span class="blind">확장 영역</span></span>
+            </a>
+            <!-- aside-menu-wrap -->
+            <div id="aside-menu-wrap" class="aside-menu-wrap">
+                <header class="menu-header">
+                    <button type="button" class="house">메인화면</button>
+                    <div class="nav__links">
+                        <button type="button" class="arim">알림</button>
+                        <button type="button" class="setting">설정</button>
+                        <button type="button" id="close" class="close">닫기</button>
+                    </div>
+                </header>
+                <div class="menu-container">
+                    <div class="menu-content">
+                        <div class="section-info">
+                            <p class="info-txt01"> 현장작업자</p>
+                            <p class="info-txt02">안전 1팀 <span>김안전</span>님</p>
+                            <div class="my-info-btn">
+                                <a href="#none" alt="내정보">내정보</a>
+                            </div>
+                        </div>
+                        <div class="list-box accordion">
+                            <ul class="section">
+                                <!-- to dev : 2depth오픈시 li태그에 .on클래스로 변경 -->
+                                <!-- to Dev [toggle Class] : on -->
+                                <li class="depth panel">
+                                    <a href="#none" class="dep-inner" data-container="toggle-menu-1">금일 점검 항목</a>
+                                    <ul id="toggle-menu-1" class="dep-content">
+                                        <li>
+                                            <a href="#none">일 점검 항목</a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">주 점검 항목</a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">월 점검 항목</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="depth panel">
+                                    <a href="#none" class="dep-inner" data-container="toggle-menu-2">점검 항목 모아보기</a>
+                                    <ul id="toggle-menu-2" class="dep-content">
+                                        <li>
+                                            <a href="#none">전체 점검 항목</a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">점검미완료 항목</a>
+                                        </li>
+                                        <li>
+                                            <a href="#none">불량 항목</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none">점검 리포트</a>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none">자료실</a>
+                                </li>
+                                <li class="depth">
+                                    <a href="#none">공지사항</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- // aside-menu-wrap -->
+            <h1 class="title">점검 상세보기</h1>
+        </header>
+        <!-- // header -->
+        <div class="ui-container detail">
+            <!-- content-wrap -->
+            <div class="content-wrap">
+                <div class="main-content">
+                    <img class="preview-img" src="../../static/images/check/preview_img.png" alt="철근">
+                    <ul class="info-box">
+                        <li>철근 콘크리트 공사</li>
+                        <li class="point-c">A구역 철근</li>
+                        <li>- 점검주기<b>:</b><span>일일 점검</span></li>
+                        <li>- 점검자<b>:</b><span>김안전</span></li>
+                    </ul>
+                </div>
+                <div class="main-content v2">
+                    <ul class="info-box">
+                        <li>- 점검 완료 여부<b>:</b><span>점검 미완료</span></li>
+                        <li>- 점검 완료 시간<b>:</b><span class="num">2021-07-29 14:56:31</span></li>
+                    </ul>
+                    <img class="stamp-img" src="../../static/images/check/stamp_incomplete.png" alt="미완료">
+                </div>
+                <!-- list-section -->
+                <div class="list-section">
+                    <div class="list-title">
+                        <p class="txt">점검항목</p>
+                        <div class="check-title">
+                            <p>양호</p>
+                            <p>불량</p>
+                        </div>
+                    </div>
+                    <!-- list-item 1 -->
+                    <div class="list-item">
+                        <p class="txt">표지판 부착 및 주변 통제 여부 확인</p>
+                        <div class="radio-button-list">
+                            <div class="m-radio-button">
+                                <!-- to dev : 라디오 버튼 비활성화시 input[type="radio"] 태그에 disabled 추가 -->
+                                <!-- to Dev [toggle tag] : disabled -->
+                                <label>
+                                    <input type="radio" class="a-radio-button" value="good" name="check1">
+                                </label>
+                            </div>
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button reject" value="reject" name="check1">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// list-item 1 -->
+                    <!-- list-item 2 -->
+                    <div class="list-item">
+                        <p class="txt">관련 부서와 작업 조정 상태 확인</p>
+                        <div class="radio-button-list">
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button" value="good" name="check2">
+                                </label>
+                            </div>
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button reject" value="reject" name="check2">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// list-item 2 -->
+                    <!-- list-item 3 -->
+                    <div class="list-item">
+                        <p class="txt">응급상황 발생 시 긴급 조치장비 확보</p>
+                        <div class="radio-button-list">
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button" value="good" name="check3">
+                                </label>
+                            </div>
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button reject" value="reject" name="check3">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// list-item 3 -->
+                    <!-- list-item 4 -->
+                    <div class="list-item">
+                        <p class="txt">감시인 배치 상태</p>
+                        <div class="radio-button-list">
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button" value="good" name="check4">
+                                </label>
+                            </div>
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button reject" value="reject" name="check4">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// list-item 4 -->
+                    <!-- list-item 5 -->
+                    <div class="list-item">
+                        <p class="txt">응급상황 발생 시 긴급 조치장비 확보</p>
+                        <div class="radio-button-list">
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button" value="good" name="check5">
+                                </label>
+                            </div>
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button reject" value="reject" name="check5">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// list-item 5 -->
+                    <!-- list-item 6 -->
+                    <div class="list-item">
+                        <p class="txt">감시인 배치 상태</p>
+                        <div class="radio-button-list">
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button" value="good" name="check6">
+                                </label>
+                            </div>
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button reject" value="reject" name="check6">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// list-item 6 -->
+                    <!-- list-item 7 -->
+                    <div class="list-item">
+                        <p class="txt">응급상황 발생 시 긴급 조치장비 확보</p>
+                        <div class="radio-button-list">
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button" value="good" name="check7">
+                                </label>
+                            </div>
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button reject" value="reject" name="check7">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// list-item 7 -->
+                    <!-- list-item 8 -->
+                    <div class="list-item">
+                        <p class="txt">감시인 배치 상태</p>
+                        <div class="radio-button-list">
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button" value="good" name="check8">
+                                </label>
+                            </div>
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button reject" value="reject" name="check8">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// list-item 8 -->
+                    <!-- list-item 9 -->
+                    <div class="list-item">
+                        <p class="txt">응급상황 발생 시 긴급 조치장비 확보</p>
+                        <div class="radio-button-list">
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button" value="good" name="check9">
+                                </label>
+                            </div>
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button reject" value="reject" name="check9">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// list-item 9 -->
+                    <!-- list-item 10 -->
+                    <div class="list-item">
+                        <p class="txt">감시인 배치 상태</p>
+                        <div class="radio-button-list">
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button" value="good" name="check10">
+                                </label>
+                            </div>
+                            <div class="m-radio-button">
+                                <label>
+                                    <input type="radio" class="a-radio-button reject" value="reject" name="check10">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// list-item 10 -->
+                </div>
+                <!--// list-section -->
+            </div>
+            <!--// content-wrap -->
+        </div>
+        <div class="check-btn-wrap">
+            <div class="btn-box">
+                <button type="button" class="btn navy-btn">점검하기</button>
+            </div>
+            <div class="btn-list">
+                <!-- to dev : 비 활성화 되는 button, a태그에 클래스 .btn-off 추가 -->
+                <!-- to Dev [toggle Class] : btn-off -->
+                <button class="btn" type="button">
+                    <span class="icon real-time"></span>
+                    <span class="txt">실시간알림</span>
+                </button>
+                <button class="btn" type="button">
+                    <span class="icon sns-share"></span>
+                    <span class="txt">내용공유</span>
+                </button>
+                <a class="btn" href="tel:02-000-0000">
+                    <span class="icon connect"></span>
+                    <span class="txt">관리자 연결</span>
+                </a>
+                <button class="btn" type="button">
+                    <span class="icon check-checkie"></span>
+                    <span class="txt">췌키 확인</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

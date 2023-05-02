@@ -1,0 +1,42 @@
+<%- include('../../common/layout-header')-%>
+<body>
+<div class="ui-wrap my-info-wrap">
+    <!-- header -->
+    <header class="ui-header">
+        <%- include('../../common/header/header-ver1')-%>
+        <h1 class="title">내 정보 수정</h1>
+    </header>
+    <!-- // header -->
+    <div class="ui-container">
+        <div class="my-profile-content">
+            <p class="tit-01">소속정보</p>
+        </div>
+        <div class="select-wrap profile-box">
+            <div class="input-wrap">
+                <form id="" method="post" class="form-login">
+                    <div class="i-wrap">
+                        <p class="my-title">소속</p>
+                        <select class="my-in select-list">
+                            <option>안전 1팀</option>
+                            <option>안전 2팀</option>
+                            <option>안전 3팀</option>
+                        </select>
+                    </div>
+                    <div class="i-wrap">
+                        <p class="my-title">근무시간</p>
+                        <select class="my-in select-list">
+                            <option>08:00 ~17:00</option>
+                            <option>08:00 ~17:00</option>
+                            <option>08:00 ~17:00</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="btn-box m-top-56">
+                <button type="button" class="btn navy-btn">저장하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

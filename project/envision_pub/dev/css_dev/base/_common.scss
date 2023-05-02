@@ -1,0 +1,244 @@
+@charset "UTF-8";
+/* ========================================================== */
+/*                                                            */
+/* file		: common                                   	      */
+/*                                                            */
+/* ========================================================== */
+/* ---------------------------------------------------------- */
+/* simple s ================================================= */
+/* text-align */
+.ta-l {text-align:left !important;}
+.ta-c {text-align:center !important;}
+.ta-r {text-align:right !important;}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+/* simple e ================================================= */
+/* ---------------------------------------------------------- */
+/* ---------------------------------------------------------- */
+/* common s ================================================= */
+.only-m {
+  @include mdq-min-middle{
+    display:none;
+  }
+}
+.only-wide-pc {
+  @include mdq-max-middle{
+    display:none;
+  }
+}
+.only-pc {
+  @include mdq-max-middle{
+    display:none;
+  }
+}
+
+.ui-wrap {
+  @include common-wrap;
+  padding-top: 6rem;
+}
+
+// ui-container 세로 높이 full 설정,
+// footer 하단 고정
+.ui-wrap {
+  &.dash-wrap,
+  &.login-wrap,
+  &.member-wrap,
+  &.member-result-wrap,
+  &.check-list-wrap,
+  &.bottom-fix {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .ui-container{
+      flex-grow: 1;
+    }
+  }
+  &.member-wrap,
+  &.login-wrap,
+  &.bottom-fix {
+    .ui-container {
+      padding-bottom: 8rem;
+    }
+  }
+  &.menu-wrap {
+    min-height: 30rem;
+  }
+  &.p-b-only{
+    .ui-container {
+      padding-bottom: 0;
+    }
+  }
+}
+
+
+// 팝업
+.popup-btnwrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+      .content {
+        flex-grow: 1;
+        padding-bottom: 8rem;
+      }
+}
+
+// 양쪽 여백 공통값 선언
+.dash-wrap {
+  .profile-section,
+  .main-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+// header
+.ui-header {
+  @include common-header;
+  .main-logo {
+    a {
+      display: block;
+      width: 124px;
+      height: 22px;
+      background: url(../../static/images/icons/main_logo.png) no-repeat;
+      background-size: cover;
+    }
+  }
+  .aside-nav {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    width: 6.5rem;
+    height: 100%;
+    .icon {
+      display: block;
+      width: 2.5rem;
+      height: 2rem;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-image: url(../../static/images/icons/aside_menu_gr.png);
+    }
+  }
+  .btn-prev {
+    width: 5rem;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .icon {
+      width: 1.2rem;
+      height: 2rem;
+      background: url(../../static/images/icons/arrow_prev.png) no-repeat;
+      background-size: cover;
+      text-indent: -9999px;
+    }
+  }
+  .title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #239f4c;
+  }
+  &.register-header {
+    justify-content: space-between;
+    background-color: #1dcb5d;
+    border-bottom: none;
+    .btn-prev {
+      background-color: #1dcb5d;
+      .icon {
+        background-image: url(../../static/images/icons/arrow_prev_wt.png);
+      }
+    }
+    .title {
+      width: 100%;
+      margin-right: 5rem;
+      text-align: center;
+      color: #fff;
+    }
+  }
+  &.nav-n {
+    .aside-nav {
+      display: none;
+    }
+  }
+}
+
+/* 상단 padding-top: 0 */
+.ui-wrap {
+  &.menu-wrap,
+  &.login-wrap {
+    padding-top: 0;
+  }
+}
+
+.hidden {
+  display:none;
+}
+
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* 공통버튼 클래스 */
+.btn-box {
+  .btn{
+    @include btn;
+  }
+  .navy-btn{
+    @include btn-n;
+  }
+  .white-btn{
+    @include btn-w;
+  }
+}
+.two-btn-wrap{
+  .gray-btn{
+    @include btn-g;
+  }
+}
+
+.two-btn-wrap{
+  display: flex;
+  position: static;
+  align-items: flex-end;
+  width: 100%;
+  padding: 2rem 2rem;
+  :first-child{
+    margin-right: 2rem;
+  }
+  .btn{
+    @include btn (50%);
+  }
+}
+
+/* Alert 메시지 클래스 */
+.my-warn{
+  @include margin-t(.35rem);
+  font-size: 1.1rem;
+  color: #f92121;
+  opacity: 0;
+  &.active{
+    opacity: 1;
+  }
+}
+
+/* 전체여백 */
+.div-wrap{
+  @include padding-w;
+}
+/* position사용시 높이 잡을때 사용 */
+.wrap-h{
+  height: 100%;
+}
+
+/* common e ================================================= */
+/* ---------------------------------------------------------- */

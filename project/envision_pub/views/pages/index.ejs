@@ -1,0 +1,54 @@
+<%- include('../common/layout-header')-%>
+    <body>
+        <div class="ui-wrap dash-wrap">
+            <%- include('../common/header/header-main')-%>
+            <div class="date-section">
+                <div class="day">
+                    <span>2021</span>년
+                    <span>07</span>월
+                    <span>29</span>일
+                </div>
+                <div class="time">
+                    <span>14</span>
+                    <span>56</span>
+                    <span>31</span>
+                </div>
+            </div>
+            <div class="ui-container">
+                <a href="#none" class="profile-section">
+                    <div class="photo">
+                        <!-- to dev : 상황에 따른 작업자 프로필 사진 변경 -->
+                        <img src="../static/images/dashboard/profile.jpg" alt="작업자 프로필 사진">
+                    </div>
+                    <ul class="info-box">
+                        <li>현장작업자</li>
+                        <li>안전 1팀 <span class="name">김안전</span>님 <span class="arrow"></span></li>
+                    </ul>
+                </a>
+                <div class="main-content">
+                    <div class="tab-section">
+                        <!-- to dev : 활성화 되는 a 태그에 .active 클래스 추가 -->
+                        <!-- to Dev [toggle Class] : active -->
+                        <ul class="tab-menu">
+                            <li>
+                                <a href="#tabs-1" class="active">금일<span>10</span></a>
+                            </li>
+                            <li>
+                                <a href="#tabs-2">금주<span>40</span></a>
+                            </li>
+                            <li>
+                                <a href="#tabs-3">금월<span>6</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <%- include('../common/dashboard/view-section-day')-%>
+                        <%- include('../common/dashboard/view-section-week')-%>
+                        <%- include('../common/dashboard/view-section-month')-%>
+                    </div>
+                </div>
+            </div>
+            <%- include('../common/footer-main')-%>
+        </div>
+    </body>
+</html>

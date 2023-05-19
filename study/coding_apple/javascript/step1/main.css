@@ -1,0 +1,19 @@
+.alert-box{
+  background-color: skyblue;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  display: none;
+  position: relative;
+  overflow: hidden;
+}
+.close{
+  border: 0;
+  background-color: #fff;
+  font-size: 16px;
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

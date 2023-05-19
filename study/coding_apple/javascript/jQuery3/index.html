@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="./main.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  
+  <p class="hello">안녕</p>
+
+  <p class="hello">안녕</p>
+  <p class="hello">안녕</p>
+  <p class="hello">안녕</p>
+  <button class="test-btn">버튼</button>
+
+
+  <script>
+
+    /* 제이쿼리는 아래처럼 한줄만쓰면 되는데 자바스크립트는 길게 써야함  */
+    //$('.hello').html('바보'); 
+    $('.hello').css('color', 'red');
+
+    //위에 제이쿼리를 자바스크립트로 변경함
+    const name = document.querySelectorAll('.hello');
+    for (let i =0; i < name.length; i++){
+      //const item = name.item(i);   변수로 만들어서 할당할수도있고
+      //item.innerHTML = '바보';
+      name[i].innerHTML='바보';     //이렇게 바로 인덱스로표현할수도있다
+    }
+    
+
+
+    /*제이쿼리를 자바스크립트로 변경  */
+    /* $('.test-btn').on('click', function () {
+        $('.hello').fadeToggle();
+      }); */
+    // document.querySelector 대신 $이렇게 쓴다
+    // addEventListener 대신 .on 쓴다
+    
+    const btn = document.querySelector('.test-btn');
+    const titText = document.querySelectorAll('.hello');
+    function btnClick () {
+      btn.addEventListener('click', () => {
+        console.log('hi')
+        for (let i = 0; i < titText.length; i++) {
+          //const item2 = titText.item(i);
+          //item2.style.display = 'none'
+          //item2.classList.toggle('none')
+          titText[i].classList.toggle('none')
+        }
+      })
+    }
+    btnClick();
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="main.css" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="hello">안녕하세요</h1>
+  <h1 id="hi">js 초보입니다</h1>
+
+  <div class="alert-box">
+    <p class="tit">알림창임</p>
+    <button class="close">x</button>
+  </div>
+  <button onclick="alertToggle('block')"> 열기 </button>
+
+  <button onclick="alertButton('아이디입력하셈', 'block')"> 버튼1 </button>
+  <button onclick="alertButton('비번입력하셈', 'block')"> 버튼2 </button>
+
+  <script>
+    //.innerHTML / .style / .color 이렇게 점찍는데 괄호없는건 메소드(또는 함수) 라고 부릅니다.
+    document.getElementById('hello').innerHTML='안녕';  //등호 : 오른쪽을 왼쪽에 넣어라 <= 라는 뜻 
+    document.getElementById('hello').style.fontSize = '16px';
+
+    const alertBtn = document.querySelector('.alert-box');
+
+
+    /*--------------- 열기버튼, x버튼 클릭시 이벤트 ---------------*/
+    /* function alertOpen(){
+      alertBtn.style.display='block';  //querySelector() - Class 이름으로 찾기 
+    } */
+  
+    /* function alerClose(){
+      alertBtn.style.display = 'none'; 
+    } */
+    
+    //onclick="alerClose()" 으로 함수불러서 써줘야함
+    
+
+    /*------------ 열기버튼 클릭시 이벤트 --------------- */
+    //파라미터를 뚫어두면 함수를 한개만 써도된다
+    function alertToggle(style) {
+      alertBtn.style.display = style;
+    }
+
+    //파라미터 두개 뚫어놓기
+    /* function alertToggle(구멍1, 구멍2) {
+      document.querySelector('.구멍2').style.display = 구멍1;
+    } */
+
+
+    /*--------------- 버튼1,버튼2 클릭 이벤트 ---------------*/
+    function alertButton(titText, style) {
+      document.querySelector('.tit').innerHTML= titText;
+      alertBtn.style.display = style;
+      //근데 style을 뚫을 필요는 없을듯 어차피 block이니까
+    }
+
+
+    /*------------ x버튼 클릭시 이벤트 ----------------*/
+
+    //이벤트 리스너 사용 (onclick이런거 넣을필요없다 )
+    /* document.getElementById('어쩌구').addEventListener('click', function(){
+      //실행할 코드
+    });
+
+    document.querySelector('.close').addEventListener('click', function () {
+      alertBtn.style.display = 'none'
+    }); */
+
+    /* 위에꺼를 아래처럼 써도됨 */
+    const ddd = (aaa) => () => {  /* 화살표함수를 두개써주는건 파라미터에 함수를 넣었으니까 그 함수를 return해줘야하는걸 축약해서 쓴거임 */
+      aaa.style.display = 'none'
+    }
+    document.querySelector('.close').addEventListener('click', ddd(alertBtn))
+    
+
+  </script>
+</body>
+</html>

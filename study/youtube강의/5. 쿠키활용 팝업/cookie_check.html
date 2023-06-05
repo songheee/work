@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쿠키check_ 첫방문자에게만 팝업띄우기 </title>
+</head>
+
+<style>
+  .notice{
+    position: fixed;
+    top: 10px;
+    left:100px;
+    padding: 20px;
+    border:1px solid #ccc;
+  }
+</style>
+<body>
+
+  <div class="notice">Notice</div>
+
+  <script>
+    console.log(document.cookie);
+    const currentCookie = document.cookie;
+    const cookieCheck = currentCookie.indexOf('ABC');  //abc문자열의 인덱스번호가 있는지 확인
+    
+    console.log(cookieCheck)
+    //처음사이트에 들어왔으면 -1이 나올꺼고 첫방문이 아니면 -1보다 클꺼다 
+    if(cookieCheck > -1){
+      document.querySelector('.notice').style.display = 'none';
+    }else{
+      document.querySelector('.notice').style.display = 'block';
+    }
+
+  </script>
+</body>
+
+</html>

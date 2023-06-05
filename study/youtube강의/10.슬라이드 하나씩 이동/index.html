@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>슬라이드 하나씩 이동</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    li{
+      list-style: none;
+    }
+
+    .slider_wrapper{
+      position: relative;
+      width: 960px;
+      margin: 0 auto;
+      height: 300px;
+      overflow: hidden;
+    }
+    .slides{
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: 0.5s ease-out;
+      /* width: 2610px; */
+    }
+    .slides li:not(:last-child){
+      float: left;
+      margin-right: 30px;
+    }
+    .controls{
+      text-align: center;
+      margin-top: 50px;
+    }
+    .controls span{
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider_wrapper">
+    <ul class="slides">
+      <li><img src="http://placehold.it/300x300" alt=""></li>
+      <li><img src="http://placehold.it/300x300" alt=""></li>
+      <li><img src="http://placehold.it/300x300" alt=""></li>
+      <li><img src="http://placehold.it/300x300" alt=""></li>
+      <li><img src="http://placehold.it/300x300" alt=""></li>
+    </ul>
+  </div>
+  <p class="controls">
+    <span class="prev">prev</span>
+    <span class="next">next</span>
+  </p>
+  
+  <script>
+    const slides =document.querySelector('.slides');
+    const slide = document.querySelectorAll('.slides li');
+    let currentIdx = 0;
+    const slideCount = slide.length;
+    const slideWidth = 300;
+    const slideMargin = 30;
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    //ul의 너비를 지정해줌 ( css에서 지정하지않고 )
+    slides.style.width = (slideWidth + slideMargin)*slideCount - slideMargin + 'px';
+
+    function moveSlide(num){
+      slides.style.left = -num * 330 + 'px';
+      currentIdx = num;
+    }
+
+    nextBtn.addEventListener('click',function(){
+      if(currentIdx < slideCount -3){   // 인덱스 번호가 슬라이드 갯수보다 작을때까지 ( -3인건 슬라이드가 3개씩 보여지니까)
+          moveSlide(currentIdx + 1);
+      }else{
+        moveSlide(0);  //맨끝으로 가면 맨처음으로 이동하기
+      }
+    });
+    prevBtn.addEventListener('click', function () {
+      if (currentIdx > 0) { 
+        moveSlide(currentIdx - 1);
+      } else {
+        moveSlide(slideCount - 3); 
+      }
+    });
+
+  </script>
+</body>
+</html>

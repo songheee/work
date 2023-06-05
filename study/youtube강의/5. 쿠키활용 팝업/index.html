@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>첫방문자에게만 팝업띄우기 </title>
+</head>
+
+<style>
+  .notice {
+    position: fixed;
+    top: 10px;
+    left: 100px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  .none{
+    display: none;
+  }
+</style>
+
+<body>
+
+  <div class="notice">Notice</div>
+  <button class="delcookie">쿠키지우기</button>
+
+  <script>
+    const currentCookie = document.cookie;
+    const cookieCheck = currentCookie.indexOf('ABC');  //abc문자열의 인덱스번호가 있는지 확인
+
+    console.log(cookieCheck)
+    //처음사이트에 들어왔으면 -1이 나올꺼고 첫방문이 아니면 -1보다 클꺼다 
+    if (cookieCheck > -1) {
+      document.querySelector('.notice').classList.add('none');
+    } else {
+      document.querySelector('.notice').classList.remove('none');
+    }
+
+    // 쿠키 생성을 밑에 적어야 하는이유는 위에서는 첫방문인지 아닌지 확인해서 위에서 notice를 띄우고
+    // 쿠키를 생성후 다시 사이트에 들어갓을때는 이미 쿠키가 생성되어있기때문에 notice가 없어진다
+    const date = new Date();
+    date.setDate(date.getDate() + 7);
+
+    //쿠키 만들기
+    let setCookie = '';
+    setCookie += 'CookieName = ABC;';
+    setCookie += 'expires =' + date.toUTCString();
+
+    document.cookie = setCookie;
+
+    function delCookie(){
+      const date = new Date();
+      date.setDate(date.getDate() - 1);
+
+      //쿠키 만들기
+      let setCookie = '';
+      setCookie += 'CookieName = ABC;';
+      setCookie += 'expires =' + date.toUTCString();
+
+      document.cookie = setCookie;
+    }
+    const delBtn = document.querySelector('.delcookie');
+    delBtn.addEventListener('click', delCookie);
+    
+    /* 아래처럼쓰는걸 축약해서 씀
+    delBtn.addEventListener('click', function () {
+      delCookie();
+    }); */
+  </script>
+</body>
+
+</html>

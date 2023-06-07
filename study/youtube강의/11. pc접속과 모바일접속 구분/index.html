@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Mobile Detect</h1>
+
+<div class="mobile">mobile device</div>
+<div class="pc">PC device</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script>
+
+  const ratio = window.devicePixelRatio;   // 모바일 디바이스 픽셀의 크기는 항상 1보다 크다 
+  const pc = document.querySelector('.pc');
+  const mobile = document.querySelector('.mobile');
+
+  /* 
+    1. 디바이스의 픽셀 크기를 확인해서 모바일/ 피씨 체크
+    이방법은 pc화면을 확대하면 픽셀의 크기가 2를 넘어가기때문에 모바일로 보일수 있는 단점이 있다
+    console.log(ratio);
+    
+    if(ratio >= 2){  //2이상이면 모바일
+      pc.style.display = "none";
+    }else{
+      //pc로 들어왔다 
+      mobile.style.display = "none";
+    }
+  */
+
+  //2.modernize cdn을 이용해서 확인 터치이벤트로 확인하는 방법
+  if (Modernizr.touchevents) {
+    // supported
+    pc.style.display = "none";
+  } else {
+    // not-supported
+    mobile.style.display = "none";
+  }
+
+  //3. navigator.userAgent로 모바일 감지하기
+  const uAgent = navigator.userAgent;
+  console.log(uAgent);
+
+</script>
+
+
+</body>
+</html>

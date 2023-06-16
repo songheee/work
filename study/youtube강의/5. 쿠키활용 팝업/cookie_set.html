@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>쿠키생성-함수</title>
+  <script>
+    function setCookie(name, value, day){
+      let date = new Date(); //현재 날짜 지정
+      date.setDate(date.getDate + day);
+
+      let mycookie = '';
+      mycookie += name + '=' + value + ';';
+      mycookie += 'expires=' + date.toUTCString();
+
+      document.cookie = mycookie;
+    }
+    setCookie('abccorp', 'main', 3);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

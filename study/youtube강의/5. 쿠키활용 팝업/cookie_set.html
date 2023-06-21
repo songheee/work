@@ -8,13 +8,13 @@
   <script>
     function setCookie(name, value, day){
       let date = new Date(); //현재 날짜 지정
-      date.setDate(date.getDate + day);
+      date.setDate(date.getDate + day);  //쿠키생성
 
       let mycookie = '';
       mycookie += name + '=' + value + ';';
       mycookie += 'expires=' + date.toUTCString();
 
-      document.cookie = mycookie;
+      document.cookie = mycookie; //쿠키 설정, 생성
     }
     setCookie('abccorp', 'main', 3);
   </script>

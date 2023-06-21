@@ -7,6 +7,21 @@
   <title>쿠키확인</title>
   <script>
     console.log(document.cookie);
+    // a.split('/')  -> 하나의 문자열 /구분 배열로 생성
+    //a.join('/')  -> 배열의 값을 /로 묶어서 하나의 문자열
+
+    function getCookie(name){
+      let cookies = document.cookie.split(';');  //->쿠키를 배열로 만듬 ;을 구분해서
+      console.log(cookies);
+
+      // (let i =0; i <cookies.lenght; i++) 와 같다
+      for(let i in cookies){
+        if(cookies[i].indexOf(name) > -1){   //원하는 문자열 파악할때 indexOf or search 를 쓴다
+          alert('다시 방문해 주셔서 감사합니다');
+        }
+      }
+    }
+    getCookie('abccorp');
 
   </script>
 </head>

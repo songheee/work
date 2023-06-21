@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>쿠키삭제</title>
+  <title>쿠키삭제 & 쿠키함수 삭제</title>
 </head>
 <body>
   <button id="delcookie">쿠키삭제</button>
+
+  <button id="removecookie">쿠키함수 삭제</button>
 
   <script>
     const date = new Date();
@@ -26,6 +28,28 @@
       delCookie();
       alert('쿠키삭제');
     })
+
+
+    //쿠키함수 삭제
+    document.addEventListener('DOMContentLoaded', function(){   //body태그안이 다 로드되면 할일
+      function removeCooke(name) {
+        const date = new Date();
+
+        date.setDate(date.getDate() - 1);
+        let setCookie = '';
+        setCookie += name + '=Main;';
+        setCookie += 'expires =' + date.toUTCString();
+
+        document.cookie = setCookie;
+      }
+
+      document.querySelector('#removecookie').addEventListener('click', function () {
+        removeCooke('abccorp');
+      });
+    });
+    
+    
+
   </script>
 </body>
 </html>

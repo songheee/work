@@ -15,7 +15,8 @@ menu.forEach((item, idx)=> {
     e.preventDefault();
     //console.log(e.target);  -> <a href="">list item1</a> 가 나옴 (제일 작은게 나옴)
     console.log(e.currentTarget); //-> li태그가 나옴
-    var title = e.currentTarget.getAttribute('data-title');  //화살표 함수는 this를 못받아옴
-    alert(idx + '번째를' + title + '클릭했어요');
+    
+    let title = e.currentTarget.getAttribute('data-title');  //화살표 함수는 this를 못받아옴
+    alert(`${ idx } 번째를${ title }클릭했어요`);
   })
 });
